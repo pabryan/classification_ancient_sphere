@@ -217,6 +217,15 @@ The Aleksandrov reflection across \(\reflectionplane\) is the map defined by
 \]
 \end{definition}
 
+The reader may find it useful to refer to \cref{fig:reflection} for the arugments in this section.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{./reflection.pdf}
+\caption{Reflection in the $(\vertvec, \reflectionvector)$-plane showing the reflected equator, \(M_T\), \(\reflectionmap(M_t)\) and some geodesics through the north pole (dotted lines).}
+\label{fig:reflection}
+\end{figure}
+
 This map is an idempotent, (orientation reversing) isometry of \(\R^{n+2}\) fixing \(\reflectionplane\) and in particular fixing the origin. Therefore, it induces an idempotent isometry of \(\S^{n+1}\). Our aim is to show that for any \(\reflectionvector\) with \(\reflectionangle = 0\), the flow \(M_t\) is invariant under \(\reflectionmap\). This will complete the classification since the invariance implies that at each time \(t\), \(M_t\) is contained in a hyperplane orthogonal to \(\vertvec\) and hence must be a geodesic sphere. To achieve this goal, we first work with ``perturbed reflections'' satisying the condition \(\reflectionangle > 0\) to obtain estimates and then finally we send \(\reflectionangle \to 0\). 
 
 The relevant estimates are comparisons of the spherical distance from the reflection \(\reflectionmap(M_t)\) to the equator with the spherical distance of the original hypersurface \(M_t\) to the equator. With this comparison in mind, let \(\radialdistance(x) = d_{\S^{n+1}} (\equator, x) \subseteq [-\pi/2,\pi/2]\) denote the signed, spherical distance from \(\equator\) to \(x \in \S^{n+1}\) with \(H^{\pm} = \{\pm \radialdistance > 0\}\). The radial projection onto \(\equator\) is the map \(x \in \S^{n+1} \mapsto \radialprojection(x) \in \equator\), where \(\radialprojection\) is the nearest point on \(\equator\) to \(x\). If \(x \ne \pm \basepoint\), then \(\radialprojection(x)\) is a single point. If \(x = \pm \basepoint\), then \(\radialprojection(x) = \equator\). In any event, given \(y \in \radialprojection(x)\), there is a unique length minimizing geodesic joining \(x\) to \(y\) and this geodesic must pass through \(\pm \basepoint\). For graphs over the equator \(\{r = f(\sigma) : \sigma \in \equator\}\), each such geodesic intersects the graph in exactly one point.
