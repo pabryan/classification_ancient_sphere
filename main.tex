@@ -133,7 +133,7 @@ $H(\cdot,t)\leq c.$
 Here $c<\infty$ depends only on $M_{-1}.$
 \end{proposition}
 \begin{proof}
-For any $t>s$, the  Harnack estimate of Theorem \ref{thm: main A} implies that
+For any $t>s$, the  Harnack estimate of Theorem \ref{thm:main A} implies that
 $$\partial_t \p-b^{ij}\nabla_i\p\nabla_j\p+\frac{n}{2}\frac{\p}{t-s}>0.$$
 Allowing $s\to-\infty$ proves the first claim. For the second claim, observe that for any 1-homogeneous convex $f$ we have \[f\ge \frac{f(1,\cdots,1)}{n}H,\]
 see \cite[Chapter 2]{Gerhardt:/2006}. Therefore, ancient solutions satisfy
@@ -206,9 +206,9 @@ We can apply \cite[Thm.~1.1]{MakowskiScheuer:/2013} and obtain that $\hat{M}_{-T
 
 In this section, we use Theorem \ref{thm:backwardslimit} to classify convex, embedded, (quasi-)ancient solutions of contracting curvature flows on \(\S^{n+1}\) as either equators or shrinking geodesic spheres. The proof uses Aleksandrov reflection as in \cite{bryanlouie,2015arXiv150802821B}. Here we give a very general version with minimal assumptions on the flow: all we require is that the flow limits to an equator at $-T_S$ and that the maximum principle holds forward in time.
 
-We begin with some preliminaries of the Aleksandrov reflection on \(\S^{n+1}\). First, we will work relative to the limiting equator obtained in Theorem \ref{thm:backwardslimit}, denoted by $\equator = M_{-T_S}$. The equator \(\equator\) determines two \emph{open} hemispheres \(H^{\pm}\) with centers \(\pm \basepoint\) and we assume the flow is contained in the upper hemisphere, $M_t \subset H^+$. It's convenient to make use of the ambient Euclidean space, \(\R^{n+2}\) with \(\S^{n+1} \subset \R^{n+2}\) via the standard embedding. Let \(\vertvec = \overrightarrow{\origin\basepoint}\) be the unit vector in \(\R^{n+2}\) that points from the origin \(\origin\) to \(\basepoint\), the ``vertical direction''. 
+We begin with some preliminaries of the Aleksandrov reflection on \(\S^{n+1}\). First, we will work relative to the limiting equator obtained in Theorem \ref{thm:backwardslimit}, denoted by $\equator = M_{-T_S}$. The equator \(\equator\) determines two \emph{open} hemispheres \(H^{\pm}\) with centers \(\pm \basepoint\) and we assume the flow is contained in the upper hemisphere, $M_t \subset H^+$. It's convenient to make use of the ambient Euclidean space, \(\R^{n+2}\) with \(\S^{n+1} \subset \R^{n+2}\) via the standard embedding. Let \(\vertvec = \overrightarrow{\origin\basepoint}\) be the unit vector in \(\R^{n+2}\) that points from the origin \(\origin\) to \(\basepoint\); the ``vertical direction''. 
 
-To define the Aleksandrov reflection, let \(\reflectionvector \in \R^{n+2}\) be any unit vector satisfying \(\ip{\reflectionvector}{\vertvec} \leq 0\). Let \(\reflectionplane = \reflectionvector^{\perp}\) be the hyperplane through the origin orthogonal to \(\reflectionvector\). Let \(\reflectionhalfspace^{\pm} = \{\pm \ip{x}{\reflectionvector} > 0\}\) denote the open halfspaces with boundary \(\reflectionplane\). For any subset \(S \subset \S^{n+1}\), write \(\reflectionset{S}^{\pm} = S \intersect \reflectionhalfspace^{\pm}\). Lastly, let \(\reflectionangle \geq 0\) denote the angle \(\reflectionvector\) makes with \(\equator\) so that \(\sin \reflectionangle = \ip{\reflectionvector}{-\vertvec}\).
+To define the Aleksandrov reflection, let \(\reflectionvector \in \R^{n+2}\) be any unit vector satisfying \(\ip{\reflectionvector}{\vertvec} \leq 0\). Let \(\reflectionplane = \reflectionvector^{\perp}\) be the hyperplane through the origin orthogonal to \(\reflectionvector\) and let \(\reflectionhalfspace^{\pm} = \{\pm \ip{x}{\reflectionvector} > 0\}\) denote the open halfspaces with boundary \(\reflectionplane\). For any subset \(S \subset \S^{n+1}\), write \(\reflectionset{S}^{\pm} = S \intersect \reflectionhalfspace^{\pm}\). Lastly, let \(\reflectionangle \geq 0\) denote the angle \(\reflectionvector\) makes with \(\equator\) so that \(\sin \reflectionangle = \ip{\reflectionvector}{-\vertvec}\).
 
 \begin{definition}
 The Aleksandrov reflection across \(\reflectionplane\) is the map defined by
@@ -217,25 +217,42 @@ The Aleksandrov reflection across \(\reflectionplane\) is the map defined by
 \]
 \end{definition}
 
-This map is an idempotent, (orientation reversing) isometry of \(\R^{n+2}\) fixing \(\reflectionplane\) and in particular fixing the origin. Therefore, it induces an idempotent isometry of \(\S^{n+1}\). Our aim is to show that for any \(\reflectionvector\) with \(\reflectionangle = 0\), the flow \(M_t\) is invariant under \(\reflectionmap\). This will complete the classification since the invariance implies that at each time \(t\), \(M_t\) is contained in a hyperplane orthogonal to \(\vertvec\) and hence must be a geodesic sphere. To achieve this goal, we first work with perturbed reflections coming from the condition \(\reflectionangle > 0\), obtain estimates and then finally send \(\reflectionangle \to 0\). 
+This map is an idempotent, (orientation reversing) isometry of \(\R^{n+2}\) fixing \(\reflectionplane\) and in particular fixing the origin. Therefore, it induces an idempotent isometry of \(\S^{n+1}\). Our aim is to show that for any \(\reflectionvector\) with \(\reflectionangle = 0\), the flow \(M_t\) is invariant under \(\reflectionmap\). This will complete the classification since the invariance implies that at each time \(t\), \(M_t\) is contained in a hyperplane orthogonal to \(\vertvec\) and hence must be a geodesic sphere. To achieve this goal, we first work with ``perturbed reflections'' satisying the condition \(\reflectionangle > 0\) to obtain estimates and then finally we send \(\reflectionangle \to 0\). 
 
-Let \(\radialdistance(x) = d_{\S^{n+1}} (\basepoint, x)\) denote the spherical distance from \(\basepoint\) to \(x \in \S^{n+1}\). The radial projection onto \(\equator\) is the map \(x \in \S^{n+1} \mapsto \radialprojection(x) \in \equator\), where \(\radialprojection\) is the nearest point on \(\equator\) to \(x\). If \(x \ne \pm \basepoint\), then \(\radialprojection(x)\) is a single point. If \(x = \pm \basepoint\), then \(\radialprojection(x) = \equator\). In any event, given \(y \in \radialprojection(x)\), there is a unique length minimizing geodesic joining \(x\) to \(y\) and this geodesic must pass through \(\pm \basepoint\). The height function is \(\height(x) = \ip{x}{\vertvec}\) and is related to the radial distance via
+The relevant estimates are comparisons of the spherical distance from the reflection \(\reflectionmap(M_t)\) to the equator with the spherical distance of the original hypersurface \(M_t\) to the equator. With this comparison in mind, let \(\radialdistance(x) = d_{\S^{n+1}} (\equator, x) \subseteq [-\pi/2,\pi/2]\) denote the signed, spherical distance from \(\equator\) to \(x \in \S^{n+1}\) with \(H^{\pm} = \{\pm \radialdistance > 0\}\). The radial projection onto \(\equator\) is the map \(x \in \S^{n+1} \mapsto \radialprojection(x) \in \equator\), where \(\radialprojection\) is the nearest point on \(\equator\) to \(x\). If \(x \ne \pm \basepoint\), then \(\radialprojection(x)\) is a single point. If \(x = \pm \basepoint\), then \(\radialprojection(x) = \equator\). In any event, given \(y \in \radialprojection(x)\), there is a unique length minimizing geodesic joining \(x\) to \(y\) and this geodesic must pass through \(\pm \basepoint\). For graphs over the equator \(\{r = f(\sigma) : \sigma \in \equator\}\), each such geodesic intersects the graph in exactly one point.
+
+The height function is \(\height(x) = \ip{x}{\vertvec}\) and is related to the radial distance via
 \[
-\height(x) = \cos(\radialdistance(x))
+\height(x) = \sin(\radialdistance(x))
 \]
-which is monotonically decreasing in \(\radialdistance\).
+which is monotonically increasing in \(\radialdistance\). This monotone relation allows us to work with the height function \(h\) in the ambient Euclidean space \(\R^{n+2}\) rather than the spherical distance \(\radialdistance\) resulting in much simpler calcuations.
 
 For \(x \in \equator\), we have \(\ip{x}{\vertvec} = 0\) and
-\[
+\begin{equation}
+\label{eq:equatorheight}
 \height(\reflectionmap(x)) = \ip{\vertvec}{x - 2 \ip{x}{\reflectionvector} \reflectionvector} = 2 \sin\reflectionangle \ip{x}{\reflectionvector}.
-\]
-In the case \(x \in \reflectionset{\equator}^+\), we have \(\ip{x}{\reflectionvector} > 0\) and hence \(\height(\reflectionmap(x)) > 0\). In the case \(x \in \equator \intersect \reflectionplane\), we have \(\ip{x}{\reflectionvector} = 0\) and hence \(\height(\reflectionmap(x)) = 0\). This allows us to compare \(\reflectionset{(\reflectionmap(\equator))}^+\) where \(\height>0\) with \(\reflectionset{\equator}^-\) where \(\height = 0\). For any hypersurface close to \(\equator\) we will then obtain a similar relation. The major difficulty occurs on the boundary \(\reflectionplane\) where both sets have \(\height = 0\). To make this notion precise, we define the following relation:
+\end{equation}
+In the case \(x \in \reflectionset{\equator}^+\), we have \(\ip{x}{\reflectionvector} > 0\) and hence \(\height(\reflectionmap(x)) > 0\). In the case \(x \in \equator \intersect \reflectionplane\), we have \(\ip{x}{\reflectionvector} = 0\) and hence \(\height(\reflectionmap(x)) = 0\). This allows us to compare \(\reflectionset{(\reflectionmap(\equator))}^-\) on which \(\height\geq 0\) (equality occuring precisely on the boundary \(\equator \intersect \reflectionplane\)) with \(\reflectionset{\equator}^-\) on which \(\height = 0\). For any hypersurface close to \(\equator\) we will then obtain a similar relation. The major difficulty occurs on the moving boundary \(M_t \intersect \reflectionplane\) on which both sets have \(\height = 0\). To make this comparison precise, we define the following relation:
 
 \begin{definition}
 For subsets \(S,T \subset \S^{n+1}\), we say \emph{\(S\) one-sided reflects above \(T\)}, written \(\reflectionmap(S^+) \geq T^-\) provided \(\radialdistance(x) \leq \radialdistance(y)\) for every \(x \in S^+\) and every \(y \in \radialprojection^{-1} (\reflectionmap(x)) \intersect T^-\). Equivalently we may require \(\height(x) \geq \height(y)\).
 \end{definition}
 
-In other words, on the minus side of \(\reflectionplane\), the reflection \(\reflectionmap(S)\) lies ``above'' \(T\). Assume that \(M_t \to \equator\) in \(C^1\) as \(t \to -T_S\) and that \(M_t\) evolves by a parabolic equation, uniform in any region with \(h \geq C g\) for \(C>0\). In the following sequence of lemmas, under these assumptions, we prove that for a fixed \(\reflectionangle \in (0,\pi/4)\) the hypersurface \(M_t\) one-sided reflects above itself on an interval \((-T_S, T)\) for any \(\reflectionangle \in (0, \reflectionangle_0)\) with \(T\) independent of \(\reflectionangle\).
+In other words, on \(\reflectionhalfspace^-\), the minus side of \(\reflectionplane\), the reflection \(\reflectionmap(S)\) lies ``above'' \(T\).
+
+From now on we assume that \(M_t \subset H^+\), that \(M_t \to \equator\) in \(C^1\) as \(t \to -T_S\) with a uniform \(C^2\) bound, and that \(M_t\) evolves by a parabolic equation, uniform in any region with \(h \geq C g\) for \(C>0\). These assumptions imply we may write \(M_t\) as the graph of a \(C^1\), positive function over \(\equator\) in geodesic polar coordinates: \(M_t = \{r = f_t(\sigma) \in (0,\pi/2) : \sigma \in \equator\)\} for all \(t \in (-T_S, \bar{T}_{\reflectionangle})\) with \(\bar{T}_{\reflectionangle}\) sufficiently close to \(T_S\). Moreover, for \(\reflectionangle \in (0,\pi/4)\), \(\reflectionmap(\equator) = \{r = g_{-T_S}(\sigma)\}\) is a graph over \(\equator\) with \(\ip{\nor_{\reflectionangle}}{\vertvec}\) a constant in \((0,1]\) where \(\nor_{\reflectionangle}\) is the unit normal to \(\reflectionmap(\equator)\) (which is the intersection of a hyperplane and \(\S^{n+1}\)). Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t) \to \reflectionmap(\equator)\) in \(C^1\) as \(t \to -T_S\) and hence, increasing \(\bar{T}_{\reflectionangle}\) if necessary, we also have that \(\reflectionmap(M_t) = \{r = g_t(\sigma)\}\) is a graph for all \(t \in (-T_S, \bar{T}_{\reflectionangle})\).
+
+We will make use of monotonicity in \(\reflectionangle\): the constant, \(\ip{\nor_{\reflectionangle}}{\vertvec}\) is monotonically increasing to \(1\) as \(\reflectionangle \to 0\). This just says that \(\nor_{\reflectionangle}\) becomes more vertical as \(\reflectionangle\) decreases and that when \(\reflectionangle = 0\), we have \(\nor_{\reflectionangle} = \vertvec\) (since \(\equator\) is invariant under \(\reflectionmap\)). To give us a little room away from \(\pi/4\) where the reflected equator is no longer a graph, fix any \(\reflectionangle_0 \in (0,\pi/4)\). Letting \(\bar{T} = \bar{T}_{\reflectionangle_0} < T_S\), from the monotonicity in \(\reflectionangle\), both \(M_t\) and \(\reflectionmap(M_t)\) are graphs for all \(t \in (-T_S, -\bar{T})\) and all \(\reflectionangle \in [0,\reflectionangle_0]\).
+
+In the following sequence of lemmas, under the above assumptions, we prove that the hypersurface \(M_t\) one-sided reflects above itself on the interval \((-T_S, -\bar{T})\) for any \(\reflectionangle \in (0, \reflectionangle_0)\).
+
+Let \(C\subset \equator\) be any great circle and consider \(f_t|_C\). The Backwards Approximate Symmetry Lemma \cite[Lemma 5.1]{bryanlouie} applies whenever \(f_t|_C\) converges in \(C^2\) to \(C\) to show that there is a \(T_{\reflectionangle} \in (0, T_S)\) such that
+\[
+\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-
+\]
+over any \(C\) and on a neighbourhood of \(\reflectionplane\) in \(\reflectionhalfspace\) for all \(t \in (-T_S, -T_{\reflectionangle})\).
+
+Here we weaken the assumpions to only require \(C^1\) convergence with a uniform \(C^2\) bound. This seems the best we can hope for in general as is remarked in the proof. The proof is similar to the Backwards Approximate Symmetry Lemma, but now we need to obtain better estimates on the neighbourhood. The tricky part is dealing with the moving boundary \(M_t \intersect \reflectionplane\).
 
 \begin{lemma}
 \label{lem:approximate_symmetry}
@@ -243,43 +260,95 @@ For any \(\reflectionangle \in (0,\reflectionangle_0)\) there exists a \(T_{\ref
 \end{lemma}
 
 \begin{proof}
-Since \(M_t\) converges in \(C^1\) to \(E\) as \(t\to-T_S\), we may write \(M_t\) as the graph of a \(C^1\), positive function over \(\equator\) in geodesic polar coordinates, \(M_t = \{(f_t(\sigma), \sigma) \in (0,\pi) \times \equator\)\} for all \(t \in (-T_S, T_{\reflectionangle})\) with \(T_{\reflectionangle}\) sufficiently close to \(T_S\). Moreover, for \(\reflectionangle \in (0,\reflectionangle_0)\), \(\reflectionmap(\equator) = \{(g_{-T_S}(\sigma), \sigma)\)\} is a graph over \(\equator\) with \(\ip{\nu}{\vertvec}\) uniformly bounded below where \(\nu\) is the unit normal to \(\reflectionmap(\equator)\). Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t) \to \reflectionmap(\equator)\) in \(C^1\) as \(t \to -T_S\) and hence, increasing \(T_{\reflectionangle}\) if necessary, we also have that \(\reflectionmap(M_t) = \{(g_t(\sigma), \sigma) \in (0,\pi) \times \equator\)\} is also a graph for all \(t \in (-T_S, T_{\reflectionangle})\).
 
-As noted above, \(\height(\reflectionmap(x)) > 0\) on \(\equator^+\) and \(\height(x) = \cos(\radialdistance(x))\). Thus, continuity implies that for \(\epsilon > 0\) there exits an \(\eta>0\) such that \(\radialdistance(\reflectionmap(x)) < \pi/2 - \epsilon\) provided \(x \in \equator_{\eta} = \{x \in E: d(x, E \intersect \reflectionplane) > \eta\}\). Possibly by making \(T_{\reflectionangle}\) smaller again, since \(M_t \to_{C^1} \equator\), we can arrange that \(d(M_t, \equator) < \epsilon/2\) for all \(t < T_{\reflectionangle}\); that is, \(\radialdistance (x) > \pi/2 - \epsilon/2\) for all \(x \in M_t\). Now for \(x \in M_t^+ \intersect \radialprojection^{-1} \equator_{\eta}\), since \(\reflectionmap\) is an isometry, we have \(d(\reflectionmap(x), \reflectionmap(\radialprojection(x))) < \epsilon/2\); therefore, \(\radialdistance(\reflectionmap(x)) < \pi/2 - \epsilon/2\). Consequently, away from the strip \(\{x \in \equator: d(x, \equator \intersect \reflectionplane) \leq \eta\}\), we have \(\radialdistance(\reflectionmap(\reflectionset{(M_t)}^+)) < \pi/2 - \epsilon/2\) and \(\radialdistance(M_t^-) > \pi/2 - \epsilon/2\). That is, away from the strip, we have \(\reflectionmap(\reflectionset{(M_t)}^+) > \reflectionset{(M_t)}^-\).
+\emph{Boundary Estmates}
 
-Now let \(C\subset \equator\) be any great circle and consider \(f_t|_C\). Using the Backwards Approximate Symmetry Lemma \cite[Lemma 5.1]{bryanlouie} (which applies whenever \(f_t\) converges in \(C^1\) to \(C\)), we find that (possibly by decreasing \(T_{\reflectionangle}\)) again, over \(C\) we have
+Let \(C\subset \equator\) be any great circle and consider \(f_t|_C\), \(g_t|_C\). We use the Taylor expansions near the two points \(\reflectionplane \intersect M_t = \{x_1(t), x_2(t)\}\) over \(C\). We work near \(x_1(t)\) (the proof being the same near \(x_2\)). For each \(t\), parametrise \(C\) with \(\theta\) such that \(\radialprojection(x_1(t))\) corresponds to \(\theta = 0\) and \(\radialprojection^{-1}\{\theta>0\} \intersect M_t\) lies in \(\reflectionhalfspace^-\). Note that since \(\reflectionmap\) preserves \(\reflectionplane\), we have \(f_t(0) = g_t(0)\) and thus the Taylor expansion with second order remainder is
+\[
+g_t(\theta) - f_t (\theta) = (g_t'(0) - f_t'(0)) \theta + R \theta^2
+\]
+where \(R\) is bounded depending only on the uniform bounds for \(f_t''\) (note \(g_t'' = f_t''\)). Since \(M_t \to \equator\) in \(C^1\), as \(t\to -T_S\) we have that \(f_t' \to 0\) and \(g_t' \to \tan(2\reflectionangle)\), the latter being the slope of the reflected equator. Thus there is a \(T_{\reflectionangle}\) such that \(g_t'(0) - f_t'(0)\) is arbitrarily close to the positive constant \(\tan(2\reflectionangle) > 0\) and hence the first order term is positive for all \(t \in (-T_S, T_{\reflectionangle})\). We can easily estimate the interval on which \(g_t(\theta) \geq f_t (\theta)\): The uniform bounds on \(f_t''\) imply that
+\[
+\eta = \inf_{t \in (-T_S, T_{\reflectionangle})} \frac{g_t'(0) - f_t'(0)}{|R|} > 0
+\]
+and thus \(g_t(\theta) \geq f_t (\theta)\) on the interval \([0, \eta)\) for any \(t \in (-T_S, T_{\reflectionangle})\). Note that previously in the Backwards Approximate Symmetry Lemma, \(C^2\) convergence to \(0\) implied that \(R\to 0\) and hence by taking \(t\) close enough to \(-T_S\) we could make \(\eta\) arbitrarily large. This of course does not apply with the relaxed assumptions of \(C^2\) bounds only, but it turns out that all we require is \(\eta > 0\). Note also that without uniform \(C^2\) bounds, \(\eta\) may in fact be \(0\) and this is where the final argument below may fail.
+
+Now we can let \(C\) vary and observe that we can make \(g_t'(0) - f_t'(0) > 0\) and \(|R|\) bounded independently of \(C\) by the uniform \(C^1\) convergence and uniform \(C^2\) bound, thus obtaining \(\eta\) independent of \(C\). 
+
+Now, \(\reflectionplane \intersect H^+\) projects onto \(\reflectionset{\equator}^+\), and so \(\radialprojection(x_1(t)) \in \reflectionset{\equator}^+\) and we need to extend our boundary estimate over to \(\reflectionset{\equator}^-\). By decreasing \(T_{\reflectionangle}\) if necessary, as \(M_t\intersect\reflectionplane \to \equator\intersect\reflectionplane\) we have that \(\radialprojection(M_t\intersect\reflectionplane) \subseteq \{x \in \equator : d(x, \reflectionplane) < \eta/2\}\) for all \(t \in (-T_S, T_{\reflectionplane})\). Note that \(\radialprojection(x_1(t))\) is contained is this set, and \(g_t(\theta) \geq f_t (\theta)\) holds for \(\theta\) such \(d(\radialprojection(x_1(t)), C(\theta)) < \eta\) if \(\theta\) is the arc-length parameter of \(C\). This is true for any \(C\), hence holds on \(\{x \in \reflectionset{\equator}^+ : d(x, \reflectionplane) < \eta/2\}\). In geodesic coordinates, for graphs the condition \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\)is equivalent to \(g_t(\theta) \geq f_t (\theta)\) hence we obtain
+\begin{equation}
+\label{eq:boundaryestimate}
+\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^- \quad \text{ over } \{x \in \reflectionset{\equator}^+: d(x, \reflectionplane) < \eta/2\}
+\end{equation}
+and all \(t \in (-T_S, T_{\reflectionangle})\).
+
+\emph{Interior Estmates}
+
+As noted above, \(\height(\reflectionmap(x)) > 0\) on \(\reflectionset{\equator}^+\) and \(\radialdistance = \arcsin(\height(x))\). For any \(\mu > 0\), let
+\[
+\reflectionset{\equator}^{+,\mu} = \{x \in \reflectionset{\equator}^+: d(x, \equator \intersect \reflectionplane) > \mu\},
+\]
+and let
+\[
+G_{\mu} = \inf\{d(\reflectionmap(x), \equator) : x \in \reflectionset{\equator}^{+,\mu}\} > 0.
+\]
+Since \(M_t \to_{C^0} \equator\), we may choose \(T_{\reflectionangle} \in (0, T_S)\) such that \(d(M_t, \equator) < G_{\reflectionangle}/2\) for all \(t < -T_{\reflectionangle}\); that is, \(\radialdistance (x) < G_{\reflectionangle}/2\) for all \(x \in M_t\) and \(t < -T_{\reflectionangle}\). Now for \(x \in M_t^+ \intersect \radialprojection^{-1} \equator_{\mu}\), since \(\reflectionmap\) is an isometry, we have \(d(\reflectionmap(x), \reflectionmap(\radialprojection(x))) < G_{\reflectionangle}/2\); therefore, \(\radialdistance(\reflectionmap(x)) > G_{\reflectionangle}/2\). Consequently, on \(\reflectionset{\equator}^{+,\mu}\), we have \(\radialdistance(\reflectionmap(\reflectionset{(M_t)}^+)) > G_{\reflectionangle}/2\) and \(\radialdistance(M_t^-) > G_{\reflectionangle}/2\). In other words, given any \(\mu>0\), there is a \(T_{\reflectionangle}\) such that for all \(t \in (-T_S,T_{\reflectionangle})\),  we have
+\begin{equation}
+\label{eq:interiorestimate}
+\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^- \quad \text{ over } \reflectionset{\equator}^{+,\mu}.
+\end{equation}
+
+\emph{Combined Estmates}
+
+Choose \(T_{\reflectionangle}\) and \(\eta\) so that both the boundary estimate \cref{eq:boundaryestimate} holds. Now choose \(\mu\) so that \(\radialprojection(\reflectionmap(\reflectionset{\equator}^{+,\mu})) \union \{x \in \reflectionset{\equator}^- : d(x, \reflectionplane) = \reflectionset{\equator}^-\) which can be achieved since \(\reflectionmap\) is an isometry. Decreasing \(T_{\delta}\) if necessary ensures that the interior estimate \cref{eq:interiorestimate} also holds and hence,
 \[
 \reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-
 \]
-on the strip \(\{x \in \equator: d(x, \equator \intersect \reflectionplane) \leq \eta\}\). Here, \(T_{\reflectionangle}\) depends only on \(\|f_t - \pi/2\|_{C^1}\) and \(\reflectionangle\); therefore, \(T_{\reflectionangle} \in (0, T_S)\) is independent of \(C\). Thus we find that
-\begin{equation}
-\label{eq:backwards_approximate_symmetry}
-\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-
-\end{equation}
 everywhere for all \(t \in (-T_S, -T_{\reflectionangle})\).
 \end{proof}
 
 \begin{lemma}
 \label{lem:approximate_symmetrypreserved}
-There exists a \(T\) independent of \(\reflectionangle\) such that for any \(\reflectionangle \in (0,\reflectionangle_0)\) we have \(\reflectionset(M_t^+) \geq M_t^-\) for all \(t \in (-T_S, -T)\).
+There exists a \(T\) independent of \(\reflectionangle\) such that for any \(\reflectionangle \in (0,\reflectionangle_0)\) we have \(\reflectionmap(\reflectionset{M_t^+}) \geq M_t^-\) for all \(t \in (-T_S, -T)\).
 \end{lemma}
 
 \begin{proof}
-Let us now define \(T_{\reflectionangle}\) so that \((-\infty, T_{\reflectionangle})\) is the largest interval on which the relation \eqref{eq:backwards_approximate_symmetry} holds. Also define \(T = \inf\limits_{\reflectionangle \in (0,\reflectionangle_0)} T_{\reflectionangle}\). We want to show that \(T > -\infty\), and hence that the relation \eqref{eq:backwards_approximate_symmetry} holds on the non-empty, open interval \((-\infty, T)\). To show $T>-\infty$, we apply the maximum principle as in \cite[Lemma 5.2]{bryanlouie}: We know that \(\reflectionset{(M_t)}^-\) and \(\reflectionmap(\reflectionset{(M_t)}^+)\) lie in the interior of \(\reflectionhalfspace^-\) with the common boundary lying in \(\reflectionplane \intersect \S^{n+1}\). We also know that in a neighborhood of \(\reflectionplane \intersect \S^{n+1}\), the hypersurfaces \(\reflectionset{M_t}^-\) and \(\reflectionmap(\reflectionset{(M_t)}^+)\) are disjoint for \(t\) sufficiently negative (depending on \(\reflectionangle\)) because \(\reflectionset{M_t}^-\) is \(C^1\)-close to the equator, while \(\reflectionmap(\reflectionset{(M_t)}^+)\) is \(C^1\)-close to the reflected equator. The strong maximum principle, using a parabolic version of the Hopf boundary point lemma (similar to \cite[Theorem 2.2]{MR1483984}), ensures that the  relation \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\) is preserved along the flow as long as both \(\reflectionset{M_t}^-\) and \(\reflectionmap(\reflectionset{(M_t)}^+)\) are non-empty and intersect \(\reflectionplane\) transversely, and these latter conditions are true on an open interval \((-\infty, S)\) with \(S>-\infty\) independent of \(\reflectionangle\) (see \cite[Lemma 5.2]{bryanlouie}). In summary, since the relation \eqref{eq:backwards_approximate_symmetry} is true on \((-\infty, \min\{T_{\reflectionangle},S\})\), the maximum principle applied in the time interval $[\min\{T_{\reflectionangle},S\}/2,S)$ ensures that
-\begin{equation*}
-\label{eq:longtime_approximate_symmetry}
-\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-
-\end{equation*}
-for all \(t \in (-\infty, S)\) and any \(\reflectionangle \in (0,\reflectionangle_0)\). Hence $T\ge S.$
+As remarked above, there exists a \(T\) such that both \(M_t\) and \(\reflectionmap(M_t\) are graphs over the equator on \((-T_S, T)\). Moreover, since both the equator \(\equator\) and the reflected equator \(\reflectionmap(\equator)\) meet \(\reflectionplane\) transversely, be decreasing \(T\) if necessary, we may assume \(M_t\) and \(\reflectionmap(M_t\) also meet \(\reflectionplane\) transversely. As with the monotonicity of the graph property in \(\reflectionangle\) we have monotonicity in transerval meeting and so \(T\) is independent of \(\reflectionangle\)..
+
+Recall the assumption that \(M_t\) satsifies a uniformly parabolic equation wherever it is strictly convex. Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t)\) also is strictly convex and satisfies the same equation. Therefore \(f_t,g_t\) satisfy a uniformly parabolic equation on \((-T_S + \epsilon_{\reflectionangle}, -T)\) where \(0 < epsilon_{\reflectionangle} < \min\{T_S-T, T_S-T_{\reflectionangle}\}\) is chosen so that we have a strict, positive lower bound on \(|A|\) from strict convexity and compactness and so that on \((-T_S + \epsilon_{\reflectionangle}, -T_{\reflectionangle})\) we have the condition \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\). That is, \(g_t \geq f_t\). We also have the boundary condition \(f_t = g_t\) on \(\reflectionplane\).
+
+Now we may apply the maximum principle on the parabolic domain \(\union_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) to conclude that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on all of \((-T_S, -T)\). Note that we use the maximum principle almost verbatim as stated in \cite[3.7, Theorem 12]{MR762825} except that this theorem is stated only for cylindrical domains \(\Omega \times (-T_S + \epsilon, -T)\) whereas our domain has a changing boundary. Nevertheless, a closer look at the proof reveals that it only relies on the maximum princple for the linearised equation \cite[3.3, Theorem 7, remark (ii)]{MR762825} which does hold on time dependent domains. Alternatively, one can rule out \(f_t\) touching \(g_t\) near the boundary by the parabolic Hopf boundary point lemma \cite[3.3, Theorem 6]{MR762825} (which holds for our domains since they satisfy the interior sphere condition and is only needed for the linearisation) and then rule out interior touching by the usual contradiction argument such as in \cite[3.2 Lemma]{MR837523}.
 \end{proof}
 
 \begin{theorem}
 \label{thm:classification}
-Let \(M_t\) be a convex, embedded (quasi-)ancient solution of any parabolic equation on \(\S^{n+1}\) such that \(M_t \to \equator\) in \(C^1\) as \(t \to -T_S\). Then \(M_t\) is a family of shrinking geodesic spheres emanating from the equator \(\equator\) at \(t=-T_S\).
+Let \(M_t\) be a convex, embedded (quasi-)ancient solution of any (uniform whenever on uniformly convex hypersurfaces) parabolic equation on \(\S^{n+1}\) such that \(M_t \to \equator\) in \(C^1\) as \(t \to -T_S\) with uniform \(C^2\) bounds. Then \(M_t\) is a family of shrinking geodesic spheres emanating from the equator \(\equator\) at \(t=-T_S\).
 \end{theorem}
 
 \begin{proof}
-Now we send \(\reflectionangle \to 0\) to complete the proof using \cite[Proposition 5.3]{bryanlouie} (which applies in any dimension) to conclude that \(M_t\) is a geodesic sphere for all \(t \in (-\infty, T)\) and thus for all negative times by the uniqueness of solutions.
+From \cref{lem:approximate_symmetrypreserved} we have \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\) everywhere for all \(t \in (-T_S, -T)\) and any \(\reflectionangle \in (0,\reflectionangle_0)\). By continuity therefore, sending \(\reflectionangle \to 0\) we have \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\) for all \(t \in (-T_S, -T)\)  and any \(\reflectionvector\) satisfying \(\ip{\reflectionvector}{\vertvec} = 0\).
+
+Now, we need some simple properties of $\reflectionmap[\reflectionvector_0]$ following from the fact that $\ip{\reflectionvector}{\vertvec} = 0$:
+\begin{itemize}
+\item $\reflectionmap^2 = \id$,
+\item $S \geq T \Rightarrow \reflectionmap(S) \geq  \reflectionmap(T)$,
+\item $\reflectionmap = \reflectionmap[-\reflectionvector]$, and
+\item $\reflectionset{S}^{\pm} = \reflectionset[-\reflectionvector]{S}^{\mp}$.
+\end{itemize}
+
+Thus we obtain,
+\begin{align*}
+\reflectionset{(M_t)}^+ &= \reflectionmap(\reflectionmap(\reflectionset{(M_t)}^+)) \geq \reflectionmap(\reflectionset{(M_t)}^-) \\
+&= \reflectionmap[-\reflectionvector](\reflectionset[-\reflectionvector]{(M_t)^+}) \geq \reflectionset[-\reflectionvector]{(M_t)}^-\\
+&= \reflectionset{(M_t)}^+.
+\end{align*}
+We must have equality all the way through and hence the middle line implies
+\[
+\reflectionmap[-\reflectionvector](\reflectionset[-\reflectionvector]{(M_t)^+}) = \reflectionset[-\reflectionvector]{(M_t)}^-
+\]
+for any $\reflectionvector$.
+
+Thus \(M_t\) is invariant under \(\reflectionmap\) for any \(\reflectionvector\) satisfying \(\ip{\reflectionvector}{\vertvec} = 0\) and hence is a geodesic sphere for every \(t \in (-T_S, T)\) and by uniqueness of solutions, is a geodesic sphere for every \(t \in (-T_S, 0)\).
 \end{proof}
 
 
