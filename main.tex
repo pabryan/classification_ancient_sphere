@@ -16,7 +16,7 @@
 \keywords{}
 
 \begin{abstract}
-We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$ by 1-homogeneous, convex functions of principal curvatures. Our main result states that the only convex, ancient solutions of shrinking curvature flows with 1-homogeneous, convex speeds are shrinking geodesic spheres. The main tools are  differential Harnack inequalities, a rigidity result in the sphere, and an Aleksandrov reflection argument. We also obtain Harnack inequalities for flows by $\a$-power of the mean curvature with $0<\alpha<1$. We introduce the notion of `quasi-ancient` solutions, which play a similar role to ancient solutions for flows that do not admit non-trivial ancient solutions. The techniques presented here in fact allow us to prove that any convex, quasi-ancient solution of a curvature flow which satisfies a uniform bound on the second fundamental form backwards in time must be a family of shrinking geodesic spheres. As an example we treat quasi-ancient solutions of $H^{\a}$-flow with $0<\a<1$.
+We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$ by 1-homogeneous, convex functions of principal curvatures. Our main result states that the only convex, ancient solutions of shrinking curvature flows with 1-homogeneous, convex speeds are shrinking geodesic spheres. The main tools are  differential Harnack inequalities, a rigidity result in the sphere, and an Aleksandrov reflection argument. We also obtain Harnack inequalities for flows by $\a$-power of the mean curvature with $0<\alpha<1$. We introduce the notion of `quasi-ancient` solutions, which plays a similar role to ancient solutions for flows that do not admit non-trivial ancient solutions. The techniques presented here in fact allow us to prove that any convex, quasi-ancient solution of a curvature flow which satisfies a uniform bound on the second fundamental form backwards in time must be a family of shrinking geodesic spheres. As an example we treat quasi-ancient solutions of $H^{\a}$-flow with $0<\a<1$.
 \end{abstract}
 
 \maketitle
@@ -217,7 +217,7 @@ The Aleksandrov reflection across \(\reflectionplane\) is the map defined by
 \]
 \end{definition}
 
-The reader may find it useful to refer to \cref{fig:reflection} for the arugments in this section.
+The reader may find it useful to refer to \cref{fig:reflection} for the arguments in this section.
 
 \begin{figure}[htb]
 \centering
@@ -226,7 +226,7 @@ The reader may find it useful to refer to \cref{fig:reflection} for the arugment
 \label{fig:reflection}
 \end{figure}
 
-This map is an idempotent, (orientation reversing) isometry of \(\R^{n+2}\) fixing \(\reflectionplane\) and in particular fixing the origin. Therefore, it induces an idempotent isometry of \(\S^{n+1}\). Our aim is to show that for any \(\reflectionvector\) with \(\reflectionangle = 0\), the flow \(M_t\) is invariant under \(\reflectionmap\). This will complete the classification since the invariance implies that at each time \(t\), \(M_t\) is contained in a hyperplane orthogonal to \(\vertvec\) and hence must be a geodesic sphere. To achieve this goal, we first work with ``perturbed reflections'' satisying the condition \(\reflectionangle > 0\) to obtain estimates and then finally we send \(\reflectionangle \to 0\). 
+This map is an idempotent, (orientation reversing) isometry of \(\R^{n+2}\) fixing \(\reflectionplane\) and in particular fixing the origin. Therefore, it induces an idempotent isometry of \(\S^{n+1}\). Our aim is to show that for any \(\reflectionvector\) with \(\reflectionangle = 0\), the flow \(M_t\) is invariant under \(\reflectionmap\). This will complete the classification since the invariance implies that at each time \(t\), \(M_t\) is contained in a hyperplane orthogonal to \(\vertvec\) and hence must be a geodesic sphere. To achieve this goal, we first work with ``perturbed reflections'' satisfying the condition \(\reflectionangle > 0\) to obtain estimates and then finally we send \(\reflectionangle \to 0\). 
 
 The relevant estimates are comparisons of the spherical distance from the reflection \(\reflectionmap(M_t)\) to the equator with the spherical distance of the original hypersurface \(M_t\) to the equator. With this comparison in mind, let \(\radialdistance(x) = d_{\S^{n+1}} (\equator, x) \subseteq [-\pi/2,\pi/2]\) denote the signed, spherical distance from \(\equator\) to \(x \in \S^{n+1}\) with \(H^{\pm} = \{\pm \radialdistance > 0\}\). The radial projection onto \(\equator\) is the map \(x \in \S^{n+1} \mapsto \radialprojection(x) \in \equator\), where \(\radialprojection\) is the nearest point on \(\equator\) to \(x\). If \(x \ne \pm \basepoint\), then \(\radialprojection(x)\) is a single point. If \(x = \pm \basepoint\), then \(\radialprojection(x) = \equator\). In any event, given \(y \in \radialprojection(x)\), there is a unique length minimizing geodesic joining \(x\) to \(y\) and this geodesic must pass through \(\pm \basepoint\). For graphs over the equator \(\{r = f(\sigma) : \sigma \in \equator\}\), each such geodesic intersects the graph in exactly one point.
 
@@ -234,14 +234,14 @@ The height function is \(\height(x) = \ip{x}{\vertvec}\) and is related to the r
 \[
 \height(x) = \sin(\radialdistance(x))
 \]
-which is monotonically increasing in \(\radialdistance\). This monotone relation allows us to work with the height function \(h\) in the ambient Euclidean space \(\R^{n+2}\) rather than the spherical distance \(\radialdistance\) resulting in much simpler calcuations.
+which is monotonically increasing in \(\radialdistance\). This monotone relation allows us to work with the height function \(h\) in the ambient Euclidean space \(\R^{n+2}\) rather than the spherical distance \(\radialdistance\) resulting in much simpler calculations.
 
 For \(x \in \equator\), we have \(\ip{x}{\vertvec} = 0\) and
 \begin{equation}
 \label{eq:equatorheight}
 \height(\reflectionmap(x)) = \ip{\vertvec}{x - 2 \ip{x}{\reflectionvector} \reflectionvector} = 2 \sin\reflectionangle \ip{x}{\reflectionvector}.
 \end{equation}
-In the case \(x \in \reflectionset{\equator}^+\), we have \(\ip{x}{\reflectionvector} > 0\) and hence \(\height(\reflectionmap(x)) > 0\). In the case \(x \in \equator \intersect \reflectionplane\), we have \(\ip{x}{\reflectionvector} = 0\) and hence \(\height(\reflectionmap(x)) = 0\). This allows us to compare \(\reflectionset{(\reflectionmap(\equator))}^-\) on which \(\height\geq 0\) (equality occuring precisely on the boundary \(\equator \intersect \reflectionplane\)) with \(\reflectionset{\equator}^-\) on which \(\height = 0\). For any hypersurface close to \(\equator\) we will then obtain a similar relation. The major difficulty occurs on the moving boundary \(M_t \intersect \reflectionplane\) on which both sets have \(\height = 0\). To make this comparison precise, we define the following relation:
+In the case \(x \in \reflectionset{\equator}^+\), we have \(\ip{x}{\reflectionvector} > 0\) and hence \(\height(\reflectionmap(x)) > 0\). In the case \(x \in \equator \intersect \reflectionplane\), we have \(\ip{x}{\reflectionvector} = 0\) and hence \(\height(\reflectionmap(x)) = 0\). This allows us to compare \(\reflectionset{(\reflectionmap(\equator))}^-\) on which \(\height\geq 0\) (equality occurring precisely on the boundary \(\equator \intersect \reflectionplane\)) with \(\reflectionset{\equator}^-\) on which \(\height = 0\). For any hypersurface close to \(\equator\) we will then obtain a similar relation. The major difficulty occurs on the moving boundary \(M_t \intersect \reflectionplane\) on which both sets have \(\height = 0\). To make this comparison precise, we define the following relation:
 
 \begin{definition}
 For subsets \(S,T \subset \S^{n+1}\), we say \emph{\(S\) one-sided reflects above \(T\)}, written \(\reflectionmap(S^+) \geq T^-\) provided \(\radialdistance(x) \leq \radialdistance(y)\) for every \(x \in S^+\) and every \(y \in \radialprojection^{-1} (\reflectionmap(x)) \intersect T^-\). Equivalently we may require \(\height(x) \geq \height(y)\).
@@ -261,7 +261,7 @@ Let \(C\subset \equator\) be any great circle and consider \(f_t|_C\). The Backw
 \]
 over any \(C\) and on a neighbourhood of \(\reflectionplane\) in \(\reflectionhalfspace\) for all \(t \in (-T_S, -T_{\reflectionangle})\).
 
-Here we weaken the assumpions to only require \(C^1\) convergence with a uniform \(C^2\) bound. This seems the best we can hope for in general as is remarked in the proof. The proof is similar to the Backwards Approximate Symmetry Lemma, but now we need to obtain better estimates on the neighbourhood. The tricky part is dealing with the moving boundary \(M_t \intersect \reflectionplane\).
+Here we weaken the assumptions to only require \(C^1\) convergence with a uniform \(C^2\) bound. This seems the best we can hope for in general as is remarked in the proof. The proof is similar to the Backwards Approximate Symmetry Lemma, but now we need to obtain better estimates on the neighbourhood. The tricky part is dealing with the moving boundary \(M_t \intersect \reflectionplane\).
 
 \begin{lemma}
 \label{lem:approximate_symmetry}
@@ -270,7 +270,7 @@ For any \(\reflectionangle \in (0,\reflectionangle_0)\) there exists a \(T_{\ref
 
 \begin{proof}
 
-\emph{Boundary Estmates}
+\emph{Boundary Estimates}
 
 Let \(C\subset \equator\) be any great circle and consider \(f_t|_C\), \(g_t|_C\). We use the Taylor expansions near the two points \(\reflectionplane \intersect M_t = \{x_1(t), x_2(t)\}\) over \(C\). We work near \(x_1(t)\) (the proof being the same near \(x_2\)). For each \(t\), parametrise \(C\) with \(\theta\) such that \(\radialprojection(x_1(t))\) corresponds to \(\theta = 0\) and \(\radialprojection^{-1}\{\theta>0\} \intersect M_t\) lies in \(\reflectionhalfspace^-\). Note that since \(\reflectionmap\) preserves \(\reflectionplane\), we have \(f_t(0) = g_t(0)\) and thus the Taylor expansion with second order remainder is
 \[
@@ -291,7 +291,7 @@ Now, \(\reflectionplane \intersect H^+\) projects onto \(\reflectionset{\equator
 \end{equation}
 and all \(t \in (-T_S, T_{\reflectionangle})\).
 
-\emph{Interior Estmates}
+\emph{Interior Estimates}
 
 As noted above, \(\height(\reflectionmap(x)) > 0\) on \(\reflectionset{\equator}^+\) and \(\radialdistance = \arcsin(\height(x))\). For any \(\mu > 0\), let
 \[
@@ -307,7 +307,7 @@ Since \(M_t \to_{C^0} \equator\), we may choose \(T_{\reflectionangle} \in (0, T
 \reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^- \quad \text{ over } \reflectionset{\equator}^{+,\mu}.
 \end{equation}
 
-\emph{Combined Estmates}
+\emph{Combined Estimates}
 
 Choose \(T_{\reflectionangle}\) and \(\eta\) so that both the boundary estimate \cref{eq:boundaryestimate} holds. Now choose \(\mu\) so that \(\radialprojection(\reflectionmap(\reflectionset{\equator}^{+,\mu})) \union \{x \in \reflectionset{\equator}^- : d(x, \reflectionplane) = \reflectionset{\equator}^-\) which can be achieved since \(\reflectionmap\) is an isometry. Decreasing \(T_{\delta}\) if necessary ensures that the interior estimate \cref{eq:interiorestimate} also holds and hence,
 \[
@@ -322,11 +322,11 @@ There exists a \(T\) independent of \(\reflectionangle\) such that for any \(\re
 \end{lemma}
 
 \begin{proof}
-As remarked above, there exists a \(T\) such that both \(M_t\) and \(\reflectionmap(M_t\) are graphs over the equator on \((-T_S, T)\). Moreover, since both the equator \(\equator\) and the reflected equator \(\reflectionmap(\equator)\) meet \(\reflectionplane\) transversely, be decreasing \(T\) if necessary, we may assume \(M_t\) and \(\reflectionmap(M_t\) also meet \(\reflectionplane\) transversely. As with the monotonicity of the graph property in \(\reflectionangle\) we have monotonicity in transerval meeting and so \(T\) is independent of \(\reflectionangle\)..
+As remarked above, there exists a \(T\) such that both \(M_t\) and \(\reflectionmap(M_t\) are graphs over the equator on \((-T_S, T)\). Moreover, since both the equator \(\equator\) and the reflected equator \(\reflectionmap(\equator)\) meet \(\reflectionplane\) transversely, be decreasing \(T\) if necessary, we may assume \(M_t\) and \(\reflectionmap(M_t\) also meet \(\reflectionplane\) transversely. As with the monotonicity of the graph property in \(\reflectionangle\) we have monotonicity in transversal meeting and so \(T\) is independent of \(\reflectionangle\)..
 
-Recall the assumption that \(M_t\) satsifies a uniformly parabolic equation wherever it is strictly convex. Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t)\) also is strictly convex and satisfies the same equation. Therefore \(f_t,g_t\) satisfy a uniformly parabolic equation on \((-T_S + \epsilon_{\reflectionangle}, -T)\) where \(0 < epsilon_{\reflectionangle} < \min\{T_S-T, T_S-T_{\reflectionangle}\}\) is chosen so that we have a strict, positive lower bound on \(|A|\) from strict convexity and compactness and so that on \((-T_S + \epsilon_{\reflectionangle}, -T_{\reflectionangle})\) we have the condition \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\). That is, \(g_t \geq f_t\). We also have the boundary condition \(f_t = g_t\) on \(\reflectionplane\).
+Recall the assumption that \(M_t\) satisfies a uniformly parabolic equation wherever it is strictly convex. Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t)\) also is strictly convex and satisfies the same equation. Therefore \(f_t,g_t\) satisfy a uniformly parabolic equation on \((-T_S + \epsilon_{\reflectionangle}, -T)\) where \(0 < epsilon_{\reflectionangle} < \min\{T_S-T, T_S-T_{\reflectionangle}\}\) is chosen so that we have a strict, positive lower bound on \(|A|\) from strict convexity and compactness and so that on \((-T_S + \epsilon_{\reflectionangle}, -T_{\reflectionangle})\) we have the condition \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\). That is, \(g_t \geq f_t\). We also have the boundary condition \(f_t = g_t\) on \(\reflectionplane\).
 
-Now we may apply the maximum principle on the parabolic domain \(\union_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) to conclude that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on all of \((-T_S, -T)\). Note that we use the maximum principle almost verbatim as stated in \cite[3.7, Theorem 12]{MR762825} except that this theorem is stated only for cylindrical domains \(\Omega \times (-T_S + \epsilon, -T)\) whereas our domain has a changing boundary. Nevertheless, a closer look at the proof reveals that it only relies on the maximum princple for the linearised equation \cite[3.3, Theorem 7, remark (ii)]{MR762825} which does hold on time dependent domains. Alternatively, one can rule out \(f_t\) touching \(g_t\) near the boundary by the parabolic Hopf boundary point lemma \cite[3.3, Theorem 6]{MR762825} (which holds for our domains since they satisfy the interior sphere condition and is only needed for the linearisation) and then rule out interior touching by the usual contradiction argument such as in \cite[3.2 Lemma]{MR837523}.
+Now we may apply the maximum principle on the parabolic domain \(\union_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) to conclude that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on all of \((-T_S, -T)\). Note that we use the maximum principle almost verbatim as stated in \cite[3.7, Theorem 12]{MR762825} except that this theorem is stated only for cylindrical domains \(\Omega \times (-T_S + \epsilon, -T)\) whereas our domain has a changing boundary. Nevertheless, a closer look at the proof reveals that it only relies on the maximum principle for the linearised equation \cite[3.3, Theorem 7, remark (ii)]{MR762825} which does hold on time dependent domains. Alternatively, one can rule out \(f_t\) touching \(g_t\) near the boundary by the parabolic Hopf boundary point lemma \cite[3.3, Theorem 6]{MR762825} (which holds for our domains since they satisfy the interior sphere condition and is only needed for the linearisation) and then rule out interior touching by the usual contradiction argument such as in \cite[3.2 Lemma]{MR837523}.
 \end{proof}
 
 \begin{theorem}
