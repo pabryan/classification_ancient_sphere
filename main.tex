@@ -16,7 +16,7 @@
 \keywords{}
 
 \begin{abstract}
-We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$ by homogeneous functions of principal curvatures. We introduce the notion of `quasi-ancient' solutions, which plays a similar role as ancient solutions for flows that do not admit non-trivial ancient solutions. The techniques presented here allow us to prove that any convex, quasi-ancient solution of a curvature flow which satisfies a uniform bound on the second fundamental form backwards in time must be a family of shrinking geodesic spheres. The main tools are rigidity result in the sphere and an Aleksandrov reflection argument.
+We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$ by smooth functions of the Weingarten map. We introduce the notion of `quasi-ancient' solutions, which plays a similar role as ancient solutions for flows that do not admit non-trivial ancient solutions. The techniques presented here allow us to prove that any convex, quasi-ancient solution of a curvature flow which satisfies a uniform bound on the second fundamental form backwards in time must be a family of shrinking geodesic spheres. The main tools are geometric and the maximum principle, using a rigidity result in the sphere and an Aleksandrov reflection argument.
 \end{abstract}
 
 \maketitle
@@ -37,7 +37,7 @@ This latter condition ensures the flow is strictly parabolic. In particular, it 
 \frac{\partial F}{\partial \kappa_i} > 0.
 \]
 
-We consider /quasi-ancient/, strictly convex solutions of \eqref{eq:CurvFlow}. Here quasi-ancient refers to solutions existing on the same time interval as the maximal flow of geodesic spheres. For many common flows, such as the Mean Curvature Flow (\(F(\mathca{W}) = \text{Trace}(\mathcal{W}) = H\), the maximal flow of geodesic spheres is the infinite time interval \((-\infty, 0)\). However for flows \(F = H^p\) with \(p \in (0,1)\), the maximal time interval is in fact finite. See \cref{sec:quasi_ancient}.
+We consider /quasi-ancient/, strictly convex solutions of \eqref{eq:CurvFlow}. Here quasi-ancient refers to solutions existing on the same time interval as the maximal flow of geodesic spheres. For many common flows, such as the Mean Curvature Flow (\(F(\mathcal{W}) = \text{Trace}(\mathcal{W}) = H\), the maximal flow of geodesic spheres is the infinite time interval \((-\infty, 0)\). However for flows \(F = H^p\) with \(p \in (0,1)\), the maximal time interval is in fact finite. See \cref{sec:quasi_ancient}.
 
 We prove the following theorem,
 \begin{theorem}
@@ -46,7 +46,7 @@ Let \(M_t\) be a /quasi-ancient/, strictly convex solution of \eqref{eq:CurvFlow
 
 In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is actually quite easy to prove and we offer a short proof in this case in \cref{sec:convex_concave_homogeneous}. This should be compared, for instance with the result in \cite[Theorem]{huiskensinestrari} where a short proof in the case of the Mean Curvature Flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the referred to paper, it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the Mean Curvature Flow. Here, we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrewsetal}.
 
-The main thrust of the theorem, is that we have very strong rigidity in the sphere, and are able to prove the result in great generality - /all we require is parabolicity of the flow/. At this level of generality, it is quite difficult to obtain suitable estimates, in particular Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{matowskischeuer} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{bryanlouie,bryanivaki} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other method of classification, using more PDE theoretic techniques, such as semi-group methods and centre manifold analysis to deduce linear stability near the equator. These methods are quite broadly applicable, but suffer the draw back that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of /singular or degenerate speeds on the equator/. Very simple examples of such speeds are \(H^p\) which is singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques.
+The main thrust of the theorem, is that we have very strong rigidity in the sphere, and are able to prove the result in great generality - /all we require is parabolicity of the flow/. At this level of generality, it is quite difficult to obtain suitable estimates, in particular Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{matowskischeuer} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{bryanlouie,bryanivaki} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other methods of classification, using more PDE theoretic techniques, such as semi-group methods to show that symmetry is preserved along the flow. There are broadly applicable methods, but they tend to suffer the draw back that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of /singular or degenerate speeds on the equator/. Very simple examples of such speeds are \(H^p\) which is singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques and supplanting them in cases where such methods are unknown.
 
 It's also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity and other ancient, convex solutions may occur. Indeed, for the Curve Shortening Flow in the plane, \cite{hamdaskses} have classified all such solutions as either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{ang}. In higher dimensions, \cite{huiskensinestrari} and \cite{kleinerhaslhoffer} have found a set of equivalent conditions characterising when an ancient, convex mean curvature flow is by shrinking spheres, and one would generally expect a greater variety of convex ancient solutions to exist.
 
@@ -93,7 +93,7 @@ A one-parameter family of graphs satisfying the flow \eqref{eq:CurvFlow}, thus i
 \fr{\del}{\del t}u=F\br{\fr{\vt'}{v\vt}\d^{i}_{j}+\fr{\vt'}{v^{3}\vt^{3}}\nabla^{i}u\nabla_{j}u+\fr{\~g^{ik}}{v\vt^{2}}\nabla^{2}_{kj}u}=\Phi(x,u,\nabla u,\nabla^{2}u).
 \end{equation}
 
-The paraboicity assumption is that \(dF > 0\) and writing,
+The paraboicity assumption is that \(dF > 0\), and writing,
 \[
 \Phi = \Phi(x, r, p, z)
 \]
@@ -101,24 +101,27 @@ we find that linearising around \(u_0\) symbol is,
 \[
 \sigma(u_0) \cdot X = d\Phi_z \cdot X = dF \cdot \fr{1}{v(u_0) \vt^{2}(u_0)} \~g^{-1}(u_0) \cdot X
 \]
-for \(X \in TC^{\infty}(E, \mathbb{R}) \simeq C^{\infty}(E, \mathbb{R})\). This is uniformly elliptic wherever \(\~g^{-1}(u_0)\) is, and wherever, \(v(u_0), \vt(u_0)\) are bounded below. In particular, this is true if the hypersurface represented by the graph \(u_t\) is strictly convex with second fundamental form, \(h(u_t)\) bounded below.
+for \(X \in TC^{\infty}(E, \mathbb{R}) \simeq C^{\infty}(E, \mathbb{R})\). This is uniformly elliptic wherever \(\~g^{-1}(u_0)\) is, and wherever, \(v(u_0), \vt(u_0)\) are bounded below. In particular, this is true if the hypersurface represented by the graph \(u_t\) is strictly convex with second fundamental form, uniformly \(h(u_t)\) bounded below.
 
 \section{Ancient and quasi-ancient Solutions}
 \label{sec:quasi_ancient}
 
-We consider the spherical ambient space, $K=1,$ without further mention, and we are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the} convex spherical solution of \eqref{eq:CurvFlow}. By the convex spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). For 1-homogeneous $\p$, \(T_S = \infty\), but for $\alpha$-homogeneous $\p$ with $\alpha<1$, \(T_S\) is finite.
+We consider the spherical ambient space, $K=1,$ without further mention, and we are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the} convex spherical solution of \eqref{eq:CurvFlow}. By the convex spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). For some speeds, \(T_S\) is finite.
+
 \begin{lemma}
- Consider \eqref{eq:CurvFlow} with speed \(\p = f^{\alpha}\) for \(\alpha \in (0,1)\). Then a flow of strictly convex geodesic spheres has a finite lifespan, i.e., let $S_r(p)$ be a geodesic sphere in $\S^{n+1}$ around $p\in \S^{n+1}$. Then the flow exists only for a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapsing to a point at \(t=0\) and converging to an equator at \(t=T_S\).
+ Consider \eqref{eq:CurvFlow} with speed \(F = f^p\) with \(f\), convex, 1-homogeneous, and \(p \in (0,1)\). Then a flow of strictly convex geodesic spheres has a finite lifespan, i.e., let $S_r(p)$ be a geodesic sphere in $\S^{n+1}$. Then the flow exists only for a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapsing to a point at \(t=0\) and converging to an equator at \(t=T_S\).
 \end{lemma}
+
 \begin{proof}
 We may assume that $f(1,\cdots,1)=n.$
-Since $f$ is constant on a geodesic sphere, the evolution equation (\ref{lem: basi ev}) for a flow of geodesic spheres yields
-\eq{\fr{d}{dt}f\geq nf^{\a}.}
+Since $F$ is constant on a geodesic sphere, the evolution equation (\ref{lem: basi ev}) for a flow of geodesic spheres yields
+\eq{\fr{d}{dt}f\geq nf^{p}.}
 Since the right hand side remains strictly positive under this ODE, we obtain finite lifespan forward in time.
 Convexity and integration over some interval $(a,b)$ yield
-\eq{0\leq f^{1-\a}(a)\leq f^{1-\a}(b)-n(1-\a)(b-a).}
+\eq{0\leq f^{1-p}(a)\leq f^{1-p}(b)-n(1-p)(b-a).}
 Allowing $a\ra-\8$ gives the finite existence backwards in time.
 \end{proof}
+
 \begin{lemma}
 Let $x$ be a convex solution of \eqref{eq:CurvFlow}, defined on the open interval $(-T,0),$ where $0$ is the collapsing time, then $T\leq T_S.$
 \end{lemma}
@@ -126,71 +129,122 @@ Let $x$ be a convex solution of \eqref{eq:CurvFlow}, defined on the open interva
 \begin{proof}
 Suppose $T>T_S+\e$ for some $\e>0$. Since $M=M_{-T_S-\fr{\e}{2}}$ bounds a convex body $\hat{M}$, it is strictly contained in an open hemisphere due to the classical paper \cite{CarmoWarner:/1970}. Then there exists a geodesic sphere $S$ with $\hat{M}\sub\hat{S}.$ By the avoidance principle, the flow with initial hypersurface $M$ collapses before the spherical flow and thus contradicting $T>T_S$.
 \end{proof}
+
 Due to this lemma, the following definition is reasonable.
+
 \begin{definition}
 A convex solution of \eqref{eq:CurvFlow} defined on maximal interval $(-T,0)$ is called \it{quasi-ancient}, if $T=T_S$.
 \end{definition}
+
 The term ancient is reserved for the situation when \(T_S=\infty\), and by the definition, ancient solutions are also quasi-ancient.
+
+For 1-homogeneous, convex speeds, Proposition \ref{cor:boundedH} to follow gives a bound on mean curvature for ancient solutions. For quasi-ancient solutions, the Harnack inequality does not, in general, give such a bound, since we cannot send \(t \to -\infty\) whenever \(T_S\) is finite. One can envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these solutions exist on the maximal time interval \((-T_S, 0)\), i.e. are quasi-ancient solutions. For the purposes of classification of quasi-ancient solutions, we make the additional assumption that \(H\) is bounded, and defer the question of whether solutions with unbounded \(H\) can exist to a later date.
+
+\begin{proposition}
+\label{cor:boundedH}
+
+Suppose $F$ is a \(1\)-homogeneous, convex function. Then any convex ancient solution of the contracting flow with speed $F$ satisfies
+\[\partial_t F-b^{ij}\nabla_i F \nabla_j F \geq 0.\]
+In particular, for all $t\le -1$ we have
+$H(\cdot,t)\leq c.$
+Here $c<\infty$ depends only on $M_{-1}.$
+\end{proposition}
+
+\begin{proof}
+For any $t>s$, the  Harnack estimate of \cite[Theorem 1]{bryan2015harnack} implies that
+$$\partial_t F-b^{ij}\nabla_i F\nabla_j F+\frac{n}{2}\frac{F}{t-s}>0.$$
+Allowing $s\to-\infty$ proves the first claim. For the second claim, observe that for any 1-homogeneous, convex $F$ we have \[F\ge \frac{F(1,\cdots,1)}{n}H,\]
+see \cite[Chapter 2]{Gerhardt:/2006}. Therefore, ancient solutions satisfy
+\[H(\cdot,t)\leq \frac{n}{F(1,\cdots,1)}F(\cdot,t)\leq \frac{n}{F(1,\cdots,1)}F(\cdot,0). \]
+\end{proof}
+
+Let us round out this section by looking at some examples of flows for which our techniques do not apply, and the ``undesirable'' behaviour ruled out by our assumptions occurs. First, we have a flow is parabolic, but not geometric, and for which \(H\) becomes unbounded. As mentioned earlier, we do not yet know whether such singular behaviour can occur for isotropic, geometric flows.
+
+\begin{example}
+We consider a family of convex curves $\gamma_t$ on $\mathbb{S}^2$ that their spherical radial functions evolve by
+\[\rho:\mathbb{S}^1\times[0,T)\to \mathbb{R}\]
+
+\begin{equation}\label{eq: angenent oval}
+\partial_t\rho(\cdot,t)=-\kappa \frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}(\cdot,t).
+\end{equation}
+
+Here, $\kappa(\cdot,t)$ is the curvature of the curve $\gamma_t$ with the radial function $\rho(\cdot,t).$ 
+In the polar coordinates, we can express the curvature as follows:
+\[\kappa=\frac{-\rho_{\theta\theta}\sin\rho+2\rho_\theta^2\cos\rho+\cos\rho\sin^2\rho}{(\sin^2\rho+\rho_{\theta}^2)^{\frac{3}{2}}}.\]
+
+We will show that the gnomonic projection of $\gamma_t$, denoted by $\bar{\gamma}_t$, evolves by the curve shortening flow in $\mathbb{R}^2.$ Write $\bar{\rho}(\cdot,t)$ for the radial function of $\bar{\gamma}_t$. We recall from \cite[page 8]{besau2014spherical} that
+$\bar{\rho}=\tan\rho.$ Using this formula and the expression of $\kappa$ we can write the curvature of $\bar{\gamma}_t$,  $\bar{\kappa}(\cdot,t),$ as follows:
+\[\kappa=\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\bar{\kappa}=\left(\frac{\bar{\rho}^2+1}{\bar{h}^2+1}\right)^{\frac{3}{2}}\bar{\kappa}.\]
+Here $\bar{h}=\frac{\bar{\rho}}{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}$ is the support function of $\bar{\gamma}.$
+Therefore, 
+\begin{align*}
+\partial_t\bar{\rho}&=-\bar{\kappa}(1+\bar{\rho}^2)\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
+&=-\bar{\kappa}(1+\bar{\rho}^2)^{\frac{3}{2}}\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\bar{\rho}}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
+&=-\bar{\kappa}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
+\end{align*}
+
+The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune (the intersection of two hemispheres) with a pair of antipodal points at which \(\kappa\) is unbounded. 
+\end{example}
+
+The second example, exhibits a flow for which the symmetry of the backwards limit is not preserved. That is, the backwards limit is an equator, yet the flow is not by geodesic spheres. Again, this flow is not geometric, and it's unclear whether such a solution can occur for geometric flows. Necessarily, our results for geometric flows imply such a solution, though converging to an equator in \(C^0\), would have unbounded \(H\) and hence not converge in \(C^2\).
+
+\begin{example}
+We consider a family of convex curves $\gamma_t$ on $\mathbb{S}^2$ that their spherical radial functions evolve by
+\[\rho:\mathbb{S}^1\times[0,T)\to \mathbb{R}\]
+\begin{equation}\label{eq: ellipse}
+\partial_t\tan\rho(\cdot,t)=-\kappa^{\frac{1}{3}} \frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}(\cdot,t).
+\end{equation}
+
+The gnomonic projection of $\gamma_t$ evolves by the affine normal flow in $\mathbb{R}^2:$ 
+\begin{align*}
+\partial_t\bar{\rho}&=-\bar{\kappa}^{\frac{1}{3}}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
+\end{align*}
+Origin-centered ellipses are ancient solutions \cite{ivaki} to the affine normal flow in $\mathbb{R}^2$. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: ellipse}). This ancient solution converges backwards in time to an equator. 
+\end{example}
 
 \section{Convex, Concave and Homogeneous Speeds}
 \label{sec:convex_concave_homogeneous}
 
 \begin{proposition}
-Let $f$ be concave and 
-$\fr{H}{f}\leq c,$
-or let $f$ be convex. Then any strictly convex ancient solution of the flow \eqref{eq:CurvFlow} with speed $\p(f)=f$ is a family of contracting geodesic spheres.
+Let $F$ be concave and 
+$\fr{H}{F}\leq c,$
+or let $F$ be convex and \(1\)-homogeneous. Then any strictly convex ancient solution of the flow \eqref{eq:CurvFlow} with speed $F$ is a family of contracting geodesic spheres.
 \end{proposition}
 \pf{
-We first consider the case that $f$ is a concave function. The tensor
-$w^j_i=\fr{h^j_i}{f}$
+We first consider the case that $F$ is a concave function. The tensor
+$w^j_i=\fr{h^j_i}{F}$
 satisfies the evolution equation
-\eq{\del_tw^j_i&=\Box w^j_i-2Kf^{kl}g_{kl}w^j_i+2K\d^j_i\\
- &\hp{=}+f^{kl,rs}\nabla_ih_{kl}\nabla^jh_{rs}+2f^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{f}}.}
-Hence, due to the concavity of $f$ we have for fixed index $i:$
-$$\del_t\br{w^i_i-\fr{1}{n}}\leq\Box\br{w^i_i-\fr{1}{n}}-2nK\br{w^i_i-\fr{1}{n}}+2f^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{f}}.$$
+\eq{\del_tw^j_i&=\Box w^j_i-2KF^{kl}g_{kl}w^j_i+2K\d^j_i\\
+ &\hp{=}+F^{kl,rs}\nabla_ih_{kl}\nabla^jh_{rs}+2F^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{F}}.}
+Hence, due to the concavity of $F$ we have for fixed index $i:$
+$$\del_t\br{w^i_i-\fr{1}{n}}\leq\Box\br{w^i_i-\fr{1}{n}}-2nK\br{w^i_i-\fr{1}{n}}+2F^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{F}}.$$
 At a spatial maximum of $w^i_i-\tfrac{1}{n}$ we have
-$$0=\nabla_k \br{\fr{h^i_i}{f}}=\fr{\nabla_k h^i_i}{f}+h^i_i\nabla_k\br{\fr{1}{f}}.$$
+$$0=\nabla_k \br{\fr{h^i_i}{F}}=\fr{\nabla_k h^i_i}{F}+h^i_i\nabla_k\br{\fr{1}{F}}.$$
 and hence by the maximum principle we obtain the bound
 $$w^i_i-\fr 1n\leq c_0e^{-2nKt},$$
 where $c_0$ is the upper bound for the function on the left-hand side at $t=0.$
 Starting the flow at an arbitrary $s<0$ we find
-$$\fr{\k_n}{f}\leq \fr 1n+c_se^{-2nK(t-s)}.$$
+$$\fr{\k_n}{F}\leq \fr 1n+c_se^{-2nK(t-s)}.$$
 If $K=1,$ letting $s\ra-\8,$ we obtain at every time $t<0$ that 
-$$\k_n\leq \fr{f}{n}.$$
-This is only possible for totally umbilical hypersurfaces.   
+$$\k_n\leq \fr{F}{n}.$$
+This is only possible for totally umbilical hypersurfaces, and the result follows since the only closed, totally umbilical hypersurfaces of the sphere are geodesic spheres.
 
-Now suppose that $f$ is a convex function and $f(1,\cdots,1)=n$. The non-collapsing result of \cite[Theorem 1.1]{andrews2015Non-collapsing} states any ancient solution of the flow with a 1-homogeneous convex speed $f$ satisfies
-\[\frac{\kappa_{\min}}{f}(x,t)\geq \frac{1}{n}+C(s)e^{-2n(t-s)},\]
-where $|C(s)|\leq \frac{1}{n}+\frac{\kappa_{\min}}{f}(x,s)\leq \frac{1}{n}+\frac{\kappa_{min}}{\frac{f(1,\cdots,1)}{n}H}(x,s)\leq \frac{1}{n}+\frac{1}{f(1,\cdots,1)}.$
+Now suppose that $F$ is a convex function, 1-homogeneous function normalised so that $F(1,\cdots,1)=n$. The non-collapsing result of \cite[Theorem 1.1]{andrews2015Non-collapsing} states any ancient solution of the flow with a 1-homogeneous convex speed $F$ satisfies
+\[\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+C(s)e^{-2n(t-s)},\]
+where $|C(s)|\leq \frac{1}{n}+\frac{\kappa_{\min}}{F}(x,s)\leq \frac{1}{n}+\frac{\kappa_{min}}{\frac{F(1,\cdots,1)}{n}H}(x,s)\leq \frac{1}{n}+\frac{1}{F(1,\cdots,1)}.$
 Therefore, allowing $s\to-\infty$ yields
-\[\frac{\kappa_{\min}}{f}(x,t)\geq \frac{1}{n}.\]
+\[\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}.\]
 This in turn implies that
-\[\kappa_{\min}(x,t)\geq \frac{f}{n}(x,t)\geq \frac{f(1,\cdots,1)}{n}\frac{H}{n}(x,t)\geq \frac{f(1,\cdots,1)}{n} \kappa_{\min}(x,t).\]
-On the other hand, since $f(1,\cdots,1)= n,$ we get
-\[\kappa_{\min}(x,t)\geq \frac{f}{n}(x,t)\geq \frac{H}{n}(x,t)\geq \kappa_{\min}(x,t).\]
-That is, $H\equiv n\kappa_{\min}.$
+\[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n}\frac{H}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n} \kappa_{\min}(x,t).\]
+On the other hand, since $F(1,\cdots,1)= n,$ we get
+\[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{H}{n}(x,t)\geq \kappa_{\min}(x,t).\]
+That is, $H\equiv n\kappa_{\min}$ and once again, the flow is by totally umbilical hypersurfaces, hence by geodesic spheres.
 }
 
 \section{Rigidity and Backwards Limit}
 
-The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} the backwards limit of the flow hypersurfaces \it{with bounded mean curvature}, $M_t$ is an equator for $t\ra -T_S$. We will use the method of \cite{MakowskiScheuer:/2013} to achieve this.
-For 1-homogeneous, convex speeds, Proposition \ref{cor:boundedH} gives a bound on mean curvature for ancient solutions. For quasi-ancient solutions, the Harnack inequality does not, in general, give such a bound, since we cannot send \(t \to -\infty\) whenever \(T_S\) is finite. One can envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these can arise as backwards limits of quasi-ancient solutions. Thus, at this stage, we must make the additional assumption that \(H\) is bounded for quasi-ancient solutions.
+Now we turn to more general speeds, \(F\). The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} the backwards limit of the flow hypersurfaces \it{with bounded mean curvature}, $M_t$ is an equator for $t\ra -T_S$. We will use the method of \cite{MakowskiScheuer:/2013} to achieve this.
 
-\begin{proposition}
-\label{cor:boundedH}
-Suppose $f$ is a convex curvature function. Then any convex ancient solution of the contracting flow with speed $\p(f)=f$ satisfies
-\[\partial_t \p-b^{ij}\nabla_i\p\nabla_j\p\geq 0.\]
-In particular, for all $t\le -1$ we have
-$H(\cdot,t)\leq c.$
-Here $c<\infty$ depends only on $M_{-1}.$
-\end{proposition}
-\begin{proof}
-For any $t>s$, the  Harnack estimate of \cite[Theorem 1]{bryan2015harnack} implies that
-$$\partial_t \p-b^{ij}\nabla_i\p\nabla_j\p+\frac{n}{2}\frac{\p}{t-s}>0.$$
-Allowing $s\to-\infty$ proves the first claim. For the second claim, observe that for any 1-homogeneous convex $f$ we have \[f\ge \frac{f(1,\cdots,1)}{n}H,\]
-see \cite[Chapter 2]{Gerhardt:/2006}. Therefore, ancient solutions satisfy
-\[H(\cdot,t)\leq \frac{n}{f(1,\cdots,1)}\p(\cdot,t)\leq \frac{n}{f(1,\cdots,1)}\p(\cdot,0). \]
-\end{proof}
 \begin{lemma}\label{ISC}
 Let $x$ be a quasi-ancient solution of \eqref{eq:CurvFlow}. Then there holds:
 \begin{enumerate}
@@ -245,7 +299,7 @@ We can apply \cite[Thmeorem 1.1]{MakowskiScheuer:/2013} and obtain that $\hat{M}
 
 \section{Aleksandrov Reflection and Classification}
 
-In this section, we use Theorem \ref{thm:backwardslimit} to classify convex, embedded, (quasi-)ancient solutions of contracting curvature flows on \(\S^{n+1}\) as either equators or shrinking geodesic spheres. The proof uses Aleksandrov reflection as in \cite{bryanlouie,2015arXiv150802821B}. Here we give a very general version with minimal assumptions on the flow: all we require is that the flow limits to an equator at $-T_S$ and that the maximum principle holds forward in time.
+In this section, use the result of Theorem \ref{thm:backwardslimit} to classify convex, embedded, (quasi-)ancient solutions of contracting curvature flows on \(\S^{n+1}\) as either equators or shrinking geodesic spheres. The proof uses Aleksandrov reflection as in \cite{bryanlouie,2015arXiv150802821B} to show that the symmetry of the backwards limit is preserved along the flow. Here we give a very general version with minimal assumptions on the flow: all we require is that the flow limits to an equator at $-T_S$ in \(C^0\), with uniform \(C^2\) bounds, and that the maximum principle holds forward in time.
 
 We begin with some preliminaries of the Aleksandrov reflection on \(\S^{n+1}\). First, we will work relative to the limiting equator obtained in Theorem \ref{thm:backwardslimit}, denoted by $\equator = M_{-T_S}$. The equator \(\equator\) determines two \emph{open} hemispheres \(H^{\pm}\) with centers \(\pm \basepoint\) and we assume the flow is contained in the upper hemisphere, $M_t \subset H^+$. It's convenient to make use of the ambient Euclidean space, \(\R^{n+2}\) with \(\S^{n+1} \subset \R^{n+2}\) via the standard embedding. Let \(\vertvec = \overrightarrow{\origin\basepoint}\) be the unit vector in \(\R^{n+2}\) that points from the origin \(\origin\) to \(\basepoint\); the ``vertical direction''. 
 
@@ -359,10 +413,12 @@ Recall the assumption that \(M_t\) satisfies a uniformly parabolic equation wher
 
 The comparison principle as in \cite[Theorem 3.1.1]{giga}, applied on the domain \(\union\limits_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) yields that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on \((-T_S, -T)\). 
 \end{proof}
+
 \begin{theorem}
 \label{thm:classification}
 Let \(M_t\) be a convex, embedded (quasi-)ancient solution of any (uniform whenever on uniformly convex hypersurfaces) parabolic equation on \(\S^{n+1}\) such that \(M_t \to \equator\) in \(C^1\) as \(t \to -T_S\) with uniform \(C^2\) bounds. Then \(M_t\) is a family of shrinking geodesic spheres emanating from the equator \(\equator\) at \(t=-T_S\).
 \end{theorem}
+
 \begin{proof}
 From \cref{lem:approximate_symmetrypreserved} we have \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\) everywhere for all \(t \in (-T_S, -T)\) and any \(\reflectionangle \in (0,\reflectionangle_0)\). By continuity therefore, sending \(\reflectionangle \to 0\) we have \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\) for all \(t \in (-T_S, -T)\)  and any \(\reflectionvector\) satisfying \(\ip{\reflectionvector}{\vertvec} = 0\).
 
@@ -387,39 +443,7 @@ for any $\reflectionvector$.
 
 Thus \(M_t\) is invariant under \(\reflectionmap\) for any \(\reflectionvector\) satisfying \(\ip{\reflectionvector}{\vertvec} = 0\) and hence is a geodesic sphere for every \(t \in (-T_S, T)\) and by uniqueness of solutions, is a geodesic sphere for every \(t \in (-T_S, 0)\).
 \end{proof}
-\begin{example}
-We consider a family of convex curves $\gamma_t$ on $\mathbb{S}^2$ that their spherical radial functions evolve by
-\[\rho:\mathbb{S}^1\times[0,T)\to \mathbb{R}\]
-\begin{equation}\label{eq: angenent oval}
-\partial_t\rho(\cdot,t)=-\kappa \frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}(\cdot,t).
-\end{equation}
-Here, $\kappa(\cdot,t)$ is the curvature of the curve $\gamma_t$ with the radial function $\rho(\cdot,t).$ 
-In the polar coordinates, we can express the curvature as follows:
-\[\kappa=\frac{-\rho_{\theta\theta}\sin\rho+2\rho_\theta^2\cos\rho+\cos\rho\sin^2\rho}{(\sin^2\rho+\rho_{\theta}^2)^{\frac{3}{2}}}.\]
-We will show that the gnomonic projection of $\gamma_t$, denoted by $\bar{\gamma}_t$, evolves by the curve shortening flow in $\mathbb{R}^2.$ Write $\bar{\rho}(\cdot,t)$ for the radial function of $\bar{\gamma}_t$. We recall from \cite[page 8]{besau2014spherical} that
-$\bar{\rho}=\tan\rho.$ Using this formula and the expression of $\kappa$ we can write the curvature of $\bar{\gamma}_t$,  $\bar{\kappa}(\cdot,t),$ as follows:
-\[\kappa=\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\bar{\kappa}=\left(\frac{\bar{\rho}^2+1}{\bar{h}^2+1}\right)^{\frac{3}{2}}\bar{\kappa}.\]
-Here $\bar{h}=\frac{\bar{\rho}}{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}$ is the support function of $\bar{\gamma}.$
-Therefore, 
-\begin{align*}
-\partial_t\bar{\rho}&=-\bar{\kappa}(1+\bar{\rho}^2)\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
-&=-\bar{\kappa}(1+\bar{\rho}^2)^{\frac{3}{2}}\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\bar{\rho}}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
-&=-\bar{\kappa}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
-\end{align*}
-The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune. 
-\end{example}
-\begin{example}
-We consider a family of convex curves $\gamma_t$ on $\mathbb{S}^2$ that their spherical radial functions evolve by
-\[\rho:\mathbb{S}^1\times[0,T)\to \mathbb{R}\]
-\begin{equation}\label{eq: ellipse}
-\partial_t\tan\rho(\cdot,t)=-\kappa^{\frac{1}{3}} \frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}(\cdot,t).
-\end{equation}
-The gnomonic projection of $\gamma_t$ evolves by the affine normal flow in $\mathbb{R}^2:$ 
-\begin{align*}
-\partial_t\bar{\rho}&=-\bar{\kappa}^{\frac{1}{3}}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
-\end{align*}
-Origin-centered ellipses are ancient solutions to the affine normal flow in $\mathbb{R}^2$. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: ellipse}). This ancient solution converges backwards in time to an equator. 
-\end{example}
+
 \bibliographystyle{amsplain}
 \bibliography{Bibliography.bib}
 
