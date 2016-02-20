@@ -20,14 +20,40 @@ We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$
 \end{abstract}
 
 \maketitle
+
 \section{Introduction}
+\label{sec:intro}
+
 We consider the evolution of a hypersurface $M^n$ by
 \eq{\label{eq:CurvFlow}
-\partial_tx=-\varphi(f)\nu,~ x:M^n\times[0,T)\to M_K,
+\partial_tx=-F(\mathcal{W})\nu,~ x:M^n\times[0,T)\to M_K,
 }
-where \(M_K\) is the simply connected space form of constant sectional curvature \(K\), and $f\in C^{\8}(\G_+)$ is a strictly monotone, 1-homogeneous, symmetric function on the eigenvalues of Weingarten map \(\mathcal{W}\) (principal curvatures) \(\kappa_1, \cdots, \kappa_n\).
+where \(M_K\) is the simply connected space form of constant sectional curvature \(K>0\) (just say the sphere?), \(\mathcal{W}\) is the Weingarten map and \(F : \Gamma(T^\ast M \otimes TM) \to C^{\infty}(M)\) is a smooth map such that for any \(A, B \in \Gamma(T^\ast M \otimes TM)\), we have pointwise relation,
+\[
+A < B \Rightarrow F(A) < F(B).
+\].
+This latter condition ensures the flow is strictly parabolic. In particular, it also ensures that if \(M_t = x_t(M)\) is strictly convex, then \(F(\mathcal{W} > 0\). Since \(\mathcal{W}\) is symmetric, it is diagonalisable and so \(F\) induces a symmetric function on the eigenvalues. Conversely, any such function induces an \(F\). Expressed in terms of \(\kappa_1,\cdots,\kappa_n)\), the eigenvalues of \(\mathcal{W}\) (principal curvatures), the parabolicity condition translates to 
+\[
+\frac{\partial F}{\partial \kappa_i} > 0.
+\]
+
+We consider /quasi-ancient/, strictly convex solutions of \eqref{eq:CurvFlow}. Here quasi-ancient refers to solutions existing on the same time interval as the maximal flow of geodesic spheres. For many common flows, such as the Mean Curvature Flow (\(F(\mathca{W}) = \text{Trace}(\mathcal{W}) = H\), the maximal flow of geodesic spheres is the infinite time interval \((-\infty, 0)\). However for flows \(F = H^p\) with \(p \in (0,1)\), the maximal time interval is in fact finite. See \cref{sec:quasi_ancient}.
+
+We prove the following theorem,
+\begin{theorem}
+Let \(M_t\) be a /quasi-ancient/, strictly convex solution of \eqref{eq:CurvFlow} with bounded mean curvature. Them \(M_t\) is a flow of shrinking geodesic spheres.
+\end{theorem}
+
+In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is actually quite easy to prove and we offer a short proof in this case in \cref{sec:convex_concave_homogeneous}. This should be compared, for instance with the result in \cite[Theorem]{huiskensinestrari} where a short proof in the case of the Mean Curvature Flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the referred to paper, it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the Mean Curvature Flow. Here, we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrewsetal}.
+
+The main thrust of the theorem, is that we have very strong rigidity in the sphere, and are able to prove the result in great generality - /all we require is parabolicity of the flow/. At this level of generality, it is quite difficult to obtain suitable estimates, in particular Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{matowskischeuer} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{bryanlouie,bryanivaki} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other method of classification, using more PDE theoretic techniques, such as semi-group methods and centre manifold analysis to deduce linear stability near the equator. These methods are quite broadly applicable, but suffer the draw back that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of /singular or degenerate speeds on the equator/. Very simple examples of such speeds are \(H^p\) which is singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques.
+
+It's also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity and other ancient, convex solutions may occur. Indeed, for the Curve Shortening Flow in the plane, \cite{hamdaskses} have classified all such solutions as either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{ang}. In higher dimensions, \cite{huiskensinestrari} and \cite{kleinerhaslhoffer} have found a set of equivalent conditions characterising when an ancient, convex mean curvature flow is by shrinking spheres, and one would generally expect a greater variety of convex ancient solutions to exist.
+
+This paper is laid out as follows: preliminaries, quasi-ancient, convex/convex speeds, rigidity, reflection.
 
 \section{Preliminaries}
+\label{sec:prelim}
 
 We will need some notation for derivatives of the speed \(\varphi\). Let us write
 \[
@@ -55,7 +81,30 @@ The following evolution equations hold:
 \eq{\label{eq:delt_speed} \partial_t \varphi = \Box \varphi + \varphi\varphi^{ij}(h^2)_{ij} + K \varphi\varphi^{ij}g_{ij}.}
 \end{lemma}
 
+We will have occasion to work with graphs \(u\) over an equator, \(E \subset \mathbb{S}^{n+1}\).
+
+A straightforward computation yields the following representation of the Weingarten map in terms of the function $u,$ namely
+\eq{\label{graph h}h^i_j=\fr{\vt'}{v\vt}\d^i_j+\fr{\vt'}{v^3\vt^3}\nabla^iu\nabla_ju-\fr{\~g^{ik}}{v\vt^2}\nabla^2_{kj}u,}
+where \(\nabla\) denotes $\~g^{ij}$ is the inverse of $\~g_{ij}=\vt^{-2}g_{ij},$ $\vt(r)=\sin r$ and covariant derivatives as well as index raising is performed with respect to $\s_{ij},$ the covariant derivative on the equator, \(E \simeq \S^n\). Compare for example \cite[(3.82)]{Scheuer:05/2015}.
+
+A one-parameter family of graphs satisfying the flow \eqref{eq:CurvFlow}, thus is a solution of
+\begin{equation}
+\label{eq:GraphCurvFlow}
+\fr{\del}{\del t}u=F\br{\fr{\vt'}{v\vt}\d^{i}_{j}+\fr{\vt'}{v^{3}\vt^{3}}\nabla^{i}u\nabla_{j}u+\fr{\~g^{ik}}{v\vt^{2}}\nabla^{2}_{kj}u}=\Phi(x,u,\nabla u,\nabla^{2}u).
+\end{equation}
+
+The paraboicity assumption is that \(dF > 0\) and writing,
+\[
+\Phi = \Phi(x, r, p, z)
+\]
+we find that linearising around \(u_0\) symbol is,
+\[
+\sigma(u_0) \cdot X = d\Phi_z \cdot X = dF \cdot \fr{1}{v(u_0) \vt^{2}(u_0)} \~g^{-1}(u_0) \cdot X
+\]
+for \(X \in TC^{\infty}(E, \mathbb{R}) \simeq C^{\infty}(E, \mathbb{R})\). This is uniformly elliptic wherever \(\~g^{-1}(u_0)\) is, and wherever, \(v(u_0), \vt(u_0)\) are bounded below. In particular, this is true if the hypersurface represented by the graph \(u_t\) is strictly convex with second fundamental form, \(h(u_t)\) bounded below.
+
 \section{Ancient and quasi-ancient Solutions}
+\label{sec:quasi_ancient}
 
 We consider the spherical ambient space, $K=1,$ without further mention, and we are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the} convex spherical solution of \eqref{eq:CurvFlow}. By the convex spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). For 1-homogeneous $\p$, \(T_S = \infty\), but for $\alpha$-homogeneous $\p$ with $\alpha<1$, \(T_S\) is finite.
 \begin{lemma}
@@ -84,6 +133,7 @@ A convex solution of \eqref{eq:CurvFlow} defined on maximal interval $(-T,0)$ is
 The term ancient is reserved for the situation when \(T_S=\infty\), and by the definition, ancient solutions are also quasi-ancient.
 
 \section{Convex, Concave and Homogeneous Speeds}
+\label{sec:convex_concave_homogeneous}
 
 \begin{proposition}
 Let $f$ be concave and 
@@ -171,11 +221,7 @@ Hence on the set in which the $M_t$ range, the metrics $\-g_{ij}=\sin^2r\s_{ij}$
 Due to \cite[Thm.~2.7.10]{Gerhardt:/2006} for all convex hypersurfaces $M_t$ the quantity
 \eq{v^2=1+\-g^{ij}\nabla_iu\nabla_ju}
 is uniformly bounded by a constant which only depends on $\e.$
-Hence by the equivalence of norms the $M_t$ are uniformly $C^1$-bounded in the sense that the corresponding functions $u(t,\cdot)$ are uniformly $C^1(\S^n)$-bounded.
-A straightforward computation yields the following representation of the Weingarten map in terms of the function $u,$ namely
-\eq{\label{graph h}h^i_j=\fr{\vt'}{v\vt}\d^i_j+\fr{\vt'}{v^3\vt^3}\nabla^iu\nabla_ju-\fr{\~g^{ik}}{v\vt^2}\nabla^2_{kj}u,}
-where $\~g^{ij}$ is the inverse of $\~g_{ij}=\vt^{-2}g_{ij},$ $\vt(r)=\sin r$ and covariant derivatives as well as index raising is performed with respect to $\s_{ij},$ compare for example \cite[(3.82)]{Scheuer:05/2015}. Due to the curvature estimates we obtain uniform $C^2(\S^n)$-estimates.
-}
+Hence by the equivalence of norms the $M_t$ are uniformly $C^1$-bounded in the sense that the corresponding functions $u(t,\cdot)$ are uniformly $C^1(\S^n)$-bounded. Recalling equation, \eqref{eq:graph h}, due to the curvature estimates we obtain uniform $C^2(\S^n)$-estimates for \(u\).}
 \begin{corollary}\label{Backlimit}
 Let $x$ be a quasi-ancient solution of \eqref{eq:CurvFlow}. Then there exists a unique backwards limiting hypersurface $M_{-T_S}$ and the flow hypersurfaces $M_t$ converge to $M_{-T_S}$ in $C^{1,\b},$ $0<\b<1,$ in the sense that for a common graph representation as in Lemma \ref{ISC} there holds
 \eq{u(t,\cdot)\ra u(-T_S,\cdot)}
@@ -311,7 +357,7 @@ As remarked above, there exists a \(T\) such that both \(M_t\) and \(\reflection
 
 Recall the assumption that \(M_t\) satisfies a uniformly parabolic equation wherever it is strictly convex. Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t)\) also is strictly convex and satisfies the same equation. Therefore \(f_t,g_t\) satisfy a uniformly parabolic equation on \((-T_S + \epsilon_{\reflectionangle}, -T)\) where \(0 < \epsilon_{\reflectionangle} < \min\{T_S-T, T_S-T_{\reflectionangle}\}\) is chosen so that we have a strict, positive lower bound on \(|A|\) from strict convexity and compactness and so that on \((-T_S + \epsilon_{\reflectionangle}, -T_{\reflectionangle})\) we have the condition \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\). That is, \(g_t \geq f_t\). We also have the boundary condition \(f_t = g_t\) on \(\reflectionplane\).
 
-The maximum principle applied on the domain \(\union\limits_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) yields that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on \((-T_S, -T)\). Note that we use the maximum principle almost verbatim as stated in \cite[3.7, Theorem 12]{MR762825} except that this theorem is stated only for cylindrical domains \(\Omega \times (-T_S + \epsilon, -T)\) whereas our domain has a changing boundary. Nevertheless, a closer look at the proof reveals that it only relies on the maximum principle for the linearized equation \cite[3.3, Theorem 7, remark (ii)]{MR762825} which does hold on time-dependent domains. Alternatively, one can rule out \(f_t\) touching \(g_t\) near the boundary by the parabolic Hopf boundary point lemma \cite[3.3, Theorem 6]{MR762825} (which holds for our domains since they satisfy the interior sphere condition and is only needed for the linearization) and then rule out interior touching by the usual contradiction argument such as in \cite[3.2 Lemma]{MR837523}.
+The comparison principle as in \cite[Theorem 3.1.1]{giga}, applied on the domain \(\union\limits_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) yields that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on \((-T_S, -T)\). 
 \end{proof}
 \begin{theorem}
 \label{thm:classification}
