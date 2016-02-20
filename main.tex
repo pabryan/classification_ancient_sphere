@@ -26,7 +26,9 @@ We consider the evolution of a hypersurface $M^n$ by
 \partial_tx=-\varphi(f)\nu,~ x:M^n\times[0,T)\to M_K,
 }
 where \(M_K\) is the simply connected space form of constant sectional curvature \(K\), and $f\in C^{\8}(\G_+)$ is a strictly monotone, 1-homogeneous, symmetric function on the eigenvalues of Weingarten map \(\mathcal{W}\) (principal curvatures) \(\kappa_1, \cdots, \kappa_n\).
+
 \section{Preliminaries}
+
 We will need some notation for derivatives of the speed \(\varphi\). Let us write
 \[
 \varphi^{i}_{j} = \frac{\partial \varphi}{\partial h^{j}_{i}}
@@ -52,8 +54,9 @@ The following evolution equations hold:
 }
 \eq{\label{eq:delt_speed} \partial_t \varphi = \Box \varphi + \varphi\varphi^{ij}(h^2)_{ij} + K \varphi\varphi^{ij}g_{ij}.}
 \end{lemma}
+
 \section{Ancient and quasi-ancient Solutions}
-\subsection{Backwards Limit}
+
 We consider the spherical ambient space, $K=1,$ without further mention, and we are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the} convex spherical solution of \eqref{eq:CurvFlow}. By the convex spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). For 1-homogeneous $\p$, \(T_S = \infty\), but for $\alpha$-homogeneous $\p$ with $\alpha<1$, \(T_S\) is finite.
 \begin{lemma}
  Consider \eqref{eq:CurvFlow} with speed \(\p = f^{\alpha}\) for \(\alpha \in (0,1)\). Then a flow of strictly convex geodesic spheres has a finite lifespan, i.e., let $S_r(p)$ be a geodesic sphere in $\S^{n+1}$ around $p\in \S^{n+1}$. Then the flow exists only for a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapsing to a point at \(t=0\) and converging to an equator at \(t=T_S\).
@@ -80,8 +83,8 @@ A convex solution of \eqref{eq:CurvFlow} defined on maximal interval $(-T,0)$ is
 \end{definition}
 The term ancient is reserved for the situation when \(T_S=\infty\), and by the definition, ancient solutions are also quasi-ancient.
 
-The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} the backwards limit of the flow hypersurfaces \it{with bounded mean curvature}, $M_t$ is an equator for $t\ra -T_S$. We will use the method of \cite{MakowskiScheuer:/2013} to achieve this.
-For 1-homogeneous, convex speeds, Proposition \ref{cor:boundedH} gives a bound on mean curvature for ancient solutions. For quasi-ancient solutions, the Harnack inequality does not, in general, give such a bound, since we cannot send \(t \to -\infty\) whenever \(T_S\) is finite. One can envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these can arise as backwards limits of quasi-ancient solutions. Thus, at this stage, we must make the additional assumption that \(H\) is bounded for quasi-ancient solutions.
+\section{Convex, Concave and Homogeneous Speeds}
+
 \begin{proposition}
 Let $f$ be concave and 
 $\fr{H}{f}\leq c,$
@@ -117,6 +120,12 @@ On the other hand, since $f(1,\cdots,1)= n,$ we get
 \[\kappa_{\min}(x,t)\geq \frac{f}{n}(x,t)\geq \frac{H}{n}(x,t)\geq \kappa_{\min}(x,t).\]
 That is, $H\equiv n\kappa_{\min}.$
 }
+
+\section{Rigidity and Backwards Limit}
+
+The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} the backwards limit of the flow hypersurfaces \it{with bounded mean curvature}, $M_t$ is an equator for $t\ra -T_S$. We will use the method of \cite{MakowskiScheuer:/2013} to achieve this.
+For 1-homogeneous, convex speeds, Proposition \ref{cor:boundedH} gives a bound on mean curvature for ancient solutions. For quasi-ancient solutions, the Harnack inequality does not, in general, give such a bound, since we cannot send \(t \to -\infty\) whenever \(T_S\) is finite. One can envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these can arise as backwards limits of quasi-ancient solutions. Thus, at this stage, we must make the additional assumption that \(H\) is bounded for quasi-ancient solutions.
+
 \begin{proposition}
 \label{cor:boundedH}
 Suppose $f$ is a convex curvature function. Then any convex ancient solution of the contracting flow with speed $\p(f)=f$ satisfies
@@ -187,7 +196,9 @@ is a compact body with
 Since $\mrm{int}(\hat{M}_{-T_S})$ is a strictly convex set, it is especially weakly convex in a hemisphere in the sense of \cite[Def.~3.2]{MakowskiScheuer:/2013}. Thus $\hat{M}_{-T_S}$ is a weakly convex body in a hemisphere. The proof of \cite[Lemma~6.1]{MakowskiScheuer:/2013} can literally be applied to show that $\hat{M}_{-T_S}$ satisfies a uniform interior sphere condition as well.
 We can apply \cite[Thmeorem 1.1]{MakowskiScheuer:/2013} and obtain that $\hat{M}_{-T_S}$ is either strictly contained in an open hemisphere or is equal to a closed hemisphere. The first alternative is not possible since the solution is quasi-ancient. We conclude that $\del \hat{M}_{-T_S}=M_{-T_S}$ is an equator of $\S^{n+1}.$
 }
-\subsection{Aleksandrov Reflection}
+
+\section{Aleksandrov Reflection and Classification}
+
 In this section, we use Theorem \ref{thm:backwardslimit} to classify convex, embedded, (quasi-)ancient solutions of contracting curvature flows on \(\S^{n+1}\) as either equators or shrinking geodesic spheres. The proof uses Aleksandrov reflection as in \cite{bryanlouie,2015arXiv150802821B}. Here we give a very general version with minimal assumptions on the flow: all we require is that the flow limits to an equator at $-T_S$ and that the maximum principle holds forward in time.
 
 We begin with some preliminaries of the Aleksandrov reflection on \(\S^{n+1}\). First, we will work relative to the limiting equator obtained in Theorem \ref{thm:backwardslimit}, denoted by $\equator = M_{-T_S}$. The equator \(\equator\) determines two \emph{open} hemispheres \(H^{\pm}\) with centers \(\pm \basepoint\) and we assume the flow is contained in the upper hemisphere, $M_t \subset H^+$. It's convenient to make use of the ambient Euclidean space, \(\R^{n+2}\) with \(\S^{n+1} \subset \R^{n+2}\) via the standard embedding. Let \(\vertvec = \overrightarrow{\origin\basepoint}\) be the unit vector in \(\R^{n+2}\) that points from the origin \(\origin\) to \(\basepoint\); the ``vertical direction''. 
