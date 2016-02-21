@@ -44,48 +44,50 @@ We prove the following theorem,
 Let \(M_t\) be a /quasi-ancient/, strictly convex solution of \eqref{eq:CurvFlow} with bounded mean curvature. Them \(M_t\) is a flow of shrinking geodesic spheres.
 \end{theorem}
 
-In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is actually quite easy to prove and we offer a short proof in this case in \cref{sec:convex_concave_homogeneous}. This should be compared, for instance with the result in \cite[Theorem]{huiskensinestrari} where a short proof in the case of the Mean Curvature Flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the referred to paper, it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the Mean Curvature Flow. Here, we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrewsetal}.
+In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is actually quite easy to prove and we offer a short proof in this case in \cref{sec:convex_concave_homogeneous}. This should be compared, for instance with the result in \cite[Theorem]{HuiskenSinestrari:05/2014} where a short proof in the case of the Mean Curvature Flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the referred to paper, it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the Mean Curvature Flow. Here, we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrews2015Non-collapsing}.
 
-The main thrust of the theorem, is that we have very strong rigidity in the sphere, and are able to prove the result in great generality - /all we require is parabolicity of the flow/. At this level of generality, it is quite difficult to obtain suitable estimates, in particular Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{matowskischeuer} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{bryanlouie,bryanivaki} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other methods of classification, using more PDE theoretic techniques, such as semi-group methods to show that symmetry is preserved along the flow. There are broadly applicable methods, but they tend to suffer the draw back that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of /singular or degenerate speeds on the equator/. Very simple examples of such speeds are \(H^p\) which is singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques and supplanting them in cases where such methods are unknown.
+The main thrust of the theorem, is that we have very strong rigidity in the sphere, and are able to prove the result in great generality - /all we require is parabolicity of the flow/. At this level of generality, it is quite difficult to obtain suitable estimates, in particular Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{MakowskiScheuer:/2013} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{bryanlouie,2015arXiv150802821B} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other methods of classification, using more PDE theoretic techniques, such as semi-group methods to show that symmetry is preserved along the flow. There are broadly applicable methods, but they tend to suffer the draw back that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of /singular or degenerate speeds on the equator/. Very simple examples of such speeds are \(H^p\) which is singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques and supplanting them in cases where such methods are unknown.
 
-It's also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity and other ancient, convex solutions may occur. Indeed, for the Curve Shortening Flow in the plane, \cite{hamdaskses} have classified all such solutions as either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{ang}. In higher dimensions, \cite{huiskensinestrari} and \cite{kleinerhaslhoffer} have found a set of equivalent conditions characterising when an ancient, convex mean curvature flow is by shrinking spheres, and one would generally expect a greater variety of convex ancient solutions to exist.
+One limitation of our method is that at this stage, we assume a bound on the mean curvature \(H\). Although there are certainly solutions emanating from convex polyhedra (and hence with unbounded \(H\)), it is not at all clear to us whether such solutions can be quasi-ancient. In \cref{sec:quasi} we give two examples (for non geometric flows) showing what could go wrong. The first converges to a lune, with unbounded \(H\) and the second converges to an equator, but is not a family of shrinking spheres. Since these examples are not geometric flows, they are not of the type considered here, but they do show that parabolic flows on the sphere may admit ancient solutions that are not a family of shrinking geodesics spheres.
 
-This paper is laid out as follows: preliminaries, quasi-ancient, convex/convex speeds, rigidity, reflection.
+It's also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity and other ancient, convex solutions may occur. Indeed, for the Curve Shortening Flow in the plane, \cite{DaskalopoulosHamiltonSesum:2010} have classified all such solutions as either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{Angenent:1992}. In higher dimensions, \cite{HuiskenSinestrari:05/2014} and \cite{HaslhoferHershkovits:08/2013} have found a set of equivalent conditions characterising when an ancient, convex mean curvature flow is by shrinking spheres, and one would generally expect a greater variety of convex ancient solutions to exist.
+
+This paper is laid out as follows: In \cref{prelim} we establish some notation and basic equations to be used in this paper. In \cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such. Then in \cref{sec:concave_convex_homogeneous} we give a short classification result for concave and 1-homogeneous convex speeds. The following section, \cref{sec:rigidity} contains the rigidity results used to show backwards limits with bounded \(H\) are equators. Then finally in \cref{sec:reflection}, we used an Aleksandrov reflection technique to complete the classification.
 
 \section{Preliminaries}
 \label{sec:prelim}
 
-We will need some notation for derivatives of the speed \(\varphi\). Let us write
+We will need some notation for derivatives of the speed \(F\). Let us write
 \[
-\varphi^{i}_{j} = \frac{\partial \varphi}{\partial h^{j}_{i}}
+F^{i}_{j} = \frac{\partial F}{\partial h^{j}_{i}}
 \]
-for the first partial derivatives of \(\varphi\). As a function of the metric and second fundamental form,
+for the first partial derivatives of \(F\). As a function of the metric and second fundamental form,
 \[
-\varphi(g, h) = \varphi(g^{ik} h_{kj}),
+F(g, h) = F(g^{ik} h_{kj}),
 \]
 we write
 \[
-\varphi^{ij} = \frac{\partial\varphi}{\partial h_{ij}}, \quad \varphi^{ij,kl} = \fr{\partial^2\varphi}{\partial h_{kl} \partial h_{ij}}.
+F^{ij} = \frac{\partial F}{\partial h_{ij}}, \quad F^{ij,kl} = \fr{\partial^2F}{\partial h_{kl} \partial h_{ij}}.
 \]
 Let us also define the operator
 \[
-\Box = \varphi^{ij} \nabla^2_{ij}.
+\Box = F^{ij} \nabla^2_{ij}.
 \]
 \begin{lemma} \label{lem: basi ev}
 The following evolution equations hold:
 \eq{
  \label{eq:delt_weingarten_box} 
-\partial_t h_i^j &= \Box h_i^j + \varphi^{kl} (h^2)_{kl} h_i^j - (\varphi^{kl}h_{kl} - \varphi) (h^2)_i^j + \varphi^{kl,rs}\nabla_i h_{kl}\nabla^j h_{rs} \\
-& \quad + K \{(\varphi + \varphi^{kl}h_{kl}) \delta_i^j - \p^{kl}g_{kl} h_i^j\},
+\partial_t h_i^j &= \Box h_i^j + F^{kl} (h^2)_{kl} h_i^j - (F^{kl}h_{kl} - F) (h^2)_i^j + F^{kl,rs}\nabla_i h_{kl}\nabla^j h_{rs} \\
+& \quad + K \{(F + F^{kl}h_{kl}) \delta_i^j - \p^{kl}g_{kl} h_i^j\},
 }
-\eq{\label{eq:delt_speed} \partial_t \varphi = \Box \varphi + \varphi\varphi^{ij}(h^2)_{ij} + K \varphi\varphi^{ij}g_{ij}.}
+\eq{\label{eq:delt_speed} \partial_t F = \Box F + FF^{ij}(h^2)_{ij} + K FF^{ij}g_{ij}.}
 \end{lemma}
 
 We will have occasion to work with graphs \(u\) over an equator, \(E \subset \mathbb{S}^{n+1}\).
 
 A straightforward computation yields the following representation of the Weingarten map in terms of the function $u,$ namely
 \eq{\label{graph h}h^i_j=\fr{\vt'}{v\vt}\d^i_j+\fr{\vt'}{v^3\vt^3}\nabla^iu\nabla_ju-\fr{\~g^{ik}}{v\vt^2}\nabla^2_{kj}u,}
-where \(\nabla\) denotes $\~g^{ij}$ is the inverse of $\~g_{ij}=\vt^{-2}g_{ij},$ $\vt(r)=\sin r$ and covariant derivatives as well as index raising is performed with respect to $\s_{ij},$ the covariant derivative on the equator, \(E \simeq \S^n\). Compare for example \cite[(3.82)]{Scheuer:05/2015}.
+where $\~g^{ij}$ is the inverse of $\~g_{ij}=\vt^{-2}g_{ij}$, $\vt(r)=\sin r$ and \(v^-1 = \partial_r \cdot \nu\). Covariant derivatives as well as index raising is performed with respect to $\s_{ij}$, the round metric on the equator, \(E \simeq \S^n\). Compare for example \cite[(3.82)]{Scheuer:05/2015}.
 
 A one-parameter family of graphs satisfying the flow \eqref{eq:CurvFlow}, thus is a solution of
 \begin{equation}
@@ -102,6 +104,22 @@ we find that linearising around \(u_0\) symbol is,
 \sigma(u_0) \cdot X = d\Phi_z \cdot X = dF \cdot \fr{1}{v(u_0) \vt^{2}(u_0)} \~g^{-1}(u_0) \cdot X
 \]
 for \(X \in TC^{\infty}(E, \mathbb{R}) \simeq C^{\infty}(E, \mathbb{R})\). This is uniformly elliptic wherever \(\~g^{-1}(u_0)\) is, and wherever, \(v(u_0), \vt(u_0)\) are bounded below. In particular, this is true if the hypersurface represented by the graph \(u_t\) is strictly convex with second fundamental form, uniformly \(h(u_t)\) bounded below.
+
+In particular, we may apply the maximum principle \cite[Theorem 3.1.1]{Giga:2006} as follows.
+
+\begin{theorem}
+\label{thm:comparison}
+Let \(u_t, v_t\) be strictly convex solutions of \eqref{eq:CurvFlow} on a domain \(\Omega_t \subset E\) such that \(u_t \leq v_t\) on the parabolic boundary. Then \(u_t \leq v_t\) on all \(\Omega_t\).
+\end{theorem}
+
+\begin{proof}
+Do we need to show that a lower bound on \(\mathcal{W}\) is preserved along the flow? NO! Degenerate elliptic (not uniformly!) is all we need.
+To apply the maximum principle \cite[Theorem 3.1.1]{Giga:2006}, we need to verify the following conditions:
+- (F1) Continuity of \(\Phi\). Follows from the continuity of \(F\) and the smoothness of the solution,
+- (F2) Degenerate Elliptic. Follows from the fact that \(\~g^{-1}\) is elliptic and \(F\) is monotone,
+- (F3) Bounded.
+- (F4) Monotone. By smoothness, on any finite time interval, \([-T_1, -T_2]\), everything is bounded hence we can choose a constant large enough so this condition is satisfied.
+\end{proof}
 
 \section{Ancient and quasi-ancient Solutions}
 \label{sec:quasi_ancient}
@@ -183,7 +201,7 @@ Therefore,
 &=-\bar{\kappa}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
 \end{align*}
 
-The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune (the intersection of two hemispheres) with a pair of antipodal points at which \(\kappa\) is unbounded. 
+The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune (the intersection of two hemispheres) with a pair of antipodal points at which \(\kappa\) is unbounded.
 \end{example}
 
 The second example, exhibits a flow for which the symmetry of the backwards limit is not preserved. That is, the backwards limit is an equator, yet the flow is not by geodesic spheres. Again, this flow is not geometric, and it's unclear whether such a solution can occur for geometric flows. Necessarily, our results for geometric flows imply such a solution, though converging to an equator in \(C^0\), would have unbounded \(H\) and hence not converge in \(C^2\).
@@ -199,7 +217,7 @@ The gnomonic projection of $\gamma_t$ evolves by the affine normal flow in $\mat
 \begin{align*}
 \partial_t\bar{\rho}&=-\bar{\kappa}^{\frac{1}{3}}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
 \end{align*}
-Origin-centered ellipses are ancient solutions \cite{ivaki} to the affine normal flow in $\mathbb{R}^2$. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: ellipse}). This ancient solution converges backwards in time to an equator. 
+Origin-centered ellipses are ancient solutions to the affine normal flow in $\mathbb{R}^2$ \cite{Ivaki:2016}. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: ellipse}). This ancient solution converges backwards in time to an equator.
 \end{example}
 
 \section{Convex, Concave and Homogeneous Speeds}
@@ -411,7 +429,7 @@ As remarked above, there exists a \(T\) such that both \(M_t\) and \(\reflection
 
 Recall the assumption that \(M_t\) satisfies a uniformly parabolic equation wherever it is strictly convex. Since \(\reflectionmap\) is an isometry, \(\reflectionmap(M_t)\) also is strictly convex and satisfies the same equation. Therefore \(f_t,g_t\) satisfy a uniformly parabolic equation on \((-T_S + \epsilon_{\reflectionangle}, -T)\) where \(0 < \epsilon_{\reflectionangle} < \min\{T_S-T, T_S-T_{\reflectionangle}\}\) is chosen so that we have a strict, positive lower bound on \(|A|\) from strict convexity and compactness and so that on \((-T_S + \epsilon_{\reflectionangle}, -T_{\reflectionangle})\) we have the condition \(\reflectionmap(\reflectionset{(M_t)}^+) \geq \reflectionset{(M_t)}^-\). That is, \(g_t \geq f_t\). We also have the boundary condition \(f_t = g_t\) on \(\reflectionplane\).
 
-The comparison principle as in \cite[Theorem 3.1.1]{giga}, applied on the domain \(\union\limits_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) yields that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on \((-T_S, -T)\). 
+The comparison principle, \cref{thm:comparison} applied on the domain \(\union\limits_{t \in (-T_S + \epsilon_{\reflectionangle}, -T)} \radialprojection(\reflectionset(M_t)^-) \subseteq \equator\) yields that \(g_t \geq f_t\) holds forwards in time on all of \((-T_S + \epsilon_{\reflectionangle}, -T)\) hence on \((-T_S, -T)\).
 \end{proof}
 
 \begin{theorem}
