@@ -1,35 +1,50 @@
-%\documentclass[10 pt]{amsart}
+%\usepackage{etoolbox}
+%\makeatletter
+%\let\ams@starttoc\@starttoc
+%\makeatother
+%\makeatletter
+%\let\@starttoc\ams@starttoc
+%\patchcmd{\@starttoc}{\makeatletter}{\makeatletter\parskip\z@}{}{}
+%\makeatother
 
-\usepackage[ocgcolorlinks,linktoc=all]{hyperref}
-\hypersetup{citecolor=blue,linkcolor=red}
 \usepackage[parfill]{parskip}
+
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{bookmark}
+\usepackage{amsthm,thmtools,amssymb,amsmath,amscd}
+
+\usepackage{fancyhdr}
+\usepackage{esint}
+
+\usepackage{enumerate}
+
+\usepackage{pictexwd,dcpic}
+
 \usepackage{graphicx}
 
-%\usepackage{amsthm}
-\usepackage{cleveref}
-\crefname{lemma}{Lemma}{Lemmata}
-\crefname{equation}{equation}{equations}
+\swapnumbers
+\declaretheorem[name=Theorem,numberwithin=section]{thm}
+\declaretheorem[name=Remark,style=remark,sibling=thm]{rem}
+\declaretheorem[name=Lemma,sibling=thm]{lemma}
+\declaretheorem[name=Proposition,sibling=thm]{prop}
+\declaretheorem[name=Definition,style=definition,sibling=thm]{defn}
+\declaretheorem[name=Corollary,sibling=thm]{cor}
+\declaretheorem[name=Assumption,style=remark,sibling=thm]{ass}
+\declaretheorem[name=Example,style=remark,sibling=thm]{example}
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-
-\newtheorem*{thmA}{Theorem}
-\newtheorem*{thmB}{Theorem}
-\newtheorem*{rem}{Remark}
-\newtheorem*{thmmain}{Theorem}
-\newtheorem*{propmain}{Proposition}
-
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{xca}[theorem]{Exercise}
-
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
 
 \numberwithin{equation}{section}
+
+\usepackage{cleveref}
+\crefname{lemma}{Lemma}{Lemmata}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{thm}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{defn}{Definition}{Definitions}
+\crefname{example}{Example}{Examples}
+\crefname{rem}{Remark}{Remarks}
+\crefname{ass}{Assumption}{Assumptions}
+\crefname{not}{Notation}{Notation}
 
 %Symbols
 \renewcommand{\~}{\tilde}
@@ -68,6 +83,12 @@
 \newcommand{\G}{\Gamma}
 \newcommand{\T}{\Theta}
 \renewcommand{\L}{\Lambda}
+
+%Mathcal Letters
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cW}{\mathcal{W}}
 
 %Mathematical operators
 \newcommand{\INT}{\int_{\O}}
