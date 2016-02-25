@@ -34,19 +34,19 @@ A < B \Rightarrow F(A) < F(B)
 \]
 where \(A < B\) means that \(B - A\) has positive eigenvalues. Here, \(A\) diagonalisable means that \(TM\) splits completely into a sum of one-dimensional, \(A\) invariant sub-spaces, or equivalently in any local coordinates, the matrix representing \(A\) may is diagonalisable.
 
-This latter condition ensures the flow is strictly parabolic. In particular, it also ensures that if \(M_t = x_t(M)\) is strictly convex, then \(F(\mathcal{W} > 0\). Since \(\mathcal{W}\) is symmetric, it is diagonalisable and so \(F\) induces a symmetric function on the eigenvalues. Conversely, any such function induces an \(F\). Expressed in terms of \(\kappa_1,\cdots,\kappa_n)\), the eigenvalues of \(\mathcal{W}\) (principal curvatures), the parabolicity condition translates to 
+This latter condition ensures the flow is strictly parabolic. In particular, it also ensures that if \(M_t = x_t(M)\) is strictly convex, then \(F(\mathcal{W}) > 0.\) Since \(\mathcal{W}\) is symmetric, it is diagonalisable and so \(F\) induces a symmetric function on the eigenvalues. Conversely, any such function induces an \(F\). Expressed in terms of \((\kappa_1,\cdots,\kappa_n)\), the eigenvalues of \(\mathcal{W}\) (principal curvatures), the parabolicity condition translates to 
 \[
 \frac{\partial F}{\partial \kappa_i} > 0.
 \]
 
-We consider \emph{quasi-ancient}, strictly convex solutions of \eqref{eq:CurvFlow}. Here quasi-ancient refers to solutions existing on the same time interval as the maximal flow of geodesic spheres. For many common flows, such as the Mean Curvature Flow (\(F(\mathcal{W}) = \text{Trace}(\mathcal{W}) = H\), the maximal flow of geodesic spheres is the infinite time interval \((-\infty, 0)\). However for flows \(F = H^p\) with \(p \in (0,1)\), the maximal time interval is in fact finite. See \cref{sec:quasi_ancient}.
+We consider \emph{quasi-ancient}, strictly convex solutions of \eqref{eq:CurvFlow}. Here quasi-ancient refers to solutions existing on the same time interval as the maximal flow of geodesic spheres. For many common flows, such as the Mean Curvature Flow \(F(\mathcal{W}) = \text{Trace}(\mathcal{W}) = H\), the maximal flow of geodesic spheres is the infinite time interval \((-\infty, 0)\). However for flows \(F = H^p\) with \(p \in (0,1)\), the maximal time interval is in fact finite. See \cref{sec:quasi_ancient}.
 
 We prove the following theorem,
 \begin{theorem}
 Let \(M_t\) be a \emph{quasi-ancient}, strictly convex solution of \eqref{eq:CurvFlow} with bounded mean curvature. Them \(M_t\) is a flow of shrinking geodesic spheres.
 \end{theorem}
 
-In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is actually quite easy to prove and we offer a short proof in this case in \cref{sec:convex_concave_homogeneous}. This should be compared, for instance with the result in \cite[Theorem]{HuiskenSinestrari:05/2014} where a short proof in the case of the Mean Curvature Flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the referred to paper, it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the Mean Curvature Flow. Here, we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrews2015Non-collapsing}.
+In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is actually quite easy to prove and we offer a short proof in this case in \cref{sec:convex_concave_homogeneous}. This should be compared, for instance with the result in \cite[Theorem]{HuiskenSinestrari:05/2014} where a short proof in the case of the Mean Curvature Flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the paper referred to, it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the Mean Curvature Flow. Here, we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrews2015Non-collapsing}.
 
 The main thrust of the theorem, is that we have very strong rigidity in the sphere, and are able to prove the result in great generality - \emph{all we require is parabolicity of the flow}. At this level of generality, it is quite difficult to obtain suitable estimates, in particular Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{MakowskiScheuer:/2013} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{bryanlouie,2015arXiv150802821B} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other methods of classification, using more PDE theoretic techniques, but they tend to suffer the draw back that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of \emph{singular or degenerate speeds on the equator}. Very simple examples of such speeds are \(H^p\) which is singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques and supplanting them in cases where such methods are unknown.
 
@@ -93,12 +93,12 @@ We will have occasion to work with graphs \(u\) over an equator, \(E \subset \ma
 
 A straightforward computation yields the following representation of the Weingarten map in terms of the function $u,$ namely
 \eq{\label{graph h}h^i_j=\fr{\vt'}{v\vt}\d^i_j+\fr{\vt'}{v^3\vt^3}\nabla^iu\nabla_ju-\fr{\~g^{ik}}{v\vt^2}\nabla^2_{kj}u,}
-where $\~g^{ij}$ is the inverse of $\~g_{ij}=\vt^{-2}g_{ij}$, $\vt(r)=\sin r$ and \(v^-1 = \partial_r \cdot \nu\). Covariant derivatives as well as index raising is performed with respect to $\s_{ij}$, the round metric on the equator, \(E \simeq \S^n\). Compare for example \cite[(3.82)]{Scheuer:05/2015}.
+where $\~g^{ij}$ is the inverse of $\~g_{ij}=\vt^{-2}g_{ij}$, $\vt(r)=\sin r$ and \(v^{-1} = \partial_r \cdot \nu\). Covariant derivatives as well as index raising is performed with respect to $\s_{ij}$, the round metric on the equator, \(E \simeq \S^n\). Compare for example \cite[(3.82)]{Scheuer:05/2015}.
 
 A one-parameter family of graphs satisfying the flow \eqref{eq:CurvFlow}, thus is a solution of
 \begin{equation}
 \label{eq:GraphCurvFlow}
-\fr{\del}{\del t}u=F\br{\fr{\vt'}{v\vt}\d^{i}_{j}+\fr{\vt'}{v^{3}\vt^{3}}\nabla^{i}u\nabla_{j}u+\fr{\~g^{ik}}{v\vt^{2}}\nabla^{2}_{kj}u}=\Phi(x,u,\nabla u,\nabla^{2}u).
+\fr{\del}{\del t}u=-F\br{\fr{\vt'}{v\vt}\d^{i}_{j}+\fr{\vt'}{v^{3}\vt^{3}}\nabla^{i}u\nabla_{j}u+\fr{\~g^{ik}}{v\vt^{2}}\nabla^{2}_{kj}u}v=\Phi(x,u,\nabla u,\nabla^{2}u).
 \end{equation}
 
 The paraboicity assumption is that \(dF > 0\), and writing,
@@ -125,6 +125,7 @@ To apply the maximum principle \cite[Theorem 3.1.1]{Giga:2006}, we need to verif
 - (F2) Degenerate Elliptic. Follows from the fact that \(\~g^{-1}\) is elliptic and \(F\) is monotone,
 - (F3) Bounded.
 - (F4) Monotone. By smoothness, on any finite time interval, \([-T_1, -T_2]\), everything is bounded hence we can choose a constant large enough so this condition is satisfied.
+{\color{red} Giga assumes independence of $x,$ which is not given here.}
 \end{proof}
 
 \section{Ancient and quasi-ancient Solutions}
