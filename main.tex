@@ -46,15 +46,15 @@ The following theorem is our main result.
 Let \(M_t\) be a \emph{quasi-ancient}, strictly convex solution of \eqref{eq:CurvFlow}, where $F$ satisfies \cref{F} and such that
 \eq{\limsup_{t\ra -T}\max_{M_t}H<\8.} Then \(M_t\) is a flow of shrinking geodesic spheres.
 \end{thm}
-In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is quite easy to prove, and we offer a short proof in these cases in \Cref{sec:concave_convex_homogeneous}. For instance this should be compared with the result in \cite[Theorem]{HuiskenSinestrari:05/2014} where a short proof in the case of the mean curvature flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the paper referred to it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the mean curvature flow. Here we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity \(k\) for one-homogeneous, convex speeds used in \cite{andrews2015Non-collapsing}.
+In certain situations, such as concave speeds with speed comparable to \(H\), or one-homogeneous convex speeds, the theorem is quite easy to prove, and we offer a short proof in these cases in \Cref{sec:concave_convex_homogeneous}. For instance, this should be compared with the result in \cite[Theorem]{HuiskenSinestrari:05/2014} where a short proof in the case of the mean curvature flow in the sphere may be found. The main idea is to find the correct quantity to which the maximum principle may be applied. In the paper referred to it is the pinching quantity, \((|A|^2 - n H^2)/H^2\) used so often for the mean curvature flow. Here we use \(\mathcal{W}/F\) for concave, mean curvature comparable speeds and the non-collapsing quantity for 1-homogeneous, convex speeds used in \cite{andrews2015Non-collapsing}.
 
 The main thrust of the theorem is that we have very strong rigidity in the sphere, and can prove the result in great generality - \emph{all we require is parabolicity of the flow}. At this level of generality, it is quite difficult to obtain suitable uniform regularity estimates, in particular, Evans-Krylov higher regularity estimates are not known for arbitrary non-linear equations, and hence less direct PDE methods are required. We obtain the theorem by first using the rigidity results of \cite{MakowskiScheuer:/2013} to argue that quasi-ancient solutions with bounded \(H\) must limit to an equator backwards in time. Then the Aleksandrov reflection technique developed in \cite{2015arXiv150802821B,bryanlouie} applies to show the symmetry is preserved under the flow, completing the classification. Let us remark that one may seek other methods of classification, using more PDE theoretic techniques, but they tend to suffer the drawback that they only apply (without modification) to speeds \(F\) that are non-singular and non-degenerate on the equator. The methods we describe here, apply even in the case of \emph{singular or degenerate speeds on the equator}. Very simple examples of such speeds are \(H^p\), which are singular for \(0 < p < 1\) and degenerate for \(p > 1\) whenever \(H = 0\), in particular along the equator. We find that the geometric methods are quite appealing and of interest in their own right, even in cases where PDE methods are applicable, these methods offering a powerful, complementary alternative to direct PDE techniques and supplanting them in cases where such methods are unknown.
 
 One limitation of our method is that at this stage, we assume a bound on the mean curvature \(H\). Although there are certainly solutions emanating from convex polyhedra (and hence with unbounded \(H\)), it is not at all clear to us whether such solutions can be quasi-ancient. In \Cref{quasi}, we give two examples (for non-geometric flows) showing what could go wrong. The first converges to a lune, with unbounded \(H\) and the second converges to an equator, but is not a family of shrinking spheres. Since these examples are not geometric flows, they are not of the type considered here, but they do show that parabolic flows on the sphere may admit ancient solutions that are not a family of shrinking geodesics spheres.
 
-It is also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity, and other ancient, convex solutions may occur. Indeed, for the curve shortening flow in the plane, \cite{DaskalopoulosHamiltonSesum:2010} have classified all such solutions as either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{Angenent:1992}. In higher dimensions, \cite{HuiskenSinestrari:05/2014} and \cite{HaslhoferHershkovits:08/2013} have characterized when ancient, convex mean curvature flows are shrinking spheres, and one would generally expect a greater variety of convex ancient solutions to exist. Convex, ancient solutions are of interest as they arise as rescalings of singularities, cf.~ \cite{HuiskenSinestrari:01/1999}, of mean convex, mean curvature flow, cf.~\cite{HuiskenSinestrari:09/1999, White:10/2002}. Singularity models for mean curvature flow in the sphere have been studied in \cite{Nguyen:2015}, where mean convex singularities with an ambient curvature dependent pinching condition are classified according to a blow-up yielding ancient solutions in Euclidean space, as opposed to the ancient, convex solutions in the sphere studied here.
+It is also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity, and other ancient, convex solutions may occur. Indeed, for the curve shortening flow in the plane, \cite{DaskalopoulosHamiltonSesum:2010} have classified all such solutions as either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{Angenent:1992}. In higher dimensions, \cite{HuiskenSinestrari:05/2014} and \cite{HaslhoferHershkovits:08/2013} have characterized when ancient, convex mean curvature flows are shrinking spheres, and one would generally expect a greater variety of ancient convex solutions to exist. Convex, ancient solutions are of interest as they arise as rescalings of singularities, cf.~ \cite{HuiskenSinestrari:01/1999}, of mean convex, mean curvature flow, cf.~\cite{HuiskenSinestrari:09/1999, White:10/2002}. Singularity models for mean curvature flow in the sphere have been studied in \cite{Nguyen:2015}, where mean convex singularities with an ambient curvature dependent pinching condition are classified according to a blow-up yielding ancient solutions in Euclidean space, as opposed to the ancient, convex solutions in the sphere studied here.
 
-This paper is laid out as follows: In \Cref{prelim} we establish some notation and basic equations to be used in this paper. In \Cref{quasi} we introduce the notion of quasi-ancient solutions and establish some facts about such. Then in \Cref{sec:concave_convex_homogeneous} we give a short classification result for concave and 1-homogeneous convex speeds. \Cref{sec:rigidity} contains the rigidity results used to show backwards limits with bounded \(H\) are equators. Then finally in \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification.
+This paper is laid out as follows: In \Cref{prelim} we establish some notation and basic equations to be used in this paper. In \Cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such. Then in \Cref{sec:concave_convex_homogeneous} we give a short classification result for concave and 1-homogeneous convex speeds. \Cref{sec:rigidity} contains the rigidity results used to show backwards limits with bounded \(H\) are equators. Then finally in \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification.
 
 \section*{Acknowledgment}
 The authors would like to thank Knut Smoczyk and the Institut f\"{u}r Differentialgeometrie at Leibniz Universität for hosting a research visit where part of this work took place. The first author was a Riemann Fellow at the Riemann Center for Geometry and Physics, Leibniz Universit\"{a}t and was also supported by the EPSRC on a Programme Grant entitled ``Singularities of Geometric Partial Differential Equations'' reference number EP/K00865X/1. The work of the second author was supported by Austrian Science Fund (FWF) Project M1716-N25. All three authors would like to thank Slack.com for providing a wonderful platform for collaboration. 
@@ -94,10 +94,10 @@ The following evolution equations hold:
 We will occasionally have to work with graphs \(u\) over an equator $E \subset \mathbb{S}^{n+1}$ around a point $e\in\S^{n+1}.$ In geodesic polar coordinates around $e$ the spherical metric takes the form
 \eq{\label{SphMetric}d\-s^2=d\rho^2+\vt(\rho)^2\s_{ij}(x)dx^idx^j,}
 where $\rho$ is the radial distance to $e,$ $\vt(\rho)=\sin(\rho)$ and $\s$ the round metric on the equator $E\simeq \S^n.$ Hence, if a hypersurface $M$ is given as a graph of a function $u$ over $E$,
-\[M=\{(\rho,(x^i))\in \S^{n+1}\cn \rho=u(x), x\in E\},\]
+\[M=\{(\rho,(x^i))\in \S^{n+1}\cn \rho=u(x),~ x\in E\},\]
 a straightforward computation yields the following representation of the Weingarten map in terms of the function $u,$ namely
 $$\label{graph h}h^i_j=\fr{\vt'}{v\vt}\d^i_j+\fr{\vt'}{v^3\vt^3}\nabla^iu\nabla_ju-\fr{g^{ik}}{v}\nabla^2_{kj}u,$$
-where $v^{-1} = \partial_\rho \cdot \nu.$ Covariant derivatives as well as index raising is performed with respect to $\s_{ij};$ see for example \cite[(3.82)]{Scheuer:05/2015}.
+where $v^{-1} = \partial_\rho \cdot \nu.$ Covariant derivatives as well as index raising is performed with respect to $\s_{ij};$ see, for example, \cite[(3.82)]{Scheuer:05/2015}.
 
 A one-parameter family of graphs satisfying the flow \eqref{eq:CurvFlow} is a solution of
 \begin{equation}
@@ -107,9 +107,9 @@ A one-parameter family of graphs satisfying the flow \eqref{eq:CurvFlow} is a so
 see \cite[p.~98-99]{Gerhardt:/2006}.
 
 \section{Ancient and quasi-ancient Solutions}\label{quasi}
-We are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the} convex spherical solution of \eqref{eq:CurvFlow}. By the convex spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). For some speeds \(T_S\) is finite.
+We are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the spherical solution} of \eqref{eq:CurvFlow}. By the spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). For some speeds \(T_S\) is finite.
 \begin{lemma}
- Let $p\in(0,1)$ and consider \eqref{eq:CurvFlow} with speed \(F = f^p\) with \(f\) concave and 1-homogeneous. Then a flow of strictly convex geodesic spheres has a finite lifespan, i.e., let $S_r(p)$ be a geodesic sphere in $\S^{n+1}$. Then the flow exists only for a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapsing to a point at \(t=0\) and converging to an equator at \(t=-T_S\).
+ Let $p\in(0,1)$ and consider \eqref{eq:CurvFlow} with speed \(F = f^p\) with \(f\) concave and 1-homogeneous. The flow exists only on a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapses to a point at \(t=0\) and converges to an equator at \(t=-T_S\).
 \end{lemma}
 \begin{proof}
 We may assume that $f(1,\cdots,1)=n.$
@@ -132,13 +132,13 @@ A convex solution of \eqref{eq:CurvFlow} defined on maximal interval $(-T,0)$ is
 \end{defn}
 The term ancient is reserved for the situation when \(T_S=\infty\) and by the definition ancient solutions are also quasi-ancient.
 
-For 1-homogeneous and convex speeds Proposition \ref{cor:boundedH} to follow gives a bound on mean curvature for ancient solutions, using a Harnack inequality. For quasi-ancient solutions this Harnack inequality does not, in general, give such a bound, since we cannot send \(t \to -\infty\) whenever \(T_S\) is finite. One can envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these solutions exist on the maximal time interval \((-T_S, 0)\), i.e., they are quasi-ancient solutions. For classification of quasi-ancient solutions, we make the additional assumption that \(H\) is bounded, and defer the question of whether solutions with unbounded \(H\) can exist to a later date.
+For 1-homogeneous and convex speeds, the next proposition gives a bound on mean curvature back wards in time for ancient solutions, using a Harnack inequality. For quasi-ancient solutions, the Harnack inequality does not, in general, give such a bound, since we cannot send \(t \to -\infty\) whenever \(T_S\) is finite. One can envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these solutions exist on the maximal time interval \((-T_S, 0)\), i.e., they are quasi-ancient solutions. For classification of quasi-ancient solutions, we make the additional assumption that \(H\) is bounded, and defer the question of whether solutions with unbounded \(H\) can exist to a later date.
 
 \begin{prop}
 \label{cor:boundedH}
 Suppose $F$ is a \(1\)-homogeneous and convex curvature function. Then any convex ancient solution of \eqref{eq:CurvFlow} satisfies
 \[\partial_t F-b^{ij}\nabla_i F \nabla_j F \geq 0.\]
-In particular, for all $t\le -1$ we have
+Therefore, for all $t\le -1$ we have
 $H(\cdot,t)\leq c,$
 where $c<\infty$ depends only on $M_{-1}.$
 \end{prop}
@@ -170,7 +170,7 @@ Therefore,
 &=-\bar{\kappa}(1+\bar{\rho}^2)^{\frac{3}{2}}\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\bar{\rho}}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
 &=-\bar{\kappa}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
 \end{align*}
-The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune (the intersection of two hemispheres) with a pair of antipodal points at which \(\kappa\) is unbounded.
+The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune (the intersection of two hemispheres) with a pair of antipodal points at which \(\kappa\) is unbounded.
 \end{example}
 The second example exhibits a (non-geometric) flow for which the symmetry of the backwards limit is not preserved. That is, the backwards limit is an equator, yet the flow is not by geodesic spheres. 
 \begin{example}
@@ -186,20 +186,21 @@ The gnomonic projection of $\gamma_t$ evolves by the affine normal flow in $\mat
 Origin-centered ellipses are ancient solutions to the affine normal flow in $\mathbb{R}^2$ (see, for example, \cite{Ivaki:2016}). Thus, there exists a non-trivial convex ancient solution to the flow (\ref{eq: ellipse}). This ancient solution converges backwards in time to an equator.
 \end{example}
 \section{Convex, Concave and Homogeneous Speeds}\label{sec:concave_convex_homogeneous}
-\begin{prop}
+In this section, we give a quick classification of ancient solutions in two special cases.
+\begin{thm}
 Let $F$ be $1$-homogeneous, concave and 
 $\fr{H}{F}\leq c,$
 or let $F$ be $1$-homogeneous and convex. Then any strictly convex ancient solution of the flow \eqref{eq:CurvFlow} with speed $F$ is a family of contracting geodesic spheres.
-\end{prop}
+\end{thm}
 \pf{
 We first consider the case that $F$ is a concave function. The tensor
 $w^j_i=\fr{h^j_i}{F}$
 satisfies the evolution equation
 \begin{align*}\del_tw^j_i&=\Box w^j_i-2 F^{kl}g_{kl}w^j_i+2\d^j_i+\fr{1}{F}F^{kl,rs}\nabla_ih_{kl}\nabla^jh_{rs}\\
-	&\hp{=}-2F^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
+    &\hp{=}-2F^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
 Due to the concavity of $F$ we have for fixed index $i\cn$
 \begin{align*}\del_t\br{w^i_i-\fr{1}{n}}&\leq\Box\br{w^i_i-\fr{1}{n}}-2n\br{w^i_i-\fr{1}{n}}\\
-			&\hp{=}-2F^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
+            &\hp{=}-2F^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
 At a spatial maximum of $w^i_i-\tfrac{1}{n}$ we have
 $$0=\nabla_k \br{\fr{h^i_i}{F}}=\fr{\nabla_k h^i_i}{F}+h^i_i\nabla_k\br{\fr{1}{F}}$$
 and hence by the maximum principle we obtain the bound
@@ -220,11 +221,11 @@ This in turn implies that
 \[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n}\frac{H}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n} \kappa_{\min}(x,t).\]
 On the other hand, since $F(1,\cdots,1)= n,$ we get
 \[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{H}{n}(x,t)\geq \kappa_{\min}(x,t).\]
-That is, $H\equiv n\kappa_{\min}$ and once again, the flow is by totally umbilical hypersurfaces, hence by geodesic spheres.
+That is, $H\equiv n\kappa_{\min}$; therefore, the flow is by geodesic spheres.
 }
 \section{Rigidity and Backwards Limit}\label{sec:rigidity}
-Now we turn to more general speeds \(F\). The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} \it{with bounded mean curvature} for $t\ra -T_S$ the backwards limit of the flow hypersurfaces $M_t$  is an equator. We will use the rigidity result of \cite{MakowskiScheuer:/2013} to achieve this. For convenience let's state this result:
-\begin{thm}\label{Rigidity}\textsc{\cite[Thm.~1.1]{MakowskiScheuer:/2013}}
+Now we turn to more general speeds \(F\). The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} \it{with bounded mean curvature} for $t\ra -T_S$ the backwards limit of the flow hypersurfaces $M_t$  is an equator. We will use the rigidity result of \cite{MakowskiScheuer:/2013} to achieve this. For convenience, we state this result:
+\begin{thm}\label{Rigidity}\textsc{\cite[Theorem 1.1]{MakowskiScheuer:/2013}}
 Let $ n\geq 1$ and $\hat{M}\subset \S^{n+1}$ be a weakly convex body in a hemisphere. Let $x_0\in \S^{n+1}$ be such that $\hat{M}$ is contained in the closed hemisphere $\mc{H}(x_0)$ with equator $\mc{S}(x_{0})$. Suppose that $\hat{M}$ satisfies an interior sphere condition at all points $p\in \hat{M} \cap \mc{S}(x_0)$. Then either $\hat{M}$ is equal to $\mc{H}(x_0)$ or $\hat{M}$ is contained in an open hemisphere.
 \end{thm}
 Here $\hat{M}$ is a weakly convex body in a hemisphere $\mc{H}(x_0),$ if for every two points $p,q\in\hat{M}$ there exists a minimizing geodesic connecting $p$ with $q,$ while being contained in $\hat{M}.$ $\hat{M}$ satisfies an interior sphere condition at $p\in \del\hat{M}$ with radius $R,$ if there exists a geodesic ball $B_R$ with radius $R,$ such that
@@ -249,7 +250,7 @@ $$B_{\e}(\hat{y}_0)\sub \hat{M}_t^c$$
 with a uniform $\e,$ where $\hat{y}_0$ denotes the antipodal point of $y_0.$
 Now we prove the two claims.
 
-(1)~Consider the stereographic projection with $\hat{y}_0$ corresponding to infinity. The image hypersurfaces are then strictly convex hypersurfaces in Euclidean space with uniformly bounded second fundamental form. Blaschke's rolling theorem, cf.~\cite{Blaschke:/1956}, gives the interior sphere condition.\\
+(1)~Consider the stereographic projection with $\hat{y}_0$ corresponding to infinity. The image hypersurfaces are then strictly convex hypersurfaces in Euclidean space with uniformly bounded second fundamental form. Blaschke's rolling theorem (see \cite{Blaschke:/1956}) gives the interior sphere condition.\\
 
 (2)~
 Write the $M_t$ as graphs in geodesic polar coordinates around $y_0,$
@@ -266,7 +267,7 @@ $$u(t,\cdot)\ra u(-T_S,\cdot)$$
 in the norm of $C^{1,\b}(\S^n).$
 \end{cor}
 \pf{
-Due to the point-wise monotonicity of $u(t,\cdot)$ backwards in time we obtain a point-wise limit. The $C^{1,\b}$-convergence follows from compactness.
+In view of the point-wise monotonicity of $u(t,\cdot)$ backwards in time, we obtain a point-wise limit. The $C^{1,\b}$-convergence follows from compactness.
 }
 \begin{thm}
 \label{thm:backwardslimit}
@@ -347,9 +348,9 @@ the reflection $R_{V}(M)$ is star-shaped around $e.$
 
 \pf{
 (i)~Since $R_{V}(E)$ is also an equator, the only way not to be star-shaped around $e$ would be
-$$e\in R_{V}(E). $$
+$e\in R_{V}(E). $
 But then, letting $e=R_{V}(x)$ with $x\in E,$
-$$\sin \d_{V}=-\inpr{V}{e}=\inpr{x}{V}=\cos\d_{V},$$
+$$1=\inpr{R_V(x)}{e }=2\sin\delta_V\inpr{x}{V}\leq 2\sin\delta_V\cos\d_V,$$
 which is impossible in the given range of $\d_{V}.$
 
 (ii)~The distance from $e$ to $R_{V}(E)$ only depends on $\d_{V}$; therefore, for a sufficiently small graph function $f_{M}$ we also obtain $e\notin R_{V}(M).$ Since every convex hypersurface of the sphere is star-shaped with respect to any interior (and exterior) point, the claim follows.
@@ -370,7 +371,7 @@ lies in the plane spanned by \(x\) and \(z\). Therefore, \(\tilde V = \pi(V)\) l
 
 Let \(C\) be the geodesic joining \(\pr(x)\) to \(\pr(z)\). This is the intersection of the plane \(Q\) with the sphere which contains \(\tilde{V}\). Now let \((P \cap E) \cap C = \{y,-y\}\). Then \(y \in Q\) and \(\tilde{V} \in Q\). But \(\tilde{V}\) is tangent to the sphere at \(y\):
 \[
-\inpr{\tilde{V}}{y} = \inpr{V - \inpr{V}{e}e}{y} = \inpr{V}{y} - \inpr{V}{e} \inpr{e}{y} = 0
+\langle \tilde{V},y \rangle = \inpr{V - \inpr{V}{e}e}{y} = \inpr{V}{y} - \inpr{V}{e} \inpr{e}{y} = 0
 \]
 since \(y \in P \Rightarrow \inpr{y}{V} = 0\) and \(y \in E \Rightarrow \inpr{y}{e} = 0\).
 
@@ -378,7 +379,7 @@ So we have \(C = Q \cap \S^{n+1}\) with \(Q\) spanned by \(y\) and \(\tilde{V}\)
 
 The normal to the plane \(P\) is \(V\) and so at \(y\),
 \[
-\inpr{\tilde{V}}{V} = \inpr{V - \inpr{V}{e}e}{V} = \inpr{V}{V} - \inpr{V}{e}^2 = 1 - \sin^2{\delta} = \cos^2(\delta)
+\langle \tilde{V},V \rangle= \inpr{V - \inpr{V}{e}e}{V} = \inpr{V}{V} - \inpr{V}{e}^2 = 1 - \sin^2{\delta} = \cos^2(\delta)
 \]
 is independent of \(x\). Therefore, we have a lower bound on the angle $C$ makes with $P$, independent of the choice $x\in M^{+}.$
 \Theo{prop}{ReflectedM}{
@@ -420,15 +421,15 @@ $$\xi_{n}(\t)=\xi_{n}'(0)\t+\xi_{n}''(\t_{n})\t^{2},\quad \t_{n}\in[0,c_{\delta}
 where $C$ is independent of $n$ and $|\xi''_{n}(\t_{n})|\leq C$ (note that the term $\xi''_{n}(\t_{n})$ is uniformly bounded in view of our assumption on the mean curvature). Therefore, $\xi_n$ is bounded below by $c_{\delta}/2$ on $[0,c_{\delta}/2C]$. Since for $n$ large enough, $\t_{1}^{n}$ becomes as small as desired, we have a contradiction in view of (\ref{eq: cont}).
 }
 \subsection{Reflecting quasi-ancient curvature flows}
-The final aim of this section is to show that for a solution of a curvature flow equation defined on an interval $(-T_{S},0),$ which converges backwards in time to $E$ in $C^{1}$ and has bounded curvature, the flow hypersurfaces are invariant under reflection about every hyperplane $V^{\perp}$ with $V\in E.$ Hence we somehow need to let $\d$ go to zero in the preceding proposition. Until now we only obtained that for a given $\d>0,$ all flow hypersurfaces in an interval $(-T_{S},T_{\d})$ one-sided reflect above themselves. Hence, we can not still deduce that any flow hypersurface has this property for $\d=0.$ To get rid of the dependence on $\d$ in the interval $(-T_{S},T_{\d})$, we will use the parabolic maximum principle.
+The final aim of this section is to show that for a solution of a curvature flow defined on an interval $(-T_{S},0),$ which converges backwards in time to $E$ in $C^{1}$ and has bounded curvature, the flow hypersurfaces are invariant under reflection about every hyperplane $V^{\perp}$ with $V\in E.$ Hence we somehow need to let $\d$ go to zero in the preceding proposition. Until now we only obtained that for a given $\d>0,$ all flow hypersurfaces in an interval $(-T_{S},T_{\d})$ one-sided reflect above themselves. Hence, we can not still deduce that any flow hypersurface has this property for $\d=0.$ To get rid of the dependence on $\d$ in the interval $(-T_{S},T_{\d})$, we will use the parabolic maximum principle.
 \Theo{lemma}{MPReflection}{
 Let the closed and convex hypersurfaces $M_{t},$ $-T_{S}<t<0,$ satisfy the parabolic curvature flow equation
 \[\dot{x}=-F(\cW)\nu\]
 in $\S^{n+1}$ and suppose
 \[M_{t}\ra E,\quad t\ra -T_{S},\]
-in the sense that $e$ lies in the enclosed convex bodies of the $M_{t}$ for sufficiently small $t$ and the graph functions satisfy
+in the sense that $e$ lies in the enclosed convex bodies by $M_{t}$ for sufficiently small $t$ and the graph functions satisfy
 \[|f_{M_{t}}|_{C^{1}(E)}\ra 0,\quad t\ra -T_{S}.\]
- Furthermore suppose
+ Furthermore, suppose
  \[\limsup_{t\ra -T_{S}}H_{M_{t}}\leq\L<\8.\]
  Then there exists $T>-T_{S},$ such that for all $V\in \S^{n+1}$ satisfying
  \[0<\d_{V}\leq \fr{\pi}{8},\]
@@ -436,24 +437,23 @@ in the sense that $e$ lies in the enclosed convex bodies of the $M_{t}$ for suff
  }
 
 \pf{
-By \cref{Starshaped Reflection} and the $C^{1}$-convergence of $M_{t}$ we obtain $T>-T_{S},$ such that $M_{t}$ and $R_{V}(M_{t})$ are star-shaped around $e$ for all $t\in (-T_{S},T).$ We show that this $T$ already has the desired property. By \cref{ReflectedM} we know that for given $V\in \S^{n+1}$ with (suppressing the subscript $V$ again)
-\[0<\d\leq \fr{\pi}{8}\]
+By \cref{Starshaped Reflection} and the $C^{1}$-convergence of $M_{t}$ we obtain $T>-T_{S},$ such that $M_{t}$ and $R_{V}(M_{t})$ are star-shaped around $e$ for all $t\in (-T_{S},T).$ We show that this $T$ already has the desired property. By \cref{ReflectedM}, we know that for a given $V\in \S^{n+1}$ with (suppressing the subscript $V$ again)
+\[0<\d\leq \fr{\pi}{8},\]
  there exists $\~T_{\d}>-T_{S},$ such that $M_{t}$ one-sided reflects above itself for all $t\in (-T_{S},\~T_{\d}).$ Pick a $-T_{S}<T_{\d}<\~T_{\d}$ and define the domain
 \[\O=\bigcup_{t\in(T_{\d},T)}\{t\}\times \pr(M_{t}^{-})\sub (-T_{S},T)\times E.\]
 Recall from \eqref{eq:GraphCurvFlow} that the time dependent graph functions of the $M_{t}$ satisfy
 \[\label{FullyNonlinear}\fr{\del}{\del t}w=-F\br{\fr{\vt'}{v\vt}\d^{i}_{j}+\fr{\vt'}{v^{3}\vt^{3}}\nabla^{i}w\nabla_{j}w-\fr{g^{ik}}{v}\nabla^{2}_{kj}w}v,\]
-where $\vt=\vt\br{w}=\sin\br{w},$
-\[v^2=1+\vt^{-2}|\nabla w|^2\]
-and the connection and the norm $|\cdot|$ are those belonging to the spherical metric $\s_{ij}.$ Since the Weingarten operator is invariant under ambient diffeomorphisms, the reflected hypersurfaces $R_{V}(M_{t})$ with the corresponding graph function $u$s $u$ satisfy the same curvature flow equation.
+where $\vt=\vt\br{w}=\sin\br{w},$ $v^2=1+\vt^{-2}|\nabla w|^2$
+and the connection and the norm $|\cdot|$ are those belonging to the spherical metric $\s_{ij}.$ Since the Weingarten operator is invariant under ambient diffeomorphisms, the reflected hypersurfaces $R_{V}(M_{t})$ with the corresponding graph functions $u$ satisfy the same curvature flow equation.
 
-If the claim of the lemma was false, then there existed a time $t\in (T_{\d},T)$ and a point $x\in \pr(M_{t}^{-}),$ such that
+If the claim of the lemma were false, then there existed a time $t\in (T_{\d},T)$ and a point $x\in \pr(M_{t}^{-}),$ such that
 \[\label{MPReflection1} u(x,t)>w(x,t).\]
 Formally we would like to apply the parabolic maximum principle to conclude that $u$ must remain below $w,$ since this is the case at the initial time $T_\d$ and also at the boundaries $\del\br{\pr(M_t^{-})}\sub V^{\perp}.$ However, in this situation the application of the standard comparison principles to equations of the form
 \[\dot{w}=\Phi(x,w,\nabla w,\nabla^2w)\]
 is not straightforward, due to the restriction that $F$ is generally only defined on positive definite endomorphisms. In the following we make sure that we still get a contradiction to \eqref{MPReflection1}.
 
 
-A slight rewriting of the second fundamental form of $M_t$ described by the radial distance $u$ yields
+A slight rewriting of the second fundamental form of $M_t$ described by the graph function $u$ yields
 \eq{h^i_j&=\fr{\vt'}{\sqrt{\vt^2+|\nabla u|^2}}\d^i_j+\fr{\vt'}{\br{\vt^2+|\nabla u|^2}^{\fr 32}}\nabla^iu\nabla_ju-\fr{\vt g^{ik}}{\sqrt{\vt^2+|\nabla u|^2}}\nabla^2_{kj}u\\
         &=\fr{\vt g^{ik}}{\sqrt{\vt^2+|\nabla u|^2}}\br{\fr{\vt'}{\vt}g_{kj}+\fr{\vt'}{\vt\br{\vt^2+|\nabla u|^2}}g_{km}\s^{mr}u_ru_j-\nabla^2_{kj}u}\\ 
         &\equiv \fr{\vt(u)g^{ik}}{\sqrt{\vt^2(u)+|\nabla u|^2}}A_{kj}(x,u,u,\nabla u,\nabla^2u),}
@@ -472,7 +472,7 @@ $$\forall~ 0<z\leq u(x,t)\cn\quad h^i_j(x,z,u(x,t),\nabla u(x,t),\nabla^2u(x,t))
 Now, by our assumption 
  $$0<u(x,t)-w(x,t)=\max_{\-\O}(u-w),$$
  at $(t,x)$, and we have $\dot{u}\geq \dot{w},$ $\nabla u=\nabla w$ and $\nabla^2u\leq \nabla^2w.$ Define 
- $$\~u=ue^{-\l t},\quad \~w=ve^{-\l t},$$
+ $$\~u=ue^{-\l t},\quad \~w=we^{-\l t},$$
  where $\l>0$ is determined by the requirement that
 $$-\fr{\del\Phi}{\del z}(x,t,z,u(x,t),\nabla u(x,t),\nabla^2 u(x,t))+\l>0\quad\forall~ 0<z\leq u,
 $$
@@ -498,19 +498,19 @@ Now, we need some simple properties of $\reflectionmap[\reflectionvector]$ follo
 \item $\reflectionmap = \reflectionmap[-\reflectionvector]$, and
 \item $\reflectionset{S}^{\pm} = \reflectionset[-\reflectionvector]{S}^{\mp}$.
 \end{itemize}
-Thus we obtain,
+Thus we obtain
 \begin{align*}
 \reflectionset{(M_t)}^+ &= \reflectionmap(\reflectionmap(\reflectionset{(M_t)}^+)) \geq \reflectionmap(\reflectionset{(M_t)}^-) \\
 &= R_{-V}((M_t)^+_{-V}) \geq \reflectionset[-\reflectionvector]{(M_t)}^-\\
 &= \reflectionset{(M_t)}^+.
 \end{align*}
-We must have equality all the way through and hence the middle line implies
+So we must have equality all the way through and hence the middle line implies
 \[
 R_{-V}((M_t)^+_{-V}) = \reflectionset[-\reflectionvector]{(M_t)}^-
 \]
 for any $\reflectionvector$.
 
-Thus \(M_t\) is invariant under \(\reflectionmap\) for any \(\reflectionvector\) satisfying \(\ip{\reflectionvector}{\vertvec} = 0\) and hence is a geodesic sphere for every \(t \in (-T_S, T)\) and by uniqueness of solutions, is a geodesic sphere for every \(t \in (-T_S, 0)\).
+Therefore, \(M_t\) is invariant under \(\reflectionmap\) for any \(\reflectionvector\) satisfying \(\ip{\reflectionvector}{\vertvec} = 0\) and hence is a geodesic sphere for every \(t \in (-T_S, T)\) and by uniqueness of solutions, is a geodesic sphere for every \(t \in (-T_S, 0)\).
 \end{proof}
 
 \bibliographystyle{amsplain}
