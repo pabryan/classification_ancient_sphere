@@ -404,60 +404,59 @@ Thus, we may assume that
 $$\inpr{x_{n}}{V}\ra0,\quad x_{n}\ra x\in V^{\perp}\cap E.$$
 Hence we also obtain
 \eq{\label{Conv}R(x_{n})\ra x,\quad y_{n}\ra x,\quad \pr(x_n)\ra x\quad\text{and}\quad \pr(y_n)\ra x.}
-Denote by $C_{n}=C_{n}(\t)$ the unique great circle in $E,$ parameterized by arc length and containing $\pr(x_{n})$ and $\pr(y_{n})=\pr(R(x_n))$. Note that $C_n$ is well-defined for $n$ large enough; that is, $\pr(x_n)\ne \pr(R(x_n)),$ since $M_n$ is star-shaped and $x_n$ and $y_n$ are close to each other. 
+Denote by $C_{n}$ the unique great circle in $E$ containing $\pr(x_{n})$ and $\pr(y_{n})=\pr(R(x_n))$. Note that $C_n$ is well-defined for $n$ large enough; that is, $\pr(x_n)\ne \pr(R(x_n)),$ since $M_n$ is star-shaped and $x_n$ and $y_n$ are close to each other. 
 
-The geodesics $C_n$ arise as the intersections of $E$ with some $2$-planes $Q_n;$ $C_n=E\cap Q_n.$ Consider the projection of $x_n$ to $E$,
+The circles $C_n$ arise as the intersections of $E$ with some $2$-planes $Q_n;$ $C_n=E\cap Q_n.$ Consider the projection of $x_n$ to $E$,
 $\pr(x_n)=\fr{\~x_n}{|\~x_n|},$
 where $\~x_n=x_n-\inpr{x_n}{e}e.$ We have
 \[\~x_n,~\widetilde{R(x_n)}\in Q_n.\]
 Moreover, since
 \[V=\fr{1}{2\inpr{x_n}{V}}\br{x_n-R(x_n)},\]
-we also have $\~V\in Q_n$ and thus $\pr(V)\in C_n$ for all $n.$ 
+we also have $\~V\in Q_n$ and thus $\pr(V)\in Q_n$ for all $n.$ Along $V^{\perp} \cap E$, since $\pr(V)$ is a linear combination of $V$ and $e$, it is tangent to $\S^{n+1}$ and hence $\pr(V)$ is tangent to $C_n$ at $C_n \cap V^{\perp}$.
 
-Choose $p_n\in C_n\cap V^{\perp}$
-such that the geodesic segment in $C_n$ that joins $\pr(x_n)$ to $p_n$ points into $H_V^-.$ Since
-$\inpr{\pr(V)}{p_n}=0$
-, $\pr(V)$ is tangent to $C_n$ at the point $p_n.$ Moreover, for all large $n,$ we have
-\eq{\label{C_n}\fr{d}{d\t}\Big|_{\t_{p_n}}C_n=- \pr(V),}
-where $\t_{p_n}$ is one of the angles with $C_n(\t_{p_n})=p_n.$
+Now $C_n \cap V^{\perp}$ consists of two antipodal points. Let $p_n \in C_n \cap V^{\perp}$ be the closest point to $x_n$. Since $x_n \to x \in V^{\perp} \cap E$, $p_n$ is well defined for $n$ large enough.
 
-From the geodesics $C_n$ we will construct curves $\l_n$ and $\mu_n$ in $M_n$ and $R(M_n)$ respectively. The equator $E$ is diffeomorphic to $M_n$ via the map
+From the circles $C_n$ we will construct curves $\l_n$ and $\mu_n$ in $M_n$ and $R(M_n)$ respectively. The equator $E$ is diffeomorphic to $M_n$ via the map
 \eq{X_n\cn E&\ra M_n\\
 		\zeta&\mt \cos\br{f_{M_n}}\zeta+\sin\br{f_{M_n}}e.}
 Define
-\eq{\label{lambda} \l_n=X_n\circ C_n.}
+\eq{\label{lambda} \l_n=X_n|_{C_n}.}
+Parameterize $C_n$ by arc length such that for $\t_1^n<0<\t_2^n$,
+\[\l_n(\t_1^n)=x_n,\quad \l_n(0)\in V^{\perp}\quad~\text{and}\quad \l_n(\t_2^n)=y_n,\]
+which is equivalent to 
+\[C_n(\t^n_1)=\pr(x_n)\quad\text{and}\quad C_n(\t^n_2)=\pr(y_n).\]
 Then
 \[\l_n'(\t)=DX_n(C_n(\t))\cdot C_n'(\t).\]
 In view of \eqref{eq:Sequ}, the differential of $X_n$ converges to the identity and hence
 \eq{\label{lambdaConv}\sup_{\t}|\l_n'(\t)-C_n'(\t)|\ra 0.}
 Since $R$ is an isometry of $\S^{n+1}$, the map
 \[Y_n=R\circ X_n\cn E\ra R(M_n)\]
-is a diffeomorphism as well. After a possible translation $\t\mt\t+\t_0,$ we may assume for angles $\t_1^n<0<\t_2^n$ that
-\[\l_n(\t_1^n)=x_n,\quad \l_n(0)\in V^{\perp}\quad~\text{and}\quad \l_n(\t_2^n)=y_n,\]
-which is equivalent to 
-\[C_n(\t^n_1)=\pr(x_n)\quad\text{and}\quad C_n(\t^n_2)=\pr(y_n).\]
+is a diffeomorphism as well. 
 
 Now define the curves $\mu_n$ in $R(M_n)$ by
 \[\mu_n(\t)=Y_n\circ C_n(\t^n_2+\t^n_1-\t).\]
 Then
 \[\mu_n(\t^n_2)=R(x_n).\]
 We will obtain a contradiction to \eqref{eq: cont} by proving positivity of the functions
-\[\xi_n=\inpr{\mu_n}{e}-\inpr{\l_n}{e}.\]
-In fact we have a the Taylor expansion with remainder term, namely
-\eq{\xi_n(\t)&=\xi_n(0)+\xi_n'(0)\t+\xi_n''(\t_n)\t^2,\quad \t_n\in (-\pi,\pi)}
+\[\xi_n=\inpr{\mu_n}{e}-\inpr{\l_n}{e}\]
+on an interval of length bounded below.
+In fact, we have a the Taylor expansion with remainder term, namely
+\eq{\xi_n(\t)&=\xi_n(0)+\xi_n'(0)\t+\xi_n''(\t_n)\t^2,\quad \t_n\in (-\pi,\pi).}
 Now
-\[\xi_n(0)=\inpr{R\circ\l_n(\t^n_1+\t^n_2)}{e}-\inpr{\l_n(0)}{e}\ra 0,\quad n\ra\8,\]
+\[\xi_n(0)=\inpr{R\circ\l_n(\t^n_1+\t^n_2)}{e}-\inpr{\l_n(0)}{e}\ra 0~\text{as}~ n\ra\8,\]
 since $|\pr(x_n)-\pr(y_n)|\ra 0.$
 Furthermore, since $DR=\mrm{Id}-2V\cdot V^{T},$ we obtain
 \eq{\xi_n'(0)&=\inpr{\fr{d}{d\t}R\circ\l_n(\t^n_1+\t^n_2-\t)}{e}_{|\t=0}-\inpr{\l_n'(0)}{e}\\
 		&=-\inpr{\l_n'(\t^n_1+\t^n_2)}{e}+2\inpr{\inpr{V}{\l_n'(\t^n_1+\t^n_2)}V}{e}-\inpr{\l_n'(0)}{e}.}
  The first and the last term in this equality both converge to zero. The middle term is uniformly positive. To see this, note that
- from \eqref{Conv} we obtain that one of the angles $\t_{p_n}$ converges to zero and for this one we have
+ from \eqref{Conv} we obtain that $\t_{p_n}$ converges to zero, where $\t_{p_n}$ is defined by the requirement $C_n(\t_{p_n})=p_n.$ We have
 \eq{\label{slope}|\l_n'(\t^n_1+\t^n_2)-C_n'(\t_{p_n})|&\leq |\l_n'(\t^n_1+\t^n_2)-C_n'(\t^n_1+\t^n_2)|\\
 				&\hp{=}+|C_n'(\t^n_1+\t^n_2)-C_n'(0)|+|C_n'(0)-C_n'(\t_{p_n})|,}
-which converges to zero due to \eqref{lambdaConv} and the assumption $H_n\leq \L.$ Since $C_n'(\t_{p_n})=\pm\pr(V),$ independently of $n,$ we obtain
+which converges to zero due to \eqref{lambdaConv}. Since $C_n'(\t_{p_n})$ is either $\pr(V)$ or $-\pr(V),$ independently of $n,$ we obtain
 \eq{\l_n'(\t^n_1+\t^n_2)\ra -\pr(V).}
-for otherwise $\l_n$ would point into $H_V^{+}$ for large $n,$ which is impossible due to the choice of $\t^n_1$ and $\t^n_2.$ This implies that $\xi_n'(0)$ is uniformly positive. 
+for otherwise we had
+\[\inpr{\l_n'(0)}{V}=\inpr{\l_n'(0)-\l_n'(\t^n_1+\t^n_2)}{V}+\inpr{\l_n'(\t^n_1+\t^n_2)}{V}\ra \inpr{\pr(V)}{V}>0,\]
+which is impossible due to the choice of $\t^n_1$ and $\t^n_2.$ This implies that $\xi_n'(0)$ is uniformly positive. 
 
 Taking into account  $|\xi''_{n}(\t_{n})|$ is uniformly bounded by a constant $c>0$ (in view of our assumption on the mean curvature) $\xi_n$ is bounded below by $c_{\delta}/2$ on a uniform interval $[0,c_{\delta}/2c]$. Since for $n$ large enough, $\t_{2}^{n}$ becomes as small as desired and we have a contradiction in view of (\ref{eq: cont}).
 }
