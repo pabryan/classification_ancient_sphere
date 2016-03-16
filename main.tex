@@ -282,11 +282,9 @@ Since $\mrm{int}(\hat{M}_{-T_S})$ is a strictly convex set, it is especially wea
 We can apply \cite[Theorem 1.1]{MakowskiScheuer:/2013} and obtain that $\hat{M}_{-T_S}$ is either strictly contained in an open hemisphere or is equal to a closed hemisphere. The first alternative is not possible since the solution is quasi-ancient. We conclude that $\del \hat{M}_{-T_S}=M_{-T_S}$ is an equator of $\S^{n+1}.$
 }
 \section{Aleksandrov Reflection and Classification}\label{sec:reflection}
-In this section, we use the result of Theorem \ref{thm:backwardslimit} to classify convex, embedded, (quasi-)ancient solutions of contracting curvature flows on \(\S^{n+1}\) as either equators or shrinking geodesic spheres. The proof uses Aleksandrov reflection as in \cite{2015arXiv150802821B,bryanlouie} to show that the symmetry of the backwards limit is preserved along the flow. Here we give a very general version with minimal assumptions on the flow: all we require is that the flow limits to an equator at $-T_S$ in \(C^0\), with uniform \(C^2\) bounds, and that the maximum principle holds forwards in time.
+In this section, we use the result of Theorem \ref{thm:backwardslimit} to classify convex and (quasi-)ancient solutions of contracting curvature flows on \(\S^{n+1}\) as either equators or shrinking geodesic spheres. The proof uses Aleksandrov reflection as in \cite{2015arXiv150802821B,bryanlouie} to show that the symmetry of the backwards limit is preserved along the flow. Here we give a very general version with minimal assumptions on the flow: all we require is that the flow limits to an equator at $-T_S$ in \(C^0\), with uniform \(C^2\) bounds, and that the flow is geometric and parabolic, compare \cref{F}.
 \subsection{Notation}
-We work on the $(n+1)$-dimensional unit sphere, embedded into $\R^{n+2}$ by the standard inclusion.
-% $j,$
-%\eq{j\cn \S^{n+1}\hra \R^{n+2}.}
+We consider $\S^{n+1}$ to be embedded into $\R^{n+2}$ by the standard inclusion.
 Let
 $$e=e_{n+2}=\br{0,\dots,0,1}\in \R^{n+2}.$$
 For a vector $V\in \S^{n+1}$ let
@@ -324,15 +322,15 @@ $$\forall x\in E\cn \# \br{\mrm{Im}~\g_{x}\cap S}\leq 1.$$
 In this case we have a well-defined graph function of $S,$
 \begin{align*}f_{S}\cn \pr{S}&\ra \br{-\fr{\pi}{2},\fr{\pi}{2}}\\
             \s&\mt \arcsin\inpr{x_{\s}}{e}, \end{align*}
-where $x_{\s}$ is the unique pre-image of $\s$ in $S$ under the projection $\pr.$ We obtain a parametrization of the set $S$ via the correspondence
+where $x_{\s}$ is the unique preimage of $\s$ in $S$ under the projection $\pr.$ We obtain a parametrization of the set $S$ via the correspondence
 $$x_{\s}=(\s,f_{S}(\s)).$$
 }
 \Theo{defn}{ReflectsAbove}{
-Let $S, T$ be two star-shaped sets around $e$ with the corresponding graph functions $f_{S}$ and $f_{T}.$
+Let $S,~T$ be two star-shaped sets around $e$ with the corresponding functions $f_{S}$ and $f_{T}.$
 
 (i)~We say that \it{S lies above T}, denoted by $S\geq T,$ if
 $$\forall \s\in \pr{S}\cap\pr{T}\cn f_{S}(\s)\geq f_{T}(\s).$$
-(ii)~~Let $V\in \R^{n+2}$ and suppose $R_{V}(S)$ and $R_{V}(T)$ are star-shaped around $e.$ We say that \it{S one-sided reflects above T}, if
+(ii)~~Let $V\in \R^{n+2}$ and suppose $R_{V}(S)$ and $T$ are star-shaped around $e.$ We say that \it{S one-sided reflects above T}, if
 $$R_{V}(S^{+}_{V})\geq T^{-}_{V}.$$
 
 }
@@ -341,7 +339,7 @@ Let $V\in\S^{n+1}$ and $0\leq\d\leq\d_{0}<\fr{\pi}{4}.$ Then
 
 (i)~$R_{V}(E)$ is star-shaped around $e.$
 
-(ii)~There exists a constant $c=c(\d_{0})>0,$ such that for any closed and convex hypersurface $M\sub\S^{n+1}$ satisfying $e\notin M$ and
+(ii)~There exists a constant $c=c(\d_{0})>0,$ such that for any closed and convex hypersurface $M\sub\S^{n+1}$ satisfying
 $$|f_{M}|\leq c,$$
 the reflection $R_{V}(M)$ is star-shaped around $e.$
 }
@@ -355,33 +353,34 @@ which is impossible in the given range of $\d_{V}.$
 
 (ii)~The distance from $e$ to $R_{V}(E)$ only depends on $\d_{V}$; therefore, for a sufficiently small graph function $f_{M}$ we also obtain $e\notin R_{V}(M).$ Since every convex hypersurface of the sphere is star-shaped with respect to any interior (and exterior) point, the claim follows.
 }
-It is easily seen that the equator $E$ one-sided reflects above itself, if $0<\d_{V}<\fr{\pi}{4}.$ Now we show that this is also true for any convex hypersurface $M$ with controlled curvature, which is $C^{1}$-close to $E$ (the reason for these strong assumptions is the trouble that arises at the reflection plane $V^{\perp},$ at which the $M$ has the same height as its reflection). To this aim, we start with the following observation.
+It is easily seen that the equator $E$ one-sided reflects above itself, if $0<\d_{V}<\fr{\pi}{4}.$ Now we show that this is also true for any convex hypersurface $M$ with controlled curvature, which is $C^{1}$-close to $E$ (the reason for these strong assumptions is the trouble that arises at the reflection plane $V^{\perp},$ at which $M$ has the same height as its reflection). 
+% To this aim, we start with the following observation.
 
 
-Let \(x \in M^+\), \(z = R(x) = x - 2\inpr{x}{V} V\). Let us also write \(x = (\tilde{x}, x^{n+2})\) with \(\tilde{x} \in \R^{n+1}\). Orthogonal projection onto \(\{x^{n+2} = 0\}\) is then given by \(\pi (x) = \tilde{x} = x - \inpr{x}{e} e\). Because the plane spanned by \(e\) and \(\tilde{x}\) contains \(x\) we find that
-\[
-\pr (x) = \frac{\tilde{x}}{|\tilde{x}|}.
-\]
+% Let \(x \in M^+\), \(z = R(x) = x - 2\inpr{x}{V} V\). Let us also write \(x = (\tilde{x}, x^{n+2})\) with \(\tilde{x} \in \R^{n+1}\). Orthogonal projection onto \(\{x^{n+2} = 0\}\) is then given by \(\pi (x) = \tilde{x} = x - \inpr{x}{e} e\). Because the plane spanned by \(e\) and \(\tilde{x}\) contains \(x\) we find that
+% \[
+% \pr (x) = \frac{\tilde{x}}{|\tilde{x}|}.
+% \]
 
-Now for \(x \notin P\), we have
-\[
-V = \frac{1}{2\inpr{x}{V}} (x - z)
-\]
-lies in the plane spanned by \(x\) and \(z\). Therefore, \(\tilde V = \pi(V)\) lies in the plane \(Q\) spanned by \(\tilde{x}\) and \(\tilde{z}\). But \(\pr(x) = \tilde{x}/|\tilde{x}|\) and likewise for \(z\), hence \(Q\) is the plane spanned by \(\pr(x)\) and \(\pr(z)\).
+% Now for \(x \notin P\), we have
+% \[
+% V = \frac{1}{2\inpr{x}{V}} (x - z)
+% \]
+% lies in the plane spanned by \(x\) and \(z\). Therefore, \(\tilde V = \pi(V)\) lies in the plane \(Q\) spanned by \(\tilde{x}\) and \(\tilde{z}\). But \(\pr(x) = \tilde{x}/|\tilde{x}|\) and likewise for \(z\), hence \(Q\) is the plane spanned by \(\pr(x)\) and \(\pr(z)\).
 
-Let \(C\) be the geodesic joining \(\pr(x)\) to \(\pr(z)\). This is the intersection of the plane \(Q\) with the sphere which contains \(\tilde{V}\). Now let \(y\in P\cap C\). Then \(y \in Q\) and \(\tilde{V} \in Q\). But \(\tilde{V}\) is tangent to the sphere at \(y\):
-\[
-\langle \tilde{V},y \rangle = \inpr{V - \inpr{V}{e}e}{y} = \inpr{V}{y} - \inpr{V}{e} \inpr{e}{y} = 0
-\]
-since \(y \in P \Rightarrow \inpr{y}{V} = 0\) and \(y \in E \Rightarrow \inpr{y}{e} = 0\).
+% Let \(C\) be the geodesic joining \(\pr(x)\) to \(\pr(z)\). This is the intersection of the plane \(Q\) with the sphere which contains \(\tilde{V}\). Now let \(y\in P\cap C\). Then \(y \in Q\) and \(\tilde{V} \in Q\). But \(\tilde{V}\) is tangent to the sphere at \(y\):
+% \[
+% \langle \tilde{V},y \rangle = \inpr{V - \inpr{V}{e}e}{y} = \inpr{V}{y} - \inpr{V}{e} \inpr{e}{y} = 0
+% \]
+% since \(y \in P \Rightarrow \inpr{y}{V} = 0\) and \(y \in E \Rightarrow \inpr{y}{e} = 0\).
 
-So we have \(C = Q \cap \S^{n+1}\) with \(Q\) spanned by \(y\) and \(\tilde{V}\) with \(y\perp \S^{n+1}\) and \(\tilde{V} \in T_y \S^{n+1}\). Thus \(\tilde{V}\) is tangent to \(C\) at \(y\).
+% So we have \(C = Q \cap \S^{n+1}\) with \(Q\) spanned by \(y\) and \(\tilde{V}\) with \(y\perp \S^{n+1}\) and \(\tilde{V} \in T_y \S^{n+1}\). Thus \(\tilde{V}\) is tangent to \(C\) at \(y\).
 
-The normal to the plane \(P\) is \(V\) and so at \(y\),
-\[
-\langle \tilde{V},V \rangle= \inpr{V - \inpr{V}{e}e}{V} = \inpr{V}{V} - \inpr{V}{e}^2 = 1 - \sin^2{\delta} = \cos^2(\delta)
-\]
-is independent of \(x\). Therefore, we have a lower bound on the angle $C$ makes with $P$, independent of the choice $x\in M^{+}.$
+% The normal to the plane \(P\) is \(V\) and so at \(y\),
+% \[
+% \langle \tilde{V},V \rangle= \inpr{V - \inpr{V}{e}e}{V} = \inpr{V}{V} - \inpr{V}{e}^2 = 1 - \sin^2{\delta} = \cos^2(\delta)
+% \]
+% is independent of \(x\). Therefore, we have a lower bound on the angle $C$ makes with $P$, independent of the choice $x\in M^{+}.$
 \Theo{prop}{ReflectedM}{
 For all $V\in\S^{n+1}$ with $0<\d_{1}\leq\d_{V}\leq \d_{0}<\fr{\pi}{4}$ and all $\Lambda>0$ there exists $\a=\a(\d_{0},\d_{1},\L)>0,$ such that all closed and convex hypersurfaces with $e\notin M,$
 $$0\leq f_{M},\quad |f_{M}|_{C^{1}(\mathbb{S}^n)}\leq\a\quad\text{and}\quad H\leq \L$$
@@ -389,7 +388,7 @@ one-sided reflect above themselves.
 }
 \pf{Suppose on the contrary that there exist a $V\in\S^{n+1}$ with $0<\d_{V}\leq \d_{0},$ $\Lambda>0$ and a sequence of hypersurfaces $M_{n}$ with
 $$0\leq f_{M},\quad |f_{M_{n}}|_{C^{1}(\mathbb{S}^n)}\leq \fr 1n,\quad H_{n}\leq \L,$$
-such that $M_{n}$ do not one-sided reflect above themselves (here $H_n$ denotes the mean curvature of $M_n$). This means that $R_{V}(M_{n}^{+})$ does not lie above $M_{n}^{-}$ (from now on we suppress the subscript $V$ for better readability). By \cref{ReflectsAbove} this means that there exist sequences
+such that $M_{n}$ do not one-sided reflect above themselves (here, $H_n$ denotes the mean curvature of $M_n$); that is, $R_{V}(M_{n}^{+})$ does not lie above $M_{n}^{-}$ (from now on we suppress the subscript $V$ for better readability). Therefore, by \cref{ReflectsAbove}, there exist sequences
 $$x_{n}\in M_{n}^{+},\quad y_{n}\in \mrm{Im}~\g_{R(x_{n})}\cap M_{n}^{-},$$
 such that
 \begin{equation}\label{eq: cont}
@@ -398,27 +397,43 @@ such that
 Thus
 \eq{\inpr{x_{n}}{e}&=\inpr{R(R(x_{n}))}{e}\\
                 &=\inpr{R(x_{n})}{e}-2\inpr{R(x_{n})}{V}\inpr{V}{e}\\
-                &=\inpr{R(x_{n})}{e}-2\sin \d\inpr{x_{n}}{V}.}
+                &=\inpr{R(x_{n})}{e}+2\sin \d\inpr{R(x_{n})}{V}.}
 Therefore, in view of (\ref{eq: cont}) this yields
-\[0=\limsup_{n\ra\8}\inpr{x_{n}}{e}\leq \limsup_{n\ra\8}\br{-2\sin\d\inpr{x_{n}}{V}}\leq 0.\]
+\[0=\lim_{n\ra\8}\inpr{x_{n}}{e}= \lim_{n\ra\8}\br{2\sin\d\inpr{R(x_{n})}{V}}.\]
 Thus, we may assume that
 $$\inpr{x_{n}}{V}\ra0,\quad x_{n}\ra x\in V^{\perp}\cap E.$$
 Hence we also obtain
-$$R(x_{n})\ra x\quad\text{and}\quad y_{n}\ra x.$$
-Denote by $C_{n}=C_{n}(\t)$ the unique great circle in $E,$ parameterized by arc length and containing $\pr(x_{n})$ and $\pr(y_{n}),$ which amounts to smooth curves $\l_{n}$ in $M_{n}\hra \R^{n+2}$ and $\mu_{n}$ in $R_{V}(M_{n}),$ just by restricting the graph functions of $M_{n}$ and $R_{V}(M_{n})$ to $C_{n}.$
+\eq{\label{Conv}R(x_{n})\ra x\quad\text{and}\quad y_{n}\ra x.}
+Denote by $C_{n}=C_{n}(\t)$ the unique great circle in $E,$ parameterized by arc length and containing $\pr(x_{n})$ and $\pr(y_{n})=\pr(R(x_n))$. Note that $C_n$ is well-defined for $n$ large enough; that is, $\pr(x_n)\ne \pr(R(x_n)),$ since $M_n$ is star-shaped and $x_n$ and $y_n$ are close to each other. 
+
+The geodesics $C_n$ arise as the intersections of $E$ with some $2$-planes $Q_n;$ $C_n=E\cap Q_n.$ Consider the projection of $x_n$ to $E$,
+$\pr(x_n)=\fr{\~x_n}{|\~x_n|},$
+where $\~x_n=x_n-\inpr{x_n}{e}e.$ We have
+\[\~x_n,~\widetilde{R(x_n)}\in Q_n.\]
+Since
+\[V=\fr{1}{2\inpr{x_n}{V}}\br{x_n-R(x_n)},\]
+we also have $\~V\in Q_n$ and thus $\pr(V)\in C_n$ for all $n.$ 
+
+Let $p_n\in C_n\cap V^{\perp}$
+be arbitrary. Then
+$\inpr{\pr(V)}{p_n}=0$
+and hence $\pr(V)$ is tangent to $C_n$ at the point $p_n.$ That is, for all large $n,$ we have
+\eq{\label{C_n}\fr{d}{d\t}\Big|_{p_n}C_n=\pm \pr(V).}
+
+Geodesics $C_n$ give rise to smooth curves $\l_{n}$ in $M_{n}\hra \R^{n+2}$ and $\mu_{n}$ in $R_{V}(M_{n}),$ just by restricting the graph functions of $M_{n}$ and $R_{V}(M_{n})$ to $C_{n}.$
  Since $x_{n}\in H_{V}^{+}$ and $y_{n}\in H_{V}^{-},$ after a possible translation $\t\mt\t+\t_{0}$ we find a $\t_{1}^{n}>0,$ such that
 \eq{\l_{n}(0)\in V^{\perp},\quad \l_{n}(\t^{n}_{1})=y_{n}\quad\text{and}\quad \mu_{n}(\t^{n}_{1})=R(x_{n}).}
 Define the function $\xi_{n}\cn (-\pi,\pi)\ra\R$ by
 $$\xi_{n}(\t)=\inpr{\mu_{n}(\t)}{e}-\inpr{\l_{n}(\t)}{e}.$$
-There holds
+Due to \eqref{Conv} and \eqref{C_n} there holds
 $\xi_{n}'(0)=\inpr{\mu'_{n}(0)}{e}-\inpr{\l'_{n}(0)}{e}\geq c_{\d}>0,$
-since the first term converges to the corresponding slope of $R(C),$ i.e.,
-$$\fr{d}{d\t}\Big|_{\t=0}\inpr{R(C(-\t))}{e}=\fr{d}{d\t}\Big|_{\t=0}2\sin \d\inpr{C(-\t)}{V}\equiv 2c_{\d}>0,$$
+since the first term is close to the corresponding slope of $R(C_n(-\t))$ at a point $p_n\in C_n\cap V^{\perp}$ i.e., to
+$$2\sin \d\inpr{\~V}{V}\equiv 2c_{\d}>0,$$
 and the second term converges to $0.$
 
 Taking into account $\xi_{n}(0)=0,$ we obtain the Taylor expansion
-$$\xi_{n}(\t)=\xi_{n}'(0)\t+\xi_{n}''(\t_{n})\t^{2},\quad \t_{n}\in[0,c_{\delta}/2C],$$
-where $C$ is independent of $n$ and $|\xi''_{n}(\t_{n})|\leq C$ (note that the term $\xi''_{n}(\t_{n})$ is uniformly bounded in view of our assumption on the mean curvature). Therefore, $\xi_n$ is bounded below by $c_{\delta}/2$ on $[0,c_{\delta}/2C]$. Since for $n$ large enough, $\t_{1}^{n}$ becomes as small as desired, we have a contradiction in view of (\ref{eq: cont}).
+$$\xi_{n}(\t)=\xi_{n}'(0)\t+\xi_{n}''(\t_{n})\t^{2},\quad \t_{n}\in[0,c_{\delta}/2c],$$
+where $c$ is independent of $n$ and $|\xi''_{n}(\t_{n})|\leq c$ (note that the term $\xi''_{n}(\t_{n})$ is uniformly bounded in view of our assumption on the mean curvature). Therefore, $\xi_n$ is bounded below by $c_{\delta}/2$ on $[0,c_{\delta}/2c]$. Since for $n$ large enough, $\t_{1}^{n}$ becomes as small as desired and we have a contradiction in view of (\ref{eq: cont}).
 }
 \subsection{Reflecting quasi-ancient curvature flows}
 The final aim of this section is to show that for a solution of a curvature flow defined on an interval $(-T_{S},0),$ which converges backwards in time to $E$ in $C^{1}$ and has bounded curvature, the flow hypersurfaces are invariant under reflection about every hyperplane $V^{\perp}$ with $V\in E.$ Hence we somehow need to let $\d$ go to zero in the preceding proposition. Until now we only obtained that for a given $\d>0,$ all flow hypersurfaces in an interval $(-T_{S},T_{\d})$ one-sided reflect above themselves. Hence, we can not still deduce that any flow hypersurface has this property for $\d=0.$ To get rid of the dependence on $\d$ in the interval $(-T_{S},T_{\d})$, we will use the parabolic maximum principle.
