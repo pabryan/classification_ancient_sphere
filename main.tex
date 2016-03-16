@@ -30,7 +30,7 @@ We consider the evolution of convex hypersurfaces $M^n$ by
 }
 where \(\S^{n+1}\) is equipped with the round metric of constant curvature $1,$ $\nu$ is the outward unit normal to $M_t=x(t,M^n)$ and $F$ is a function of the principal curvatures of $M_t$ satisfying the following properties, which will be assumed throughout the paper without further mentioning.
 \begin{ass} \label{F}
-Let $\G_{+}=\{(\k_i)\in\R^n\cn \k_i>0~\forall 1\leq i\leq n\}.$ Assume that $F\in C^{\8}(\-\G_{+})$ is 
+Let $\G_{+}=\{(\k_i)\in\R^n\cn \k_i>0~\forall 1\leq i\leq n\}.$ Assume that $F\in C^{\8}(\-\G_{+})$ is
 \begin{enumerate}[(i)]
 \item{symmetric}
 \item{positive}
@@ -57,7 +57,7 @@ It is also worth comparing the techniques and results here to the Euclidean case
 This paper is laid out as follows: In \Cref{prelim} we establish some notation and basic equations to be used in this paper. In \Cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such. Then in \Cref{sec:concave_convex_homogeneous} we give a short classification result for concave and 1-homogeneous convex speeds. \Cref{sec:rigidity} contains the rigidity results used to show backwards limits with bounded \(H\) are equators. Then finally in \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification.
 
 \section*{Acknowledgment}
-The authors would like to thank Knut Smoczyk and the Institut f\"{u}r Differentialgeometrie at Leibniz Universität for hosting a research visit where part of this work took place. The first author was a Riemann Fellow at the Riemann Center for Geometry and Physics, Leibniz Universit\"{a}t and was also supported by the EPSRC on a Programme Grant entitled ``Singularities of Geometric Partial Differential Equations'' reference number EP/K00865X/1. The work of the second author was supported by Austrian Science Fund (FWF) Project M1716-N25. All three authors would like to thank Slack.com for providing a wonderful platform for collaboration. 
+The authors would like to thank Knut Smoczyk and the Institut f\"{u}r Differentialgeometrie at Leibniz Universität for hosting a research visit where part of this work took place. The first author was a Riemann Fellow at the Riemann Center for Geometry and Physics, Leibniz Universit\"{a}t and was also supported by the EPSRC on a Programme Grant entitled ``Singularities of Geometric Partial Differential Equations'' reference number EP/K00865X/1. The work of the second author was supported by Austrian Science Fund (FWF) Project M1716-N25. All three authors would like to thank Slack.com for providing a wonderful platform for collaboration.
 
 \section{Preliminaries}\label{prelim}
 \label{sec:prelim}
@@ -84,7 +84,7 @@ Let us also define the operator
 \begin{lemma} \label{lem: basi ev}
 The following evolution equations hold:
 \eq{
- \label{eq:delt_weingarten_box} 
+ \label{eq:delt_weingarten_box}
 \partial_t h_i^j &= \Box h_i^j + F^{kl} (h^2)_{kl} h_i^j - (F^{kl}h_{kl} - F) (h^2)_i^j + F^{kl,rs}\nabla_i h_{kl}\nabla^j h_{rs} \\
 & \quad +  (F + F^{kl}h_{kl}) \delta_i^j - F^{kl}g_{kl} h_i^j,
 }
@@ -157,14 +157,14 @@ We consider a family of convex curves $\gamma_t$ on $\mathbb{S}^2$ that their sp
 \partial_t\rho(\cdot,t)=-\kappa \frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}(\cdot,t).
 \end{equation}
 
-Here, $\kappa(\cdot,t)$ is the curvature of the curve $\gamma_t$ with the radial function $\rho(\cdot,t).$ 
+Here, $\kappa(\cdot,t)$ is the curvature of the curve $\gamma_t$ with the radial function $\rho(\cdot,t).$
 In polar coordinates we can express the curvature as follows:
 \[\kappa=\frac{-\rho_{\theta\theta}\sin\rho+2\rho_\theta^2\cos\rho+\cos\rho\sin^2\rho}{(\sin^2\rho+\rho_{\theta}^2)^{\frac{3}{2}}}.\]
 We will show that the gnomonic projection of $\gamma_t$, denoted by $\bar{\gamma}_t$, evolves by the curve shortening flow in $\mathbb{R}^2.$ Write $\bar{\rho}(\cdot,t)$ for the radial function of $\bar{\gamma}_t$. We recall from \cite[p.~8]{besau2014spherical} that
 $\bar{\rho}=\tan\rho.$ Using this formula and the expression of $\kappa$ we can write the curvature of $\bar{\gamma}_t$,  $\bar{\kappa}(\cdot,t),$ as follows:
 \[\kappa=\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\bar{\kappa}=\left(\frac{\bar{\rho}^2+1}{\bar{h}^2+1}\right)^{\frac{3}{2}}\bar{\kappa}.\]
 Here $\bar{h}=\frac{\bar{\rho}}{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}$ is the support function of $\bar{\gamma}.$
-Therefore, 
+Therefore,
 \begin{align*}
 \partial_t\bar{\rho}&=-\bar{\kappa}(1+\bar{\rho}^2)\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
 &=-\bar{\kappa}(1+\bar{\rho}^2)^{\frac{3}{2}}\left(\frac{\bar{\rho}^2+\bar{\rho}_{\theta}^2}{(1+\bar{\rho}^2)(\sin^2\rho+\rho_{\theta}^2)}\right)^{\frac{3}{2}}\frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\bar{\rho}}\frac{\sin^2\rho+\rho_{\theta}^2}{\tan^2\rho+(\tan\rho)_{\theta}^2}\\
@@ -172,14 +172,14 @@ Therefore,
 \end{align*}
 The curve shortening flow in $\mathbb{R}^2$ has non-trivial ancient solutions, the Angenent ovals. Thus, there exists a non-trivial convex ancient solution to flow (\ref{eq: angenent oval}). This ancient solution converges backwards in time to a lune (the intersection of two hemispheres) with a pair of antipodal points at which \(\kappa\) is unbounded.
 \end{example}
-The second example exhibits a (non-geometric) flow for which the symmetry of the backwards limit is not preserved. That is, the backwards limit is an equator, yet the flow is not by geodesic spheres. 
+The second example exhibits a (non-geometric) flow for which the symmetry of the backwards limit is not preserved. That is, the backwards limit is an equator, yet the flow is not by geodesic spheres.
 \begin{example}
 We consider a family of convex curves $\gamma_t$ on $\mathbb{S}^2,$ such that their spherical radial functions evolve by
 \[\rho:\mathbb{S}^1\times[0,T)\to \mathbb{R}\]
 \begin{equation}\label{eq: ellipse}
 \partial_t\tan\rho(\cdot,t)=-\kappa^{\frac{1}{3}} \frac{\sqrt{\sin^2\rho+\rho_{\theta}^2}}{\sin\rho}(\cdot,t).
 \end{equation}
-The gnomonic projection of $\gamma_t$ evolves by the affine normal flow in $\mathbb{R}^2:$ 
+The gnomonic projection of $\gamma_t$ evolves by the affine normal flow in $\mathbb{R}^2:$
 \begin{align*}
 \partial_t\bar{\rho}&=-\bar{\kappa}^{\frac{1}{3}}\frac{\sqrt{\bar{\rho}^2+\bar{\rho}_{\theta}^2}}{\bar{\rho}}.
 \end{align*}
@@ -188,7 +188,7 @@ Origin-centered ellipses are ancient solutions to the affine normal flow in $\ma
 \section{Convex, Concave and Homogeneous Speeds}\label{sec:concave_convex_homogeneous}
 In this section, we give a quick classification of ancient solutions in two special cases.
 \begin{thm}
-Let $F$ be $1$-homogeneous, concave and 
+Let $F$ be $1$-homogeneous, concave and
 $\fr{H}{F}\leq c,$
 or let $F$ be $1$-homogeneous and convex. Then any strictly convex ancient solution of the flow \eqref{eq:CurvFlow} with speed $F$ is a family of contracting geodesic spheres.
 \end{thm}
@@ -208,7 +208,7 @@ $$w^i_i-\fr 1n\leq c_0e^{-2n t},$$
 where $c_0$ is the upper bound for the function on the left-hand side at $t=0.$
 Starting the flow at an arbitrary $s<0$ we find
 $$\fr{\k_n}{F}\leq \fr 1n+c_se^{-2n (t-s)}.$$
-Letting $s\ra-\8,$ we obtain at every time $t<0$ that 
+Letting $s\ra-\8,$ we obtain at every time $t<0$ that
 $$\k_n\leq \fr{F}{n}.$$
 This is only possible for totally umbilical hypersurfaces, and the result follows since the only closed, totally umbilical hypersurfaces of the sphere are geodesic spheres.
 
@@ -254,7 +254,7 @@ Now we prove the two claims.
 
 (2)~
 Write the $M_t$ as graphs in geodesic polar coordinates around $y_0,$
-$$M_t=\{(\rho,x^i)\cn \rho=u(t,x^i)\}.$$ 
+$$M_t=\{(\rho,x^i)\cn \rho=u(t,x^i)\}.$$
 Due to \eqref{SphMetric}, on the set in which $M_t$ range, the metrics $g_{ij},$ $\-g_{ij}=\sin^2\rho\s_{ij}$ and $\s_{ij}$ are all equivalent.
 In view of \cite[Theorem 2.7.10]{Gerhardt:/2006} for all convex hypersurfaces $M_t$, the quantity
 $$v^2=1+\-g^{ij}\nabla_iu\nabla_ju$$
@@ -353,7 +353,7 @@ which is impossible in the given range of $\d_{V}.$
 
 (ii)~The distance from $e$ to $R_{V}(E)$ only depends on $\d_{V}$; therefore, for a sufficiently small graph function $f_{M}$ we also obtain $e\notin R_{V}(M).$ Since every convex hypersurface of the sphere is star-shaped with respect to any interior (and exterior) point, the claim follows.
 }
-It is easily seen that the equator $E$ one-sided reflects above itself, if $0<\d_{V}<\fr{\pi}{4}.$ Now we show that this is also true for any convex hypersurface $M$ with controlled curvature, which is $C^{1}$-close to $E$ (the reason for these strong assumptions is the trouble that arises at the reflection plane $V^{\perp},$ at which $M$ has the same height as its reflection). 
+It is easily seen that the equator $E$ one-sided reflects above itself, if $0<\d_{V}<\fr{\pi}{4}.$ Now we show that this is also true for any convex hypersurface $M$ with controlled curvature, which is $C^{1}$-close to $E$ (the reason for these strong assumptions is the trouble that arises at the reflection plane $V^{\perp},$ at which $M$ has the same height as its reflection).
 % To this aim, we start with the following observation.
 
 
@@ -404,7 +404,7 @@ Thus, we may assume that
 $$\inpr{x_{n}}{V}\ra0,\quad x_{n}\ra x\in V^{\perp}\cap E.$$
 Hence we also obtain
 \eq{\label{Conv}R(x_{n})\ra x,\quad y_{n}\ra x,\quad \pr(x_n)\ra x\quad\text{and}\quad \pr(y_n)\ra x.}
-Denote by $C_{n}$ the unique great circle in $E$ containing $\pr(x_{n})$ and $\pr(y_{n})=\pr(R(x_n))$. Note that $C_n$ is well-defined for $n$ large enough; that is, $\pr(x_n)\ne \pr(R(x_n)),$ since $M_n$ is star-shaped and $x_n$ and $y_n$ are close to each other. 
+Denote by $C_{n}$ the unique great circle in $E$ containing $\pr(x_{n})$ and $\pr(y_{n})=\pr(R(x_n))$. Note that $C_n$ is well-defined for $n$ large enough; that is, $\pr(x_n)\ne \pr(R(x_n)),$ since $M_n$ is star-shaped and $x_n$ and $y_n$ are close to each other.
 
 The circles $C_n$ arise as the intersections of $E$ with some $2$-planes $Q_n;$ $C_n=E\cap Q_n.$ Consider the projection of $x_n$ to $E$,
 $\pr(x_n)=\fr{\~x_n}{|\~x_n|},$
@@ -423,7 +423,7 @@ Define
 \eq{\label{lambda} \l_n=X_n|_{C_n}.}
 Parameterize $C_n$ by arc length such that for $\t_1^n<0<\t_2^n$,
 \[\l_n(\t_1^n)=x_n,\quad \l_n(0)\in V^{\perp}\quad~\text{and}\quad \l_n(\t_2^n)=y_n,\]
-which is equivalent to 
+which is equivalent to
 \[C_n(\t^n_1)=\pr(x_n)\quad\text{and}\quad C_n(\t^n_2)=\pr(y_n).\]
 Then
 \[\l_n'(\t)=DX_n(C_n(\t))\cdot C_n'(\t).\]
@@ -431,7 +431,7 @@ In view of \eqref{eq:Sequ}, the differential of $X_n$ converges to the identity 
 \eq{\label{lambdaConv}\sup_{\t}|\l_n'(\t)-C_n'(\t)|\ra 0.}
 Since $R$ is an isometry of $\S^{n+1}$, the map
 \[Y_n=R\circ X_n\cn E\ra R(M_n)\]
-is a diffeomorphism as well. 
+is a diffeomorphism as well.
 
 Now define the curves $\mu_n$ in $R(M_n)$ by
 \[\mu_n(\t)=Y_n\circ C_n(\t^n_2+\t^n_1-\t).\]
@@ -440,8 +440,8 @@ Then
 We will obtain a contradiction to \eqref{eq: cont} by proving positivity of the functions
 \[\xi_n=\inpr{\mu_n}{e}-\inpr{\l_n}{e}\]
 on an interval of length bounded below.
-In fact, we have a the Taylor expansion with remainder term, namely
-\eq{\xi_n(\t)&=\xi_n(0)+\xi_n'(0)\t+\xi_n''(\t_n)\t^2,\quad \t_n\in (-\pi,\pi).}
+In fact, we have a Taylor expansion with remainder term, namely
+\[\xi_n(\t)=\xi_n(0)+\xi_n'(0)\t+\xi_n''(\t_n)\t^2,\quad \t_n\in (-\pi,\pi).\]
 Now
 \[\xi_n(0)=\inpr{R\circ\l_n(\t^n_1+\t^n_2)}{e}-\inpr{\l_n(0)}{e}\ra 0~\text{as}~ n\ra\8,\]
 since $|\pr(x_n)-\pr(y_n)|\ra 0.$
@@ -455,10 +455,10 @@ Furthermore, since $DR=\mrm{Id}-2V\cdot V^{T},$ we obtain
 which converges to zero due to \eqref{lambdaConv}. Since $C_n'(\t_{p_n})$ is either $\pr(V)$ or $-\pr(V),$ independently of $n,$ we obtain
 \eq{\l_n'(\t^n_1+\t^n_2)\ra -\pr(V).}
 for otherwise we had
-\[\inpr{\l_n'(0)}{V}=\inpr{\l_n'(0)-\l_n'(\t^n_1+\t^n_2)}{V}+\inpr{\l_n'(\t^n_1+\t^n_2)}{V}\ra \inpr{\pr(V)}{V}>0,\]
-which is impossible due to the choice of $\t^n_1$ and $\t^n_2.$ This implies that $\xi_n'(0)$ is uniformly positive. 
+$$\inpr{\l_n'(0)}{V}=\inpr{\l_n'(0)-\l_n'(\t^n_1+\t^n_2)}{V}+\inpr{\l_n'(\t^n_1+\t^n_2)}{V}\ra \inpr{\pr(V)}{V}>0,$$
+which is impossible due to the choice of $\t^n_1$ and $\t^n_2.$ This implies that $\xi_n'(0)$ is uniformly positive.
 
-Taking into account  $|\xi''_{n}(\t_{n})|$ is uniformly bounded by a constant $c>0$ (in view of our assumption on the mean curvature) $\xi_n$ is bounded below by $c_{\delta}/2$ on a uniform interval $[0,c_{\delta}/2c]$. Since for $n$ large enough, $\t_{2}^{n}$ becomes as small as desired and we have a contradiction in view of (\ref{eq: cont}).
+Define $c_{\d}:=2\inpr{V}{\pr(V)}\sin\d_V.$ Taking into account  $|\xi''_{n}(\t_{n})|$ is uniformly bounded by a constant $c>0$ (in view of our assumption on the mean curvature), we obtain that for large $n,$ $\xi_n$ is bounded below by $c_{\delta}/3$ on a uniform interval $[0,c_{\delta}/2c]$. Since for $n$ large enough, $\t_{2}^{n}$ becomes as small as desired, we have a contradiction in view of (\ref{eq: cont}).
 }
 \subsection{Reflecting quasi-ancient curvature flows}
 The final aim of this section is to show that for a solution of a curvature flow defined on an interval $(-T_{S},0),$ which converges backwards in time to $E$ in $C^{1}$ and has bounded curvature, the flow hypersurfaces are invariant under reflection about every hyperplane $V^{\perp}$ with $V\in E.$ Hence we somehow need to let $\d$ go to zero in the preceding proposition. Until now we only obtained that for a given $\d>0,$ all flow hypersurfaces in an interval $(-T_{S},T_{\d})$ one-sided reflect above themselves. Hence, we can not still deduce that any flow hypersurface has this property for $\d=0.$ To get rid of the dependence on $\d$ in the interval $(-T_{S},T_{\d})$, we will use the parabolic maximum principle.
@@ -481,6 +481,10 @@ By \cref{Starshaped Reflection} and the $C^{1}$-convergence of $M_{t}$ we obtain
 \[0<\d\leq \fr{\pi}{8},\]
  there exists $\~T_{\d}>-T_{S},$ such that $M_{t}$ one-sided reflects above itself for all $t\in (-T_{S},\~T_{\d}).$ Pick a $-T_{S}<T_{\d}<\~T_{\d}$ and define the domain
 \[\O=\bigcup_{t\in(T_{\d},T)}\{t\}\times \pr(M_{t}^{-})\sub (-T_{S},T)\times E.\]
+Note that
+\[\mathcal{P}\Omega=\left(\bigcup_{t\geq T_{\delta}} (\partial \pr(M_t^-)\cap P)\times \{t\}\right)\cup \left((\pr(M_{T_{\delta}}^-)\cap P)\times T_{\delta} \right).
+\]
+
 Recall from \eqref{eq:GraphCurvFlow} that the time dependent graph functions of the $M_{t}$ satisfy
 \[\label{FullyNonlinear}\fr{\del}{\del t}w=-F\br{\fr{\vt'}{v\vt}\d^{i}_{j}+\fr{\vt'}{v^{3}\vt^{3}}\nabla^{i}w\nabla_{j}w-\fr{g^{ik}}{v}\nabla^{2}_{kj}w}v,\]
 where $\vt=\vt\br{w}=\sin\br{w},$ $v^2=1+\vt^{-2}|\nabla w|^2$
@@ -495,23 +499,23 @@ is not straightforward, due to the restriction that $F$ is generally only define
 
 A slight rewriting of the second fundamental form of $M_t$ described by the graph function $u$ yields
 \eq{h^i_j&=\fr{\vt'}{\sqrt{\vt^2+|\nabla u|^2}}\d^i_j+\fr{\vt'}{\br{\vt^2+|\nabla u|^2}^{\fr 32}}\nabla^iu\nabla_ju-\fr{\vt g^{ik}}{\sqrt{\vt^2+|\nabla u|^2}}\nabla^2_{kj}u\\
-        &=\fr{\vt g^{ik}}{\sqrt{\vt^2+|\nabla u|^2}}\br{\fr{\vt'}{\vt}g_{kj}+\fr{\vt'}{\vt\br{\vt^2+|\nabla u|^2}}g_{km}\s^{mr}u_ru_j-\nabla^2_{kj}u}\\ 
+        &=\fr{\vt g^{ik}}{\sqrt{\vt^2+|\nabla u|^2}}\br{\fr{\vt'}{\vt}g_{kj}+\fr{\vt'}{\vt\br{\vt^2+|\nabla u|^2}}g_{km}\s^{mr}u_ru_j-\nabla^2_{kj}u}\\
         &\equiv \fr{\vt(u)g^{ik}}{\sqrt{\vt^2(u)+|\nabla u|^2}}A_{kj}(x,u,u,\nabla u,\nabla^2u),}
  where $\vt=\vt(u)$ and we set
  $$A_{kj}(x,z,u,p,r)=\fr{\vt'(z)}{\vt(z)}g_{kj}(u)+\fr{\vt'(z)}{\vt(z)\br{\vt^2(z)+|p|^2}}g_{km}(u)\s^{mr}p_rp_j-r_{kj}.$$
  Here the dependence on $x$ is hidden in $\s^{mr}$ and we artificially introduced $z$ in the argument in order to distinguish increasing behavior from decreasing behavior in $u.$ Observe that
  $$\fr{\del A_{kj}}{\del z}\br{x,z,u,\nabla u,\nabla^2u}<0\quad\text{on}~ z\in(0,u(x,t))$$
  in the sense of bilinear forms, whenever $u$ describes a strictly convex hypersurface. To see this, use that $\cot(z)$ is decreasing in $z.$
- 
+
 Also write
 $$h^i_j(x,z,u,p,r)=\fr{\vt(z)g^{ik}(z)}{\sqrt{\vt^2(z)+|p|}}A_{kj}(x,z,u,p,r).$$
 Hence, if $u$ graphs a convex hypersurface, we obtain that
 $$\forall~ 0<z\leq u(x,t)\cn\quad h^i_j(x,z,u(x,t),\nabla u(x,t),\nabla^2u(x,t))>0$$
  and thus $h^i_j$ lies in the domain of $F.$ Write
   $$\Phi(x,z,u,p,r)=-F(h^i_j(x,z,u,p,r))\sqrt{1+\vt^{-2}(z)|p|^2}.$$
-Now, by our assumption 
+Now, by our assumption
  $$0<u(x,t)-w(x,t)=\max_{\-\O}(u-w),$$
- at $(t,x)$, and we have $\dot{u}\geq \dot{w},$ $\nabla u=\nabla w$ and $\nabla^2u\leq \nabla^2w.$ Define 
+ at $(t,x)$, and we have $\dot{u}\geq \dot{w},$ $\nabla u=\nabla w$ and $\nabla^2u\leq \nabla^2w.$ Define
  $$\~u=ue^{-\l t},\quad \~w=we^{-\l t},$$
  where $\l>0$ is determined by the requirement that
 $$-\fr{\del\Phi}{\del z}(x,t,z,u(x,t),\nabla u(x,t),\nabla^2 u(x,t))+\l>0\quad\forall~ 0<z\leq u,
@@ -521,7 +525,7 @@ $$
         &\geq \dot{\~u}-\Phi(x,w,u,\nabla u,\nabla^2 u)e^{-\l t}+\l\~w \\
         &> \dot{\~w}-\Phi(x,w,w,\nabla w,\nabla^2w)e^{-\l t}+\l\~w\\
         &=\br{\dot{w}-\Phi(x,w,w,\nabla w,\nabla^2 w}e^{-\l t},
-    }    
+    }
  a contradiction, since both sides are zero in view of the flow equation.
 }
 \begin{thm}
