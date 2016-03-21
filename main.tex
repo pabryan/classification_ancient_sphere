@@ -209,16 +209,49 @@ Let $F$ be $1$-homogeneous, concave and $\fr{H}{F}\leq c,$ or let $F$ be $1$-hom
 \end{thm}
 
 \pf{
-We first consider the case that $F$ is a 1-homogeneous, convex function normalized so that $F(1,\cdots,1)=n$. The non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015} states any ancient solution of the flow with a 1-homogeneous convex speed $F$ satisfies
-\[\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+C(s)e^{-2n(t-s)},\]
-where $|C(s)|\leq \frac{1}{n}+\frac{\kappa_{\min}}{F}(x,s)\leq \frac{1}{n}+\frac{\kappa_{min}}{\frac{F(1,\cdots,1)}{n}H}(x,s)\leq \frac{1}{n}+\frac{1}{F(1,\cdots,1)}.$
-Therefore, allowing $s\to-\infty$ yields
-\[\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}.\]
-This in turn implies that
-\[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n}\frac{H}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n} \kappa_{\min}(x,t).\]
-On the other hand, since $F(1,\cdots,1)= n,$ we get
-\[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{H}{n}(x,t)\geq \kappa_{\min}(x,t).\]
-That is, $H\equiv n\kappa_{\min}$; therefore, the flow is by geodesic spheres.
+We first consider the case that $F$ is a 1-homogeneous, convex function normalized so that $F(1,\cdots,1)=n$. Homogeneity and convexity implies that $F \geq \tfrac{F(1, \cdots, 1)}{n} H$ and so the chosen normalisation implies,
+\begin{equation}
+\label{eq:convex_speed_ineq}
+F \geq H \geq n \kappa_{\min}.
+\end{equation}
+On the other hand, the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015} states that any ancient solution of the flow with a 1-homogeneous convex speed $F$ satisfies
+\[
+\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+C(s)e^{-2n(t-s)},
+\]
+where \(C(s) = \inf_{x \in M} \{\frac{\kappa_{\min}}{F} - \frac{1}{n}\} \leq 0\). Equation \eqref{eq:convex_speed_ineq} implies that
+\[
+|C(s)| \leq \frac{1}{n} + \frac{\kappa_{\min}}{F}(x,s) \leq \frac{2}{n}
+\]
+is uniformly bounded and we may let $s\to-\infty$ to yield
+\begin{equation}
+\label{eq:convex_noncollapsing_ineq}
+\frac{\kappa_{\min}}{F}(x,t) \geq \frac{1}{n}.
+\end{equation}
+From equations \eqref{eq:convex_speed_ineq} and \eqref{eq:convex_noncollapsing_ineq} we obtain
+\[
+\frac{\kappa_{\min}}{F} \leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F}.
+\]
+Hence, $H\equiv n\kappa_{\min}$ so that the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
+
+For concave speeds, we have
+\begin{equation}
+\label{eq:concave_speed_ineq}
+F \leq H \leq n \kappa_{\max}.
+\end{equation}
+The non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015} states that any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
+\[
+\frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}+C(s)e^{-2n(t-s)},
+\]
+where \(C(s) = \sup_{x \in M} \{\frac{\kappa_{\max}}{F} - \frac{1}{n}\} \geq 0\). The assumption \(H/F \leq c\) implies that \(\frac{\kappa_{\max}}{F} \leq c\) and so
+\[
+C(s) \leq c - \frac{1}{n}
+\]
+is uniformly bounded and again we may let $s\to-\infty$ to yield
+\begin{equation}
+\label{eq:concave_noncollapsing_ineq}
+\frac{\kappa_{\min}}{F}(x,t) \geq \frac{1}{n}.
+\end{equation}
+As before, equations \eqref{eq:concave_speed_ineq} and \eqref{eq:concave_noncollapsing_ineq} allow us to conclude $H\equiv n\kappa_{\max}$ so that the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
 
 Now suppose that case that $F$ is a concave function with $\fr{H}{F} \leq c$ and again normalised so that \(F(1, \cdots, 1) = n\). The tensor
 $w^j_i=\fr{h^j_i}{F}$
@@ -226,7 +259,7 @@ satisfies the evolution equation
 \begin{align*}\del_tw^j_i&=\Box w^j_i-2 F^{kl}g_{kl}w^j_i+2\d^j_i+\fr{1}{F}F^{kl,rs}\nabla_ih_{kl}\nabla^jh_{rs}\\
     &\hp{=}-2F^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
 
-Due to the concavity of $F$, we have for any fixed index $i\cn$
+Due to the concavity of $F$, the normalisation \(F(1, \cdots, 1) = n\), and the convexity of the solution the second term is bounded above by \(-2 n w^j_i\). The last term on the first line is non-positive because \(F\geq 0\) and from the concavity of the speed. Thus for any fixed index $i\cn$
 \begin{align*}\del_t\br{w^i_i-\fr{1}{n}}&\leq\Box\br{w^i_i-\fr{1}{n}}-2n\br{w^i_i-\fr{1}{n}}\\
             &\hp{=}-2F^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{F}} - 2\fr{h^i_i}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
 
