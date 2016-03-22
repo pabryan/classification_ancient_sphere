@@ -209,7 +209,7 @@ Let $F$ be $1$-homogeneous, concave and $\fr{H}{F}\leq c,$ or let $F$ be $1$-hom
 \end{thm}
 
 \pf{
-We may assume \(F\) is normalised so that \(F(1, \cdots, 1) = n\). Homogeneity and convexity implies that $F \geq \tfrac{F(1, \cdots, 1)}{n} H$, while homogeneity and concavity implies that $F\leq \tfrac{F(1,\cdots,1)}{n} H$. The chosen normalisation implies,
+We may assume \(F\) is normalised so that \(F(1, \cdots, 1) = n\). Homogeneity and concavity implies that $F \leq \tfrac{F(1, \cdots, 1)}{n} H$, while homogeneity and convexity implies that $F\geq \tfrac{F(1,\cdots,1)}{n} H$. The chosen normalisation implies,
 \begin{equation}
 \label{eq:speed_ineq}
 \begin{split}
@@ -268,20 +268,22 @@ We have the uniform bounds
 0 &\leq c_s \leq \frac{H}{F} - \frac{1}{n} \leq c - \frac{1}{n} \quad \text{$F$ concave} \\
 -\frac{1}{n} &\leq c_s \leq 0 \quad \text{$F$ convex}.
 \end{align*}
+Note that for convex speeds, $c_s$ is automatically bounded where for concave speeds we must make the addition assumption $H/F \leq c$.
+
 Taking the limit $s\to \infty$ we then obtain for all $t < 0$,
 \begin{equation}
 \label{eq:mp_speed_ineq}
 \begin{split}
-\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ concave} \\
-\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ convex}
+\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ convex}
 \end{split}
 \end{equation}
 
 From equations \eqref{eq:speed_ineq} and \eqref{eq:mp_speed_ineq} we obtain
 \[
 \begin{split}
-\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F} \quad \text{$F$ concave} \\
-\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\max}}{F} \quad \text{$F$ convex}
+\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n} \geq \frac{\kappa_{\max}}{F} \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F} \quad \text{$F$ convex}
 \end{split}
 \]
 Hence, for $F$ concave, $H\equiv n\kappa_{\min}$ and for $F$ convex $H\equiv \kappa_{\max}$. In either case, the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
@@ -291,21 +293,21 @@ Hence, for $F$ concave, $H\equiv n\kappa_{\min}$ and for $F$ convex $H\equiv \ka
 The bounds, 
 \[
 \begin{split}
-\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ concave} \\
-\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ convex}
+\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ convex}
 \end{split}
 \]
-may also be obtained from the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015}, which states that any ancient solution of the flow with a 1-homogeneous convex speed $F$ satisfies
+may also be obtained from the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015}, which states that any any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
 \[
-\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+C(s)e^{-2n(t-s)},
+\frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}+c_se^{-2n(t-s)},
 \]
-where \(C(s)\) is from the proof above.
+with \(c_s\) as in the proof above.
 
-For concave speeds, the non-collapsing result states that any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
+For convex speeds, the non-collapsing result states
 \[
-\frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}+C(s)e^{-2n(t-s)},
+\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+c_se^{-2n(t-s)},
 \]
-again with \(C(s)\) as in the proof above.
+where again \(c_s\) is from the proof above.
 \end{rem}
 
 \section{Rigidity and Backwards Limit}\label{sec:rigidity}
