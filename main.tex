@@ -209,13 +209,13 @@ Let $F$ be $1$-homogeneous, concave and $\fr{H}{F}\leq c,$ or let $F$ be $1$-hom
 \end{thm}
 
 \pf{
-We may assume \(F\) is normalised so that \(F(1, \cdots, 1) = n\). Homogeneity and concavity implies that $F \leq \tfrac{F(1, \cdots, 1)}{n} H$, while homogeneity and convexity implies that $F\geq \tfrac{F(1,\cdots,1)}{n} H$. The chosen normalisation implies,
+We may assume \(F\) is normalized so that \(F(1, \cdots, 1) = n\). Homogeneity and concavity implies that $F \leq \tfrac{F(1, \cdots, 1)}{n} H$, while homogeneity and convexity implies that $F\geq \tfrac{F(1,\cdots,1)}{n} H$. The chosen normalization implies,
 \begin{equation}
 \label{eq:speed_ineq}
 \begin{split}
-\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n} \quad \text{$F$ concave}
+\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n}, \quad \text{ $F$ concave}
  \\
-\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \quad \text{$F$ convex}
+\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n}, \quad \text{ $F$ convex}
 \end{split}
 \end{equation}
 
@@ -235,7 +235,7 @@ and hence the second line above vanishes:
 = 2F^{kl} \left[Fh^i_i\nabla_k \br{\fr{1}{F}} \nabla_l \br{\fr{1}{F}}  - \fr{h^i_i}{F^3}\nabla_k F\nabla_l F\right] = 0.
 \end{multline*}
 
-Homogeneity, concavity/convexity and the normalisation \(F(1, \cdots, 1) = n\) imply that
+Homogeneity, concavity/convexity and the normalization \(F(1, \cdots, 1) = n\) imply that
 \[
 \begin{split}
 F^{kl}g_{kl} \geq n, \quad F^{kl,rs} \leq 0, \quad \text{$F$ concave} \\
@@ -249,8 +249,8 @@ Then, fixing an index \(i\) and working in normal coordinates centred on a criti
 \]
 is non-positive for $F$ concave and non-negative for $F$ convex. Thus at a spatial maximum for $F$ concave, or a spatial minimum for $F$ convex we have
 \begin{align*}
-\partial_t \br{w^i_i-\fr{1}{n}} &\leq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}} \quad \text{$F$ concave} \\
-\partial_t \br{w^i_i-\fr{1}{n}} &\geq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}} \quad \text{$F$ convex} \\
+\partial_t \br{w^i_i-\fr{1}{n}} &\leq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}}, \quad \text{$F$ concave} \\
+\partial_t \br{w^i_i-\fr{1}{n}} &\geq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}}, \quad \text{$F$ convex}. \\
 \end{align*}
 
 Thus, by the maximum principle, for any $s<0$, we obtain the bound
@@ -260,13 +260,13 @@ w^i_i-\fr 1n &\geq c_s e^{-2n(t-s)} \quad \text{$F$ convex}
 \end{align*}
 for $t\geq s$, and where
 \begin{align*}
-c_s &= \max w^i_i(\cdot, s) = \max \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right) \quad \text{$F$ concave} \\
-c_s &= \min w^i_i(\cdot, s) = \min \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right) \quad \text{$F$ convex}.
+c_s &= \max w^i_i(\cdot, s) = \max \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right), \quad \text{$F$ concave} \\
+c_s &= \min w^i_i(\cdot, s) = \min \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right), \quad \text{$F$ convex}.
 \end{align*}
 We have the uniform bounds
 \begin{align*}
-0 &\leq c_s \leq \frac{H}{F} - \frac{1}{n} \leq c - \frac{1}{n} \quad \text{$F$ concave} \\
--\frac{1}{n} &\leq c_s \leq 0 \quad \text{$F$ convex}.
+0 &\leq c_s \leq \frac{H}{F} - \frac{1}{n} \leq c - \frac{1}{n}, \quad \text{$F$ concave} \\
+-\frac{1}{n} &\leq c_s \leq 0, \quad \text{$F$ convex}.
 \end{align*}
 Note that for convex speeds, $c_s$ is automatically bounded where for concave speeds we must make the addition assumption $H/F \leq c$.
 
@@ -274,16 +274,16 @@ Taking the limit $s\to \infty$ we then obtain for all $t < 0$,
 \begin{equation}
 \label{eq:mp_speed_ineq}
 \begin{split}
-\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ concave} \\
-\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ convex}
+\frac{\kappa_{\max}}{F} &\leq \frac{1}{n}, \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\geq \frac{1}{n}, \quad \text{$F$ convex}
 \end{split}
 \end{equation}
 
 From equations \eqref{eq:speed_ineq} and \eqref{eq:mp_speed_ineq} we obtain
 \[
 \begin{split}
-\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n} \geq \frac{\kappa_{\max}}{F} \quad \text{$F$ concave} \\
-\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F} \quad \text{$F$ convex}
+\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n} \geq \frac{\kappa_{\max}}{F}, \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F}, \quad \text{$F$ convex}
 \end{split}
 \]
 Hence, for $F$ concave, $H\equiv n\kappa_{\min}$ and for $F$ convex $H\equiv \kappa_{\max}$. In either case, the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
@@ -293,8 +293,8 @@ Hence, for $F$ concave, $H\equiv n\kappa_{\min}$ and for $F$ convex $H\equiv \ka
 The bounds, 
 \[
 \begin{split}
-\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ concave} \\
-\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ convex}
+\frac{\kappa_{\max}}{F} &\leq \frac{1}{n}, \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\geq \frac{1}{n}, \quad \text{$F$ convex}
 \end{split}
 \]
 may also be obtained from the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015}, which states that any any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
