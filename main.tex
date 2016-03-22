@@ -209,7 +209,9 @@ Let $F$ be $1$-homogeneous, concave and $\fr{H}{F}\leq c,$ or let $F$ be $1$-hom
 \end{thm}
 
 \pf{
-We first consider the case that $F$ is a 1-homogeneous, convex function normalized so that $F(1,\cdots,1)=n$. Homogeneity and convexity implies that $F \geq \tfrac{F(1, \cdots, 1)}{n} H$ and so the chosen normalisation implies,
+We normalize $F$ so that $F(1,\cdots,1)=n.$
+
+We first consider the case that $F$ is a 1-homogeneous, convex function. IN this case, we have
 \begin{equation}
 \label{eq:convex_speed_ineq}
 F \geq H \geq n \kappa_{\min}.
@@ -233,12 +235,12 @@ From equations \eqref{eq:convex_speed_ineq} and \eqref{eq:convex_noncollapsing_i
 \]
 Hence, $H\equiv n\kappa_{\min}$ so that the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
 
-For concave speeds, we have
+For 1-homogeneous, concave speeds, we have
 \begin{equation}
 \label{eq:concave_speed_ineq}
 F \leq H \leq n \kappa_{\max}.
 \end{equation}
-The non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015} states that any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
+The non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015} states that any ancient solution of the flow with a 1-homogeneous, concave speed $F$ satisfies
 \[
 \frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}+C(s)e^{-2n(t-s)},
 \]
@@ -249,7 +251,7 @@ C(s) \leq c - \frac{1}{n}
 is uniformly bounded and again we may let $s\to-\infty$ to yield
 \begin{equation}
 \label{eq:concave_noncollapsing_ineq}
-\frac{\kappa_{\min}}{F}(x,t) \geq \frac{1}{n}.
+\frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}.
 \end{equation}
 As before, equations \eqref{eq:concave_speed_ineq} and \eqref{eq:concave_noncollapsing_ineq} allow us to conclude $H\equiv n\kappa_{\max}$ so that the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
 
