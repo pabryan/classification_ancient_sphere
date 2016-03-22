@@ -237,7 +237,7 @@ Homogeneity, convexity and the normalization \(F(1, \cdots, 1) = n\) imply that
 \[
 F^{kl}g_{kl} \leq n, \quad \text{ and } F^{kl,rs} \geq 0.
 \]
-Fixing an index \(i\) and working in normal coordinates centred on a critical point we have
+Fixing an index \(i\) and working in normal coordinates centred on a local minimum we have
 \[
 \frac{1}{F} F^{kl,rs} \nabla_i h_{kl} \nabla^i h_{rs} = \frac{1}{F} F^{kl,rs} \nabla_i h_{kl} \nabla_i h_{rs}
 \]
@@ -262,7 +262,7 @@ from equation \eqref{eq:speed_ineq}. Note that for convex speeds, $c_s$ is autom
 \[
 c_s = \max w^i_i(\cdot, s) = \max \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right) \geq 0,
 \]
-again from equation \eqref{eq:speed_ineq}. For an upper bound however, we require the additional assumption, \(\tfrac{H}{F} \leq c\) so that \(c_s \leq \tfrac{1}{F} \sup k_{\max}(\cdot, s) \leq \tfrac{\sup H(\cdot, s)}{F} \leq c\).
+from the analogue of equation \eqref{eq:speed_ineq} for concave speeds: \(\kappa_{\max}/F \geq 1/n\). For an upper bound however, we require the additional assumption, \(\tfrac{H}{F} \leq c\) so that \(c_s \leq \tfrac{1}{F} \sup k_{\max}(\cdot, s) \leq \tfrac{\sup H(\cdot, s)}{F} \leq c\).
 
 Taking the limit $s\to -\infty$ we then obtain for all $t < 0$,
 \begin{equation}
@@ -274,7 +274,7 @@ From equations \eqref{eq:speed_ineq} and \eqref{eq:mp_speed_ineq} we obtain
 \[
 \frac{\kappa_{\min}}{F} \leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F}.
 \]
-Hence, $H\equiv \kappa_{\max}$ and the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres. In the concave case, all the inequalities are reversed and we obtain $H \equiv \kappa_{\min}$ and the same conclusion applies.
+Hence, $H\equiv \kappa_{\max}$ and the flow is by totally umbilical hypersurfaces, and hence by geodesic spheres. In the concave case, all the inequalities are reversed and we obtain $H \equiv \kappa_{\min}$ and the same conclusion applies.
 }
 
 \begin{rem}
@@ -285,7 +285,7 @@ The bounds,
 \frac{\kappa_{\min}}{F} &\geq \frac{1}{n}, \quad \text{$F$ convex}
 \end{split}
 \]
-may also be obtained from the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015}, which states that any any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
+may also be obtained from the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015}, which states that any any ancient solution of the flow with a 1-homogeneous, concave speed $F$ satisfies
 \[
 \frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}+c_se^{-2n(t-s)},
 \]
