@@ -209,51 +209,106 @@ Let $F$ be $1$-homogeneous, concave and $\fr{H}{F}\leq c,$ or let $F$ be $1$-hom
 \end{thm}
 
 \pf{
-We first consider the case that $F$ is a 1-homogeneous, convex function normalized so that $F(1,\cdots,1)=n$. The non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015} states any ancient solution of the flow with a 1-homogeneous convex speed $F$ satisfies
-\[\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+C(s)e^{-2n(t-s)},\]
-where $|C(s)|\leq \frac{1}{n}+\frac{\kappa_{\min}}{F}(x,s)\leq \frac{1}{n}+\frac{\kappa_{min}}{\frac{F(1,\cdots,1)}{n}H}(x,s)\leq \frac{1}{n}+\frac{1}{F(1,\cdots,1)}.$
-Therefore, allowing $s\to-\infty$ yields
-\[\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}.\]
-This in turn implies that
-\[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n}\frac{H}{n}(x,t)\geq \frac{F(1,\cdots,1)}{n} \kappa_{\min}(x,t).\]
-On the other hand, since $F(1,\cdots,1)= n,$ we get
-\[\kappa_{\min}(x,t)\geq \frac{F}{n}(x,t)\geq \frac{H}{n}(x,t)\geq \kappa_{\min}(x,t).\]
-That is, $H\equiv n\kappa_{\min}$; therefore, the flow is by geodesic spheres.
+We may assume \(F\) is normalised so that \(F(1, \cdots, 1) = n\). Homogeneity and concavity implies that $F \leq \tfrac{F(1, \cdots, 1)}{n} H$, while homogeneity and convexity implies that $F\geq \tfrac{F(1,\cdots,1)}{n} H$. The chosen normalisation implies,
+\begin{equation}
+\label{eq:speed_ineq}
+\begin{split}
+\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n} \quad \text{$F$ concave}
+ \\
+\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \quad \text{$F$ convex}
+\end{split}
+\end{equation}
 
-Now suppose that case that $F$ is a concave function with $\fr{H}{F} \leq c$ and again normalised so that \(F(1, \cdots, 1) = n\). The tensor
+The tensor
 $w^j_i=\fr{h^j_i}{F}$
 satisfies the evolution equation
-\begin{align*}\del_tw^j_i&=\Box w^j_i-2 F^{kl}g_{kl}w^j_i+2\d^j_i+\fr{1}{F}F^{kl,rs}\nabla_ih_{kl}\nabla^jh_{rs}\\
-    &\hp{=}-2F^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
+\begin{align*}
+\del_tw^j_i&=\Box w^j_i-2 F^{kl}g_{kl}w^j_i+2\d^j_i+\fr{1}{F}F^{kl,rs}\nabla_ih_{kl}\nabla^jh_{rs}\\
+    &\hp{=}-2F^{kl}\nabla_kh^j_i\nabla_l\br{\fr{1}{F}}-2\fr{h^i_j}{F^3}F^{kl}\nabla_k F\nabla_l F.
+\end{align*}
 
-Due to the concavity of $F$, we have for any fixed index $i\cn$
-\begin{align*}\del_t\br{w^i_i-\fr{1}{n}}&\leq\Box\br{w^i_i-\fr{1}{n}}-2n\br{w^i_i-\fr{1}{n}}\\
-            &\hp{=}-2F^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{F}} - 2\fr{h^i_i}{F^3}F^{kl}\nabla_k F\nabla_l F.\end{align*}
-
-At a spatial maximum of $w^i_i-\tfrac{1}{n}$ we have
+At a critical point of $w^i_i$ we have
 $$0=\nabla_k \br{\fr{h^i_i}{F}}=\fr{\nabla_k h^i_i}{F} + h^i_i\nabla_k\br{\fr{1}{F}},$$
-and hence 
+and hence the second line above vanishes:
 \begin{multline*}
 -2F^{kl}\nabla_kh^i_i\nabla_l\br{\fr{1}{F}} - 2\fr{h^i_i}{F^3}F^{kl}\nabla_k F\nabla_l F \\
 = 2F^{kl} \left[Fh^i_i\nabla_k \br{\fr{1}{F}} \nabla_l \br{\fr{1}{F}}  - \fr{h^i_i}{F^3}\nabla_k F\nabla_l F\right] = 0.
 \end{multline*}
-Thus, by the maximum principle, for any $s<0$, we obtain the bound
-$$w^i_i-\fr 1n\leq c_se^{-2n(t-s)},$$
-for $t\geq s$, and where
-\[
-c_s = \max w^i_i(\cdot, s) \leq \frac{H}{F} \leq c
-\]
-is uniformly bounded. Here the convexity of the solution implies that for each \(i\), \(h^i_i \leq H\). In particular,
-$$\fr{\k_{\max}}{F}\leq \fr 1n+c_se^{-2n (t-s)},$$
-and letting $s\ra-\8,$ we obtain at every time $t<0$ that
-$$\k_{\max}\leq \fr{F}{n}.$$
 
-Similar arguments to the convex case, but now with the inequalities reversed since \(F\) is concave, show that
+Homogeneity, concavity/convexity and the normalisation \(F(1, \cdots, 1) = n\) imply that
 \[
-H \equiv n k_{\max}
+\begin{split}
+F^{kl}g_{kl} \geq n, \quad F^{kl,rs} \leq 0, \quad \text{$F$ concave} \\
+F^{kl}g_{kl} \leq n, \quad F^{kl,rs} \geq 0, \quad \text{$F$ convex}.
+\end{split}
 \]
-and hence the flow is again by geodesic spheres.
+
+Then, fixing an index \(i\) and working in normal coordinates centred on a critical point we have
+\[
+\frac{1}{F} F^{kl,rs} \nabla_i h_{kl} \nabla^i h_{rs} = \frac{1}{F} F^{kl,rs} \nabla_i h_{kl} \nabla_i h_{rs}
+\]
+is non-positive for $F$ concave and non-negative for $F$ convex. Thus at a spatial maximum for $F$ concave, or a spatial minimum for $F$ convex we have
+\begin{align*}
+\partial_t \br{w^i_i-\fr{1}{n}} &\leq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}} \quad \text{$F$ concave} \\
+\partial_t \br{w^i_i-\fr{1}{n}} &\geq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}} \quad \text{$F$ convex} \\
+\end{align*}
+
+Thus, by the maximum principle, for any $s<0$, we obtain the bound
+\begin{align*}
+w^i_i-\fr 1n &\leq c_s e^{-2n(t-s)} \quad \text{$F$ concave} \\
+w^i_i-\fr 1n &\geq c_s e^{-2n(t-s)} \quad \text{$F$ convex}
+\end{align*}
+for $t\geq s$, and where
+\begin{align*}
+c_s &= \max w^i_i(\cdot, s) = \max \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right) \quad \text{$F$ concave} \\
+c_s &= \min w^i_i(\cdot, s) = \min \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right) \quad \text{$F$ convex}.
+\end{align*}
+We have the uniform bounds
+\begin{align*}
+0 &\leq c_s \leq \frac{H}{F} - \frac{1}{n} \leq c - \frac{1}{n} \quad \text{$F$ concave} \\
+-\frac{1}{n} &\leq c_s \leq 0 \quad \text{$F$ convex}.
+\end{align*}
+Note that for convex speeds, $c_s$ is automatically bounded where for concave speeds we must make the addition assumption $H/F \leq c$.
+
+Taking the limit $s\to \infty$ we then obtain for all $t < 0$,
+\begin{equation}
+\label{eq:mp_speed_ineq}
+\begin{split}
+\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ convex}
+\end{split}
+\end{equation}
+
+From equations \eqref{eq:speed_ineq} and \eqref{eq:mp_speed_ineq} we obtain
+\[
+\begin{split}
+\frac{\kappa_{\max}}{F} &\geq \frac{\kappa_{\max}}{H} \geq \frac{1}{n} \geq \frac{\kappa_{\max}}{F} \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n} \leq \frac{\kappa_{\min}}{F} \quad \text{$F$ convex}
+\end{split}
+\]
+Hence, for $F$ concave, $H\equiv n\kappa_{\min}$ and for $F$ convex $H\equiv \kappa_{\max}$. In either case, the flow is by totally umbilic hypersurfaces, and hence by geodesic spheres.
 }
+
+\begin{rem}
+The bounds, 
+\[
+\begin{split}
+\frac{\kappa_{\max}}{F} &\leq \frac{1}{n} \quad \text{$F$ concave} \\
+\frac{\kappa_{\min}}{F} &\geq \frac{1}{n} \quad \text{$F$ convex}
+\end{split}
+\]
+may also be obtained from the non-collapsing result of \cite[Theorem 1.1]{AndrewsHanLiWei:/2015}, which states that any any ancient solution of the flow with a 1-homogeneous concave speed $F$ satisfies
+\[
+\frac{\kappa_{\max}}{F}(x,t) \leq \frac{1}{n}+c_se^{-2n(t-s)},
+\]
+with \(c_s\) as in the proof above.
+
+For convex speeds, the non-collapsing result states
+\[
+\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+c_se^{-2n(t-s)},
+\]
+where again \(c_s\) is from the proof above.
+\end{rem}
 
 \section{Rigidity and Backwards Limit}\label{sec:rigidity}
 Now we turn to more general speeds \(F\). The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} \it{with bounded mean curvature} for $t\ra -T_S$ the backwards limit of the flow hypersurfaces $M_t$  is an equator. We will use the rigidity result of \cite{MakowskiScheuer:/2013} to achieve this. For convenience, we state this result:
