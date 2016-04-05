@@ -34,7 +34,7 @@ Let $\G_{+}=\{(\k_i)\in\R^n\cn \k_i>0~\forall 1\leq i\leq n\}.$ Assume that $F\i
 \begin{enumerate}[(i)]
 \item{symmetric},
 \item{positive} on $\G_{+}$, and
-\item{monotone, i.e. for all $1\leq i\leq n$ we have
+\item{monotone, i.e., for all $1\leq i\leq n$ we have
 \[\fr{\del F}{\del \k_i}\geq 0.\]}
 \end{enumerate}
 \end{ass}
@@ -45,7 +45,7 @@ We consider \emph{quasi-ancient}, convex solutions of \eqref{eq:CurvFlow}. Here 
 The following theorem is the main result of the paper.
 \begin{thm}
 \label{thm:main}
-Let \(M_t\) be a \emph{quasi-ancient}, convex solution of $\dot{x}=-F\nu,$ where $F$ satisfies \cref{F} and such that
+Let \(M_t\) be a smooth, \emph{quasi-ancient}, convex solution of $\dot{x}=-F\nu,$ where $F$ satisfies \cref{F} and such that
 \[\limsup_{t\rightarrow -T}\max_{M_t}H<\infty.\] Suppose that either
 \begin{enumerate}[(i)]
 \item $M_t$ is strictly convex for all $t \in (-T, 0)$, or
@@ -63,11 +63,11 @@ Let us remark that one may seek other methods of classification, using more PDE 
 
 One limitation of our method is that at this stage, we assume a bound on the mean curvature \(H\). Although there are certainly solutions emanating from convex polyhedra (and hence with unbounded \(H\)), it is not at all clear to us whether such solutions can be quasi-ancient. In \Cref{sec: examples}, we give two examples (for non-geometric flows) showing what could go wrong. The first converges to a lune (intersection of hemispheres), with unbounded \(H\) and the second converges to an equator, but is not a family of shrinking spheres. Since these examples are not geometric flows, they are not of the type considered here, but they do show that parabolic flows on the sphere may admit ancient solutions that are not a family of shrinking geodesics spheres.
 
-It is also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity, and other ancient, convex solutions may occur. Indeed, for the curve shortening flow in the plane, the classification \cite{DaskalopoulosHamiltonSesum:/2010} states that solutions are either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{Angenent:/1992}. In higher dimensions a characterization of when ancient, convex mean curvature flows are shrinking spheres have been given \cite{HuiskenSinestrari:10/2015,HaslhoferHershkovits:08/2013}, and one generally expects a greater variety of ancient convex solutions to exist.
+It is also worth comparing the techniques and results here to the Euclidean case. The latter does not exhibit such strong rigidity, and other ancient, convex solutions may occur. Indeed, for the curve shortening flow in the plane, the classification \cite{DaskalopoulosHamiltonSesum:/2010} states that solutions are either shrinking circles or the Angenent oval (also known as the paper clip solution) \cite{Angenent:/1992}. In higher dimensions a characterization of when ancient, convex mean curvature flows are shrinking spheres have been given \cite{HuiskenSinestrari:10/2015,HaslhoferHershkovits:08/2013}, and one generally expects a greater variety of ancient, convex solutions to exist.
 
 Convex, ancient solutions are of interest as they arise as rescalings of singularities, cf.~ \cite{HuiskenSinestrari:01/1999}, of mean convex, mean curvature flow, cf.~\cite{HuiskenSinestrari:09/1999, White:10/2002}. Singularity models for mean curvature flow in the sphere have been studied in \cite{Nguyen:07/2015}, where mean convex singularities with an ambient curvature dependent pinching condition are classified according to a blow-up yielding ancient solutions in Euclidean space, as opposed to the ancient, convex solutions in the sphere studied here.
 
-This paper is laid out as follows: In \Cref{prelim}, we establish some notation and basic equations to be used in this paper. In \Cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such solutions. In \Cref{sec:concave_convex_homogeneous}, we give a short classification result for concave and 1-homogeneous convex speeds and for the curve shortening flow. In \Cref{sec:rigidity}, we use the rigidity results from \cite{MakowskiScheuer:/2013} to show that the backwards limits of convex quasi-ancient solutions with bounded \(H\) are equators. In \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification. In \Cref{sec: examples}, we look at two examples of flows for which our techniques do not apply, and the ``undesirable'' behavior ruled out by our assumptions occurs.
+This paper is laid out as follows: In \Cref{prelim}, we establish some notation and basic equations to be used in this paper. In \Cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such solutions. In \Cref{sec:concave_convex_homogeneous}, we give a short classification result for 1-homogeneous concave or convex speeds and for the curve shortening flow. In \Cref{sec:rigidity}, we use the rigidity results from \cite{MakowskiScheuer:/2013} to show that the backwards limits of convex quasi-ancient solutions with bounded \(H\) are equators. In \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification. In \Cref{sec: examples}, we look at two examples of flows for which our techniques do not apply, and the ``undesirable'' behavior ruled out by our assumptions occurs.
 
 \section*{Acknowledgment}
 The authors would like to thank Knut Smoczyk and the Institut f\"{u}r Differentialgeometrie at Leibniz Universität for hosting a research visit where part of this work took place. The first author was a Riemann Fellow at the Riemann Center for Geometry and Physics, Leibniz Universit\"{a}t and was also supported by the EPSRC on a Programme Grant entitled ``Singularities of Geometric Partial Differential Equations'' reference number EP/K00865X/1. The work of the second author was supported by Austrian Science Fund (FWF) Project M1716-N25. All three authors would like to thank Slack.com and Overleaf.com for providing wonderful platforms for collaboration. The figure in this paper was created using the wonderful SageMath Cloud (cloud.sagemath.com).
@@ -187,7 +187,7 @@ Let $F$ be $1$-homogeneous, and either convex, or concave with $H \leq c F$ for 
 \pf{
 We may assume \(F\) is normalized so that \(F(1, \cdots, 1) = n\). We will give the details for \(F\) convex. The concave case is similar, and we remark below where the proof deviates slightly.
 
-Convexity and 1-homogeneity implies that $F\geq \tfrac{F(1,\cdots,1)}{n} H$ \cite[Lemma~2.2.20]{Gerhardt:/2006}. The chosen normalization then implies,
+Convexity and 1-homogeneity implies that $F\geq \tfrac{F(1,\cdots,1)}{n} H;$ see \cite[Lemma~2.2.20]{Gerhardt:/2006}. The chosen normalization then implies,
 \begin{equation}
 \label{eq:speed_ineq}
 \frac{\kappa_{\min}}{F} \leq \frac{\kappa_{\min}}{H} \leq \frac{1}{n}.
@@ -218,16 +218,16 @@ Fixing an index \(i\) and working in normal coordinates centered on a local mini
 \frac{1}{F} F^{kl,rs} \nabla_i h_{kl} \nabla^i h_{rs} = \frac{1}{F} F^{kl,rs} \nabla_i h_{kl} \nabla_i h_{rs}
 \]
 is non-negative. Thus at a spatial minimum,
-\[
+\begin{align*}
 \partial_t \br{w^i_i-\fr{1}{n}} \geq \Box\br{w^i_i-\fr{1}{n}} - 2n\br{w^i_i-\fr{1}{n}}.
-\]
+\end{align*}
 By the maximum principle, for any $s<0$, we obtain the bound
-\[
+\begin{align*}
 w^i_i-\fr 1n \geq c_s e^{-2n(t-s)}
-\]
+\end{align*}
 for $t\geq s$, and where
 \[
-c_s = \min w^i_i(\cdot, s) = \min \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right).
+c_s := \min w^i_i(\cdot, s)- \frac{1}{n}.
 \]
 Moreover, we have the uniform bounds
 \[
@@ -247,11 +247,17 @@ Combining equations \eqref{eq:speed_ineq} and \eqref{eq:mp_speed_ineq} we obtain
 \]
 Hence, $H\equiv n \kappa_{\min}$ and the flow is by totally umbilical, closed hypersurfaces, and hence by geodesic spheres.
 
-In the concave case, all the inequalities are reversed and we obtain $H \equiv n \kappa_{\max}$ and the same conclusion applies. Note that while for convex speeds, $c_s$ is automatically bounded, this is not a-priori the case for concave speeds. For concave speeds,
-\[
-c_s = \max w^i_i(\cdot, s) = \max \left(\frac{h^i_i(\cdot, s)}{F(\mathcal{W}(\cdot, s))} - \frac{1}{n}\right) \geq 0,
-\]
-from the analogue of equation \eqref{eq:speed_ineq} for concave speeds: \(\kappa_{\max}/F \geq 1/n\). For an upper bound however, we require the additional assumption, \(\tfrac{H}{F} \leq c\) so that \(c_s \leq \tfrac{1}{F} \sup k_{\max}(\cdot, s) \leq \tfrac{\sup H(\cdot, s)}{F} \leq c\).
+In the concave case, we obtain
+\begin{align*}
+w^i_i-\fr 1n \leq d_s e^{-2n(t-s)},
+\end{align*}
+where
+$
+d_s := \max w^i_i(\cdot, s) - \frac{1}{n}\geq 0.
+$
+With the aid of the additional assumption \(\tfrac{H}{F} \leq c\), we obtain that 
+\[d_s=\frac{\kappa_{\max}(\cdot, s)}{F}  -\frac{1}{n}\leq \frac{H(\cdot, s)}{F}-\frac{1}{n} \leq c-\frac{1}{n}.\]
+Now by letting $s\to-\infty,$ we conclude that $H \equiv n \kappa_{\max}$ and the claim follows.
 }
 \begin{rem}
 The bounds, 
@@ -267,17 +273,19 @@ may also be obtained from the curvature ball estimates of \cite[Theorem 1.1]{And
 \]
 with \(c_s\) as in the proof above. For convex speeds, the curvature ball estimates imply that
 \[
-\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+c_se^{-2n(t-s)},
+\frac{\kappa_{\min}}{F}(x,t)\geq \frac{1}{n}+d_se^{-2n(t-s)},
 \]
-where again \(c_s\) is from the proof above. The proof applying the maximum principle to \(h^i_i/F\) above, though weaker than the curvature ball estimates, is significantly simple and suffices for our purposes.
+where \(d_s\) is from the proof above. The proof applying the maximum principle to \(h^i_i/F\) above, though weaker than the curvature ball estimates, is significantly simple and suffices for our purposes.
 \end{rem}
-
+\begin{rem}
+In view of Lemma \ref{},  any ancient solution of \ref{} becomes strictly convex 
+\end{rem}
 We end this section, by providing a short proof for the classification result of \cite{BryanLouie:04/2016}.
 \begin{thm}\cite{BryanLouie:04/2016}
 The only convex, ancient solutions of the curve shortening flow on the sphere are shrinking geodesic circles or equators.
 \end{thm}
 \begin{proof}
-Suppose $\gamma_t$ is a convex, ancient solution to the curve shortening flow. Let $s$ denote the arc-length parameter of $\gamma_t$. In view of Lemma \ref{lem: basi ev} and that $\frac{d}{dt}ds=-\kappa^2ds,$ we have 
+Suppose $\gamma_t$ is a convex, ancient solution to the curve shortening flow. Let $s$ denote the arc-length parameter of $\gamma_t$. By Lemma \ref{lem: basi ev} and that $\frac{d}{dt}ds=-\kappa^2ds:$
 \begin{align*}
 \frac{d}{dt}\left(\left(\int_{\gamma_t}\kappa ds\right)^2+\left(\int_{\gamma_t}ds\right)^2\right)=2\left(\left(\int_{\gamma_t}\kappa ds\right)^2-\int_{\gamma_t}ds\int_{\gamma_t}\kappa^2ds\right)\leq 0.
 \end{align*}
@@ -287,8 +295,8 @@ is a non-increasing function. By \cite[Lemma 4.1]{BryanLouie:04/2016}, $\lim\lim
 \[
 \lim_{t\to \infty} q(t) = 4 \pi^2.
 \]
-On the other hand, by the spherical Alexandrov-Fenchel inequality \cite[Theorem 1.5]{MakowskiScheuer:/2013}, $q(t) \geq 4\pi^2$ and hence $$q(t)\equiv 4\pi^2.$$
-By the characterization of the equality cases in the spherical Alexandrov-Fenchel inequality, $\gamma_t$ are either shrinking geodesic circles or equators.
+On the other hand, by the Gauss-Bonnet theorem and the isoperimetric inequality \cite{Rado:10/1935}, $q(t) \geq 4\pi^2$ and hence $$q(t)\equiv 4\pi^2.$$
+By the characterization of the equality cases, $\gamma_t$ are either shrinking geodesic circles or equators.
 \end{proof}
 \section{Rigidity and Backwards Limit}\label{sec:rigidity}
 Now we turn to more general speeds \(F\). The aim of this section is to prove that for a quasi-ancient solution of \eqref{eq:CurvFlow} \it{with bounded mean curvature} for $t\ra -T_S$ the backwards limit of the flow hypersurfaces $M_t$  is an equator. We will use the rigidity result of \cite{MakowskiScheuer:/2013} to achieve this. For convenience, we state this result:
