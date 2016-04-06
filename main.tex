@@ -7,16 +7,27 @@
 \title[Ancient solutions to curvature flows in the sphere]
  {On the classification of ancient solutions to curvature flows on the sphere}
 
-\curraddr{}
-\email{}
+\author[P. Bryan]{Paul Bryan}
+\address{Mathematics Institute, University of Warwick
+Coventry, CV4 7AL, England}
+\email{pabryan@gmail.com}
+\author[M.N. Ivaki]{Mohammad N. Ivaki}
+\address{Institut f\"{u}r Diskrete Mathematik und Geometrie, Technische Universit\"{a}t Wien,
+Wiedner Hauptstr. 8--10, 1040 Wien, Austria}
+\email{mohammad.ivaki@tuwien.ac.at}
+\author[J. Scheuer]{Julian Scheuer }
+\address{Albert-Ludwigs-Universit\"{a}t,
+Mathematisches Institut, Eckerstr. 1, 79104
+Freiburg, Germany}
+\email{julian.scheuer@math.uni-freiburg.de}
 \date{\today}
 
 \dedicatory{}
 \subjclass[2010]{}
-\keywords{}
+\keywords{Spherical geometry, Fully nonlinear curvature flows, Ancient solutions}
 
 \begin{abstract}
-We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$ by smooth functions of the Weingarten map. We introduce the notion of `quasi-ancient' solutions for flows that do not admit non-trivial, convex, ancient solutions. Such solutions are somewhat analogous to ancient solutions for flows such as the mean-curvature flow, or 1-homogeneous flows. The techniques presented here allow us to prove that any convex, quasi-ancient solution of a curvature flow which satisfies a backwards in time uniform bound on mean curvature must be stationary or a family of shrinking geodesic spheres. The main tools are geometric, employing the maximum principle, a rigidity result in the sphere and an Aleksandrov reflection argument. We emphasize that no homogeneity or convexity/concavity restrictions are placed on the flows, though we do also offer a short classification proof for several such restricted cases.
+We consider the evolution of hypersurfaces on the unit sphere $\mathbb{S}^{n+1}$ by smooth functions of the Weingarten map. We introduce the notion of `quasi-ancient' solutions for flows that do not admit non-trivial, convex, ancient solutions. Such solutions are somewhat analogous to ancient solutions for flows such as the mean curvature flow, or 1-homogeneous flows. The techniques presented here allow us to prove that any convex, quasi-ancient solution of a curvature flow which satisfies a backwards in time uniform bound on mean curvature must be stationary or a family of shrinking geodesic spheres. The main tools are geometric, employing the maximum principle, a rigidity result in the sphere and an Aleksandrov reflection argument. We emphasize that no homogeneity or convexity/concavity restrictions are placed on the flows, though we do also offer a short classification proof for several such restricted cases.
 \end{abstract}
 
 \maketitle
@@ -33,12 +44,12 @@ where \(\S^{n+1}\) is equipped with the round metric of constant curvature $1,$ 
 Let $\G_{+}=\{(\k_i)\in\R^n\cn \k_i>0~\forall 1\leq i\leq n\}.$ Assume that $F\in C^{\8}(\G_{+}) \cap C^{0}(\-\G_{+})$ is
 \begin{enumerate}[(i)]
 \item{symmetric},
-\item{positive on $\G_{+}$, $F(0)=0$}  and
-\item{monotone, i.e., for all $1\leq i\leq n$ we have
+\item{positive on $\G_{+}$ with $F(0)=0$}  and
+\item{increasing, i.e. for all $1\leq i\leq n$ we have
 \[\fr{\del F}{\del \k_i}\geq 0.\]}
 \end{enumerate}
 \end{ass}
-We emphasize that no homogeneity, convexity or concavity restrictions are placed on the speed - all we require is that the speed is parabolic and positive, symmetric (equivalently, the speed is invariant under isometries, defined for convex hypersurfaces and \emph{shrinks} strictly convex hypersurfaces). The assumption $F(0)=0$ ensures that equators are static solutions and that the choice of an \emph{outward} unit normal makes sense for all nontrivial solutions.
+We emphasize that no homogeneity, convexity or concavity restrictions are placed on the speed - all we require is that the speed is parabolic, positive and symmetric (equivalently, the speed is invariant under isometries). It \emph{shrinks} strictly convex hypersurfaces. The assumption $F(0)=0$ ensures that equators are static solutions and that the choice of an \emph{outward} unit normal makes sense for all nontrivial solutions.
 
 We consider \emph{quasi-ancient}, convex solutions of \eqref{eq:CurvFlow}. Here quasi-ancient refers to solutions existing on the same time interval as the maximal flow of strictly convex geodesic spheres, compare \cref{Quasi}. For many common flows, such as the mean curvature flow \(F(\mathcal{W}) = \text{Trace}(\mathcal{W}) = H\), the maximal interval of a flow of geodesic spheres is the infinite time interval \((-\infty, 0)\). However, for flows \(F = H^p\) with \(p \in (0,1)\), the maximal time interval is in fact bounded; see \Cref{quasi}.
 
@@ -49,7 +60,7 @@ Let \(M_t\) be a smooth, \emph{quasi-ancient}, convex solution of \eqref{eq:Curv
 \[\limsup_{t\rightarrow -T}\max_{M_t}H<\infty.\] Suppose that either
 \begin{enumerate}[(i)]
 \item\label{main1} $M_t$ is strictly convex for all $t \in (-T, 0)$, or
-\item \label{main2}$F\in C^1(\bar\Gamma_{+}),$ and $M_t$ is weakly convex for all $t \in (-T, 0)$.
+\item \label{main2}$F\in C^1(\bar\Gamma_{+}),$ and $M_t$ is convex for all $t \in (-T, 0)$.
 \end{enumerate}
 \noindent
 Then $M_t$ is flow of geodesic spheres.
@@ -67,7 +78,7 @@ It is also worth comparing the techniques and results here to the Euclidean case
 
 Convex, ancient solutions are of interest as they arise as rescalings of singularities, cf.~ \cite{HuiskenSinestrari:01/1999}, of mean convex, mean curvature flow, cf.~\cite{HuiskenSinestrari:09/1999, White:10/2002}. Singularity models for mean curvature flow in the sphere have been studied in \cite{Nguyen:07/2015}, where mean convex singularities with an ambient curvature dependent pinching condition are classified according to a blow-up yielding ancient solutions in Euclidean space.
 
-This paper is laid out as follows: In \Cref{prelim}, we establish some notation and basic equations to be used in this paper. In \Cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such solutions. In \Cref{sec:concave_convex_homogeneous}, we give a short classification result for 1-homogeneous concave or convex speeds and for the curve shortening flow. In \Cref{sec:rigidity}, we use the rigidity results from \cite{MakowskiScheuer:/2013} to show that the backwards limits of convex quasi-ancient solutions with bounded \(H\) are equators. In \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification. In \Cref{sec: examples}, we look at two examples of flows for which our techniques do not apply, and the ``undesirable'' behavior ruled out by our assumptions occurs.
+This paper is laid out as follows: In \Cref{prelim}, we establish some notation and basic equations to be used in this paper. In \Cref{quasi}, we introduce the notion of quasi-ancient solutions and establish some facts about such solutions. In \Cref{sec:concave_convex_homogeneous}, we give a short classification result for 1-homogeneous concave or convex speeds and for the curve shortening flow. In \Cref{sec:rigidity}, we use the rigidity results from \cite{MakowskiScheuer:/2013} to show that the backwards limits of convex quasi-ancient solutions with bounded \(H\) are equators. In \Cref{sec:reflection}, we use an Aleksandrov reflection technique to complete the classification. In \Cref{sec: examples}, we look at two examples of non-geometric flows for which there exist convex, ancient solutions that are not shrinking spheres, illustrating the necessary restriction to geometric flows and justifying our use of geometric methods. 
 
 \section*{Acknowledgment}
 The authors would like to thank Knut Smoczyk and the Institut f\"{u}r Differentialgeometrie at Leibniz Universit\"at for hosting a research visit where part of this work took place. The first author was a Riemann Fellow at the Riemann Center for Geometry and Physics, Leibniz Universit\"{a}t and was also supported by the EPSRC on a Programme Grant entitled ``Singularities of Geometric Partial Differential Equations'' reference number EP/K00865X/1. The work of the second author was supported by Austrian Science Fund (FWF) Project M1716-N25. All three authors would like to thank Slack.com and Overleaf.com for providing wonderful platforms for collaboration. The figure in this paper was created using the wonderful SageMath Cloud (cloud.sagemath.com).
@@ -123,7 +134,7 @@ see \cite[p.~98-99]{Gerhardt:/2006}.
 We are interested in solutions with maximal possible lifetime. To understand this maximal time, we define $T_S$ to be the lifespan of \it{the strictly convex spherical solution} of \eqref{eq:CurvFlow}. By the strictly convex spherical solution we mean a family of geodesic spheres shrinking under the flow \eqref{eq:CurvFlow} collapsing to a point at time $t=0$ and existing on the maximal interval \((-T_S, 0)\). \(T_S\) can be finite or infinite, as the following lemma shows.
 \begin{lemma}
 \label{lem:spherical_existence_time}
- (i)~Let $p\in(0,1)$ and consider \eqref{eq:CurvFlow} with speed \(F = f^p\) where \(f\) is strictly monotone, concave and 1-homogeneous. Then the strictly convex spherical solution exists only on a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapses to a point at \(t=0\) and converges to an equator at \(t=-T_S\).
+ (i)~Let $p\in(0,1)$ and consider \eqref{eq:CurvFlow} with speed \(F = f^p\) where \(f\) is strictly increasing, concave and 1-homogeneous. Then the strictly convex spherical solution exists only on a finite time interval \((-T_S,0)\) with \(0 < T_S < \infty\), collapses to a point at \(t=0\) and converges to an equator at \(t=-T_S\).
  
 (ii)~Let $F$ be $1$-homogeneous, then the strictly convex spherical solution of \eqref{eq:CurvFlow} is ancient.
 \end{lemma}
@@ -146,13 +157,13 @@ and hence integration of this ODE yields $T=\8.$
 Let $x$ be a non-equatorial, convex solution of \eqref{eq:CurvFlow}, defined on the open interval $(-T,0),$ where $0$ is the collapsing time, then $T\leq T_S.$
 \end{lemma}
 \begin{proof}
-Suppose $T>T_S+\e$ for some $\e>0$.$M=M_{-T_S-\fr{\e}{2}}$ bounds a convex body $\hat{M}$ and is strictly contained in an open hemisphere due to the classical paper \cite{CarmoWarner:/1970}. Then there exists a geodesic sphere $S$ with $\hat{M}\sub\hat{S}.$ By the avoidance principle, the flow with initial hypersurface $M$ collapses before the spherical flow thus contradicting $T>T_S$.
+Suppose $T>T_S+\e$ for some $\e>0$. $M=M_{-T_S-\fr{\e}{2}}$ bounds a convex body $\hat{M}$ and is strictly contained in an open hemisphere due to the classical paper \cite{CarmoWarner:/1970}. Then there exists a geodesic sphere $S$ with $\hat{M}\sub\hat{S}.$ By the avoidance principle, the flow with initial hypersurface $M$ collapses before the spherical flow thus contradicting $T>T_S$.
 \end{proof}
 In view of this lemma, the following definition is reasonable.
 \begin{defn}\label{Quasi}
 A convex solution of \eqref{eq:CurvFlow} defined on a maximal interval $(-T,0)$ is called \it{quasi-ancient}, if $T=T_S$. For convenience we also call the static equatorial solution quasi-ancient. 
 \end{defn}
- By the definition convex ancient solutions are also quasi-ancient.
+ By the definition, convex ancient solutions are also quasi-ancient.
 For convex speeds of homogeneity $1$, the following proposition gives a bound on mean curvature backwards in time for ancient solutions, using a Harnack inequality. For genuine quasi-ancient solutions ($T_S < \infty$), the Harnack inequality (whenever it holds) does not give such a bound since we cannot send \(s \to -\infty\) as in the proof. For example, a Harnack inequality holds for the flows $F = H^p$, $0<p<1$; see \cite[Theorem 1]{BryanIvakiScheuer:12/2015} and from \cref{lem:spherical_existence_time}, $T_S < \infty$. One could envisage backwards limits as convex polyhedra and hence with unbounded \(H\), but it is not clear that these solutions exist on the maximal time interval \((-T_S, 0)\), i.e., we do not know if they can be quasi-ancient solutions. For the classification of quasi-ancient solutions, we thus make the additional assumption that \(H\) is bounded, and defer the question of whether solutions with unbounded \(H\) can exist as an interesting study for a later date.
 
 For a strictly convex hypersurface, define $(b^{ij})$ to be the inverse of $(h_{ij}).$
@@ -279,7 +290,7 @@ with \(c_s\) as in the proof above. For convex speeds, the curvature ball estima
 where \(d_s\) is from the proof above. The proof applying the maximum principle to \(h^i_i/F\) above, though weaker than the curvature ball estimates, is significantly simple and suffices for our purposes.
 \end{rem}
 \begin{rem}
-In view of the evolution equations in Lemma \ref{lem: basi ev}, for strictly monotone, 1-homogeneous and convex speeds $F$ with $F\in C^1(\bar\Gamma_{+})$,  any non-equatorial, convex, ancient solution of (\ref{eq:CurvFlow}) is in fact strictly convex. To see this, apply the strong maximum principle to the evolution equation of $F$ to conclude that $F$ must be strictly positive for any time. On the other hand, the last term in the evolution equation of $\kappa_{\min}$ is bounded below by
+In virtue of the evolution equations in Lemma \ref{lem: basi ev}, for strictly increasing, 1-homogeneous, convex speeds $F$ with $F\in C^1(\bar\Gamma_{+})$,  any non-equatorial, convex, ancient solution of (\ref{eq:CurvFlow}) is in fact strictly convex. To see this, apply the strong maximum principle to the evolution equation of $F$ to conclude that $F$ must be strictly positive for any time. On the other hand, the last term in the evolution equation of $\kappa_{\min}$ is bounded below by
 \[F+F-n\kappa_{\min}\geq F+H-n\kappa_{\min}\ge F>0.\]
 Therefore, the statement of Theorem \ref{thm: quick} holds under the weaker assumption of convexity of ancient solutions rather than strict convexity.
 \end{rem}
@@ -312,7 +323,7 @@ Note that the points $p$ in \cref{Rigidity} are automatically boundary points of
 
 The next lemma is the first step in providing the assumptions of \cref{Rigidity}.
 \begin{lemma}\label{ISC}
-Let $x$ be a convex and quasi-ancient solution of \eqref{eq:CurvFlow} with backwards bounded mean curvature. Then there holds:
+Let $x$ be a convex, quasi-ancient solution of \eqref{eq:CurvFlow} with backwards bounded mean curvature. Then there holds:
 \begin{enumerate}
   \item For all $t_0<0$ there exists a uniform radius $R>0,$ such that the enclosed convex bodies $\hat{M}_t,$ $-T_S<t\leq t_0,$ of the flow hypersurfaces $M_t$ satisfy a uniform interior sphere condition with radius $R.$
   \item For every $y_0\in\mrm{int}~\hat{M}_{t_0}$ the hypersurfaces $M_t,$ $-T_S<t\leq t_0,$ can be written as a graph in geodesic polar coordinates around $y_0$ and the corresponding graph functions satisfy uniform $C^2$-estimates.
@@ -577,16 +588,16 @@ A slight rewriting of the second fundamental form of $M_t$ described by the grap
         &=\fr{\vt g^{ik}}{\sqrt{\vt^2+|\nabla u|^2}}\br{\fr{\vt'}{\vt}g_{kj}+\fr{\vt'}{\vt\br{\vt^2+|\nabla u|^2}}g_{km}\s^{mr}u_ru_j-\nabla^2_{kj}u}\\
         &\equiv \fr{\vt(u)g^{ik}}{\sqrt{\vt^2(u)+|\nabla u|^2}}A_{kj}(x,u,u,\nabla u,\nabla^2u),}
  where $\vt=\vt(u)$ and we set
- $$A_{kj}(x,z,u,p,r)=\fr{\vt'(z)}{\vt(z)}g_{kj}(u)+\fr{\vt'(z)}{\vt(z)\br{\vt^2(z)+|p|^2}}g_{km}(u)\s^{mr}p_rp_j-r_{kj}.$$
- Here the dependence on $x$ is hidden in $\s^{mr}$ and we artificially introduced $z$ in the argument in order to distinguish increasing behavior from decreasing behavior in $u.$ Observe that
+ $$A_{kj}(x,z,u,p,r)=\fr{\vt'(z)}{\vt(z)}g_{kj}(p,u)+\fr{\vt'(z)}{\vt(z)\br{\vt^2(z)+|p|^2}}g_{km}(p,u)\s^{mr}p_rp_j-r_{kj}.$$
+ Here the dependence on $x$ is hidden in $\s^{mr},$ $g_{kj}(p,u)=p_k p_j+\vt^{2}(u)\s_{kj}$ and we artificially introduced $z$ in the argument in order to distinguish increasing behavior from decreasing behavior in $u.$ Observe that
  $$\fr{\del A_{kj}}{\del z}\br{x,z,u,\nabla u,\nabla^2u}<0\quad\text{on}~ z\in(0,u(x,t))$$
  in the sense of bilinear forms, whenever $u$ describes a convex hypersurface. To see this, use that $\cot(z)$ is decreasing in $z.$
 
 Also write
-$$h^i_j(x,z,u,p,r)=\fr{\vt(z)g^{ik}(z)}{\sqrt{\vt^2(z)+|p|^2}}A_{kj}(x,z,u,p,r).$$
+$$h^i_j(x,z,u,p,r)=\fr{\vt(z)g^{ik}(p,z)}{\sqrt{\vt^2(z)+|p|^2}}A_{kj}(x,z,u,p,r).$$
 Hence, if $u$ graphs a convex hypersurface, we obtain that
-$$\forall~ 0<z< u(x,t)\cn\quad h^i_j(x,z,u(x,t),\nabla u(x,t),\nabla^2u(x,t))>0$$
- and thus $h^i_j$ lies in the domain of $F.$ Write
+$$\forall~ 0<z< u(x,t)\cn\quad \br{h^i_j(x,z,u(x,t),\nabla u(x,t),\nabla^2u(x,t))}>0$$
+as a self-adjoint endomorphism and thus $h^i_j$ lies in the domain of $F.$ Write
   $$\Phi(x,z,u,p,r)=-F(h^i_j(x,z,u,p,r))\sqrt{1+\vt^{-2}(z)|p|^2}.$$
 By our assumption \eqref{MPReflection1} we obtain for 
  $$\~u=ue^{-\l t}\quad\text{and}\quad \~w=we^{-\l t},$$
